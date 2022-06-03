@@ -1,0 +1,70 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e0bced75-4c09-4d4b-8f76-807dd8ddc549\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/jpa-buddy.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/pom.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/databases/Annotation.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/databases/Image.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/databases/Subset.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/databases/User.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/repositories/ImageRepository.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/repositories/SubsetRepository.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/java/repositories/UserRepository.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/databases/src/main/resources/application.properties\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ToolUI/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/web/pom.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"JpbToolWindowState\">\n    <option name=\"myId2FirstActivated\">\n      <map>\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\n      </map>\n    </option>\n    <option name=\"myId2Visible\">\n      <map>\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"27P0sDygFcJAHpQkZt4uiKUzhHa\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"jdk.selected.JAVA_MODULE\": \"17\",\n    \"last_opened_file_path\": \"/home/nguyennghiauit/Projects/guess-the-number-game-original/pom.xml\"\n  }\n}]]></component>\n  <component name=\"RunAnythingCache\">\n    <option name=\"myCommands\">\n      <command value=\"mvn clean install\" />\n    </option>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e0bced75-4c09-4d4b-8f76-807dd8ddc549\" name=\"Changes\" comment=\"\" />\n      <created>1649206629064</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1649206629064</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a49937ea6625d7bb2b0a1b3bae9e127b513af6e5)
++++ b/.idea/workspace.xml	(date 1652148048734)
+@@ -4,23 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/pom.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/databases/Annotation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/databases/Image.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/databases/Subset.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/databases/User.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/repositories/ImageRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/repositories/SubsetRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/java/repositories/UserRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/databases/src/main/resources/application.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="created databases module and web module, included entity classes and repository classes">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ToolUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -78,7 +63,8 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "jdk.selected.JAVA_MODULE": "17",
+-    "last_opened_file_path": "/home/nguyennghiauit/Projects/guess-the-number-game-original/pom.xml"
++    "last_opened_file_path": "/home/nguyennghiauit/Projects/mysql-spring-jpa/pom.xml",
++    "run.code.analysis.last.selected.profile": "pProject Default"
+   }
+ }]]></component>
+   <component name="RunAnythingCache">
+@@ -108,6 +94,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1649206629064</updated>
+     </task>
++    <task id="LOCAL-00001" summary="created databases module and web module, included entity classes and repository classes">
++      <created>1652147261016</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1652147261016</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -121,4 +115,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="created databases module and web module, included entity classes and repository classes" />
++    <option name="LAST_COMMIT_MESSAGE" value="created databases module and web module, included entity classes and repository classes" />
++  </component>
+ </project>
+\ No newline at end of file

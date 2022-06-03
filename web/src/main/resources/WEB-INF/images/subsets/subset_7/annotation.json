@@ -1,0 +1,2625 @@
+[
+    {
+        "annotations": [
+            {
+                "answer": "gạo sạch",
+                "question": "cửa hàng Phù Sa chuyên kinh doanh mặt hàng nào?",
+                "type": 0
+            },
+            {
+                "answer": "siêu thị",
+                "question": "kế bên cửa hàng gạo Phù Sa là gì?",
+                "type": 0
+            },
+            {
+                "answer": "hai người",
+                "question": "có bao nhiêu người đến siêu thị mua hàng?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang đi bộ dọc bên vỉa hè bên phải?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000600.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000601.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000602.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong một vườn cây",
+                "question": "hai cô gái đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang đội nón lá đang đi trong vườn?",
+                "type": 1
+            },
+            {
+                "answer": "màu xanh dương",
+                "question": "cô gái đang cầm nón lá mặc áo màu gì?",
+                "type": 1
+            },
+            {
+                "answer": "áo bà ba",
+                "question": "hai cô gái đang đi trong vườn mặc trang phục gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000603.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "một bức",
+                "question": "có bao nhiêu bức tượng được đặt trong phòng?",
+                "type": 1
+            },
+            {
+                "answer": "hai người",
+                "question": "có bao nhiêu người đang ngồi trong phòng?",
+                "type": 1
+            },
+            {
+                "answer": "áo dài màu đỏ",
+                "question": "cô gái ngồi đối diện chàng trai mặc trang phục gì?",
+                "type": 1
+            },
+            {
+                "answer": "áo sơ mi trắng",
+                "question": "chàng trai ngồi đối diện cô gái mặc áo gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000604.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "hai chiếc",
+                "question": "có bao nhiêu chiếc máy điều hòa được lắp đặt ở trong phòng?",
+                "type": 1
+            },
+            {
+                "answer": "tiệm cà phê",
+                "question": "các nhân viên đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "đang dọn quầy",
+                "question": "nhân viên đang đứng ở quầy thu ngân đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "đang sắp xếp lại quầy hàng",
+                "question": "nhân viên đang đứng ở quầy trưng hàng hóa đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000605.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trên một dãy phố",
+                "question": "hai người đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "đang che mưa cho cô gái mặc áo dài tím",
+                "question": "cậu thanh niên mặc áo sơ mi trắng đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "áo dài tím",
+                "question": "cô gái đứng đối diện chàng trai mặc áo sơ mi trắng mặc trang phục gì?",
+                "type": 1
+            },
+            {
+                "answer": "áo sơ mi trắng quần đen",
+                "question": "chàng trai đang che mưa cho cô gái mặc trang phục gì?",
+                "type": 1
+            },
+            {
+                "answer": "29C141303",
+                "question": "biển số xe ngay sau cậu thanh niên mặc áo sơ mi trắng là gì?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000606.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000607.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "gần một cây thông Giáng Sinh",
+                "question": "bạn nữ đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "xung quanh cây thông được trang trí bởi những hộp quà",
+                "question": "xung qaunh cây thông Giáng Sinh được trang trí bằng những vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000608.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000609.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000610.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "nhà hàng bánh xèo ăn là ghiền",
+                "question": "giấy chứng nhận được trao cho nhà hàng nào?",
+                "type": 0
+            },
+            {
+                "answer": "hai lá",
+                "question": "có bao nhiêu lá bánh xèo được trưng bày ra dĩa?",
+                "type": 1
+            },
+            {
+                "answer": "thương hiệu Việt yêu thích nhất năm 2010",
+                "question": "nhà hàng bánh xèo ăn là ghiền được chứng nhận danh hiệu gì?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Hồ Chí Minh",
+                "question": "nhà hàng bánh xèo ăn là ghiền tọa lạc ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "năm 2010",
+                "question": "nhà hàng bánh xèo ăn là ghiền được trao tặng chứng nhận năm nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000611.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000612.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "năm người",
+                "question": "có bao nhiêu người đang ngồi trên hai chiếc thúng ở giữa sông?",
+                "type": 1
+            },
+            {
+                "answer": "đón lá",
+                "question": "du khách ngồi trên những chiếc thúng đội nón gì?",
+                "type": 1
+            },
+            {
+                "answer": "bốn chiếc",
+                "question": "có bao nhiêu chiếc thúng đang di chuyển trên mặt nước?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000613.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000614.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000615.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "cửa hàng Bánh Mì",
+                "question": "nhà thuốc Bảo Tâm An nằm kế bên cửa hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "Nhật Phong",
+                "question": "cửa hàng Bánh Mì nằm kế bên nhà thuốc Bảo Tâm An tên gì?",
+                "type": 0
+            },
+            {
+                "answer": "bánh mì",
+                "question": "cửa hàng nằm bên cạnh nhà thuốc Bảo Tâm An kinh doanh mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "một chiếc",
+                "question": "có bao nhiêu chiếc xe đang dựng trước cửa hàng bán bánh mì?",
+                "type": 0
+            },
+            {
+                "answer": "không có ai đến mua",
+                "question": "có bao nhiêu người đang đến mua bánh mì?",
+                "type": 0
+            },
+            {
+                "answer": "không có ai",
+                "question": "có bao nhiêu người đang ghé mua thuốc?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000616.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000617.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "70",
+                "question": "chiếc xe điện mang số hiệu bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "Hà Nội",
+                "question": "chiếc xe điện đang ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "Hà Nội",
+                "question": "chiếc xe điện đang di chuyển ở thành phố nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000618.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000619.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000620.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "10h",
+                "question": "thời gian mở cửa đón khách vào lúc mấy giờ?",
+                "type": 0
+            },
+            {
+                "answer": "ngày 14 tháng 12",
+                "question": "thời gian mở cửa đón khách vào ngày nào?",
+                "type": 0
+            },
+            {
+                "answer": "Hải Phòng",
+                "question": "trung tâm thương mại này nằm ở đâu?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000621.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong một con hẻm hẹp",
+                "question": "bạn nữ đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000622.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ở một con suối",
+                "question": "những người này đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "ở một con suối trong một khu du lịch sinh thái",
+                "question": "những người này đang đi du lịch ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000623.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "bưởi 5 roi",
+                "question": "cửa hàng Hoàng Gia kinh doanh mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "bưởi 5 roi",
+                "question": "cửa hàng Hoàng Gia bán những mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang đến xem bưởi 5 roi?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000624.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong xưởng chế biến thức ăn",
+                "question": "các công nhân đang làm việc ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "màu xanh dương",
+                "question": "các công nhân mặc đồ màu gì?",
+                "type": 1
+            },
+            {
+                "answer": "chế biến thức ăn",
+                "question": "các công nhân đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000625.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000626.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "18500 đồng",
+                "question": "ổi giống Đài Loan có giá bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "đang lựa ổi",
+                "question": "người phụ nữ mặc áo hồng đang làm gì?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang lựa ổi?",
+                "type": 1
+            },
+            {
+                "answer": "9900 đồng",
+                "question": "dưa hấu có giá bao nhiêu?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000627.jpeg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000628.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000629.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "một chiếc",
+                "question": "có bao nhiêu chiếc xe đạp đang ở bên cạnh cô gái?",
+                "type": 1
+            },
+            {
+                "answer": "một chiếc",
+                "question": "có bao nhiêu chiếc thuyền đang có khách du lịch?",
+                "type": 1
+            },
+            {
+                "answer": "đang nhìn về phía những chiếc thuyền",
+                "question": "cô gái ngồi trên tấm gỗ đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang ở trên tấm gỗ?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000630.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "cửa hàng nội thất Xanh Đà Nẵng",
+                "question": "buổi lễ khai trương được tổ chức cho cửa hàng nào?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Đà Nẵng",
+                "question": "cửa hàng nội thất Xanh Đà Năng được khai trương ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "Tôn Đức Thắng",
+                "question": "cửa hàng nội thất Xanh Đà Nẵng nằm trên đường nào?",
+                "type": 0
+            },
+            {
+                "answer": "696",
+                "question": "cửa hàng nội thất Xanh Đà Nẵng nằm ở số nhà bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "18008040",
+                "question": "liên hệ đặt hàng nội thất ở cửa hàng nội thất Xanh Đà Nẵng qua số điện thoại nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000631.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000632.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000633.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong siêu thị",
+                "question": "người đàn ông đứng bên cạnh người phụ nữ mặc áo đen đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "quầy bán trái cây",
+                "question": "người đàn ông đứng bên cạnh người phụ nữ mặc áo đen đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "quầy bán trái cây",
+                "question": "người đàn ông đứng bên cạnh người phụ nữ mặc áo đen đang đứng ở quầy hàng nào?",
+                "type": 1
+            },
+            {
+                "answer": "đang lựa hôp trái cây",
+                "question": "người phụ nữ mặc áo đen đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "lựa hộp trái cây",
+                "question": "người đàn ông đứng bên cạnh người phụ nữ mặc áo đen đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000634.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000635.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "rừng dừa Bảy Mẫu Hội An",
+                "question": "khách du lịch đang được tham quan ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "Hội An",
+                "question": "rừng dừa Bảy Mẫu ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "ba người",
+                "question": "chiếc thúng đi đầu tiên chở bao nhiêu người?",
+                "type": 1
+            },
+            {
+                "answer": "nón lá",
+                "question": "người chèo chiếc thúng đầu tiên đội nón gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000636.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "gói quà",
+                "question": "bà chủ sạp đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang ngồi trong cửa hàng?",
+                "type": 1
+            },
+            {
+                "answer": "không có ai đến mua",
+                "question": "có bao nhiêu người đến mua đồ trang trí?",
+                "type": 1
+            },
+            {
+                "answer": "trong cửa hàng bán đồ trang trí tết",
+                "question": "bà lão ngồi ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "đồ trang trí tết",
+                "question": "cửa hàng của bà lão kinh doanh những gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000637.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000638.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trên một con phố trong một khu chợ",
+                "question": "quang cảnh này được ghi nhận ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000639.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ở một góc của một khu chợ",
+                "question": "quang cảnh này được chụp ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000640.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong siêu thị",
+                "question": "người đàn ông đeo mặc quần lửng đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "quầy bán đồ tươi sống đóng hộp",
+                "question": "người đàn ông đeo mặc quần lửng đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "đang lựa đồ tươi sống đóng hộp",
+                "question": "người đàn ông đeo mặc quần lửng đang làm gì?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu nhân viên đang đứng gần người đàn ông?",
+                "type": 1
+            },
+            {
+                "answer": "sắp xếp lại hàng",
+                "question": "nhân viên đứng bên cạnh người đàn ông đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000641.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000642.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "Hà Nội",
+                "question": "chợ Đồng Xuân nằm ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "chợ Đồng Xuân",
+                "question": "đây là chợ nào?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Hà Nội",
+                "question": "chợ Đồng Xuân nằm ở đâu?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000643.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "xe máy nhập khẩu, vỏ xe chính hãng, nhớt chính hãng, phụ tùng - đồ chơi xe máy",
+                "question": "cửa hàng kinh doanh những mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "0938999405",
+                "question": "liên hệ thông tin và đặt hàng qua cửa hàng thông qua đường dây nóng nào?",
+                "type": 0
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang đến cửa hàng?",
+                "type": 1
+            },
+            {
+                "answer": "thành phố Hồ Chí Minh",
+                "question": "cửa hàng nằm ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "6C",
+                "question": "cửa hàng nằm ở số nhà bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "đường Trần Quan Diệu",
+                "question": "cửa hàng nằm trên đường nào?",
+                "type": 0
+            },
+            {
+                "answer": "quận 13",
+                "question": "cửa hàng nằm trên quận nào?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Hồ Chí Minh",
+                "question": "cửa hàng xe máy nằm ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "6C đường Trần Quang Diệu, phường 13, quận 3, thành phố Hồ Chí Minh",
+                "question": "cửa hàng xe máy nằm ở địa chỉ bao nhiêu?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000644.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000645.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang thổi bong bóng",
+                "question": "hai bạn này đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "ở trên một con phố",
+                "question": "hai bạn này đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000646.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "phía trước một cung điện",
+                "question": "quang cảnh này được ghi nhận ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "một cái hồ nước",
+                "question": "phía trước cung điện được xây dựng những gì?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000647.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang chèo thuyền",
+                "question": "người phụ nữ đội nón lá dang làm gì?",
+                "type": 1
+            },
+            {
+                "answer": "đang đứng ở trên chiếc xuồng trên mặt nước",
+                "question": "người phụ nữ đội nón lá đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "di chuyển bằng xuồng",
+                "question": "người phụ nữ đội nón lá di chuyển bằng phương tiện gì?",
+                "type": 1
+            },
+            {
+                "answer": "có một chiếc thuyền đang di chuyển trên mặt nước",
+                "question": "có bao nhiêu chiếc thuyền đang di chuyển trên mặt nước?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000648.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "giỏi vịt - gà, cháo, bún miếng, tiết canh vịt",
+                "question": "quán ăn Tú Quyên kinh doanh những món ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "tiết canh vịt",
+                "question": "quán ăn Tú Quyên đặc biệt kinh doanh những món ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "quận Tân Bình",
+                "question": "quán ăn Tú Quyên nằm ở quận nào?",
+                "type": 0
+            },
+            {
+                "answer": "Bạch Đằng",
+                "question": "quán ăn Tú Quyên nằm ở đường nào?",
+                "type": 0
+            },
+            {
+                "answer": "54/3/16",
+                "question": "quán ăn Tú Quyên nằm ở số nhà bao nhiêu?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000649.jpeg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang trả tiền",
+                "question": "người đàn ông mặc áo xanh dương đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "bốn người",
+                "question": "có bao nhiêu người đang đứng ở quầy hàng?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đang xách bịch hàng?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000650.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "20 người",
+                "question": "công ty Hải Đại Thành tuyển dụng thêm bao nhiêu kỹ thuật viên?",
+                "type": 0
+            },
+            {
+                "answer": "kỹ thuật viên sửa chữa xe máy",
+                "question": "công ty Hải Đại Hành tuyển dụng vị trí nào?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Biên Hòa",
+                "question": "công ty Hải Đại Thành nằm ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "bảo dưỡng, sữa chữa xe máy",
+                "question": "công ty Hải Đại Hành kinh doanh loại hình dịch vụ gì?",
+                "type": 0
+            },
+            {
+                "answer": "Đồng Nai",
+                "question": "công ty Hải Đại Thành tọa lại ở tỉnh nào?",
+                "type": 0
+            },
+            {
+                "answer": "đường Bùi Văn Hoa",
+                "question": "công ty Hải Đại Thành nằm trên đường nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000651.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000652.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang đi hướng vào trong cổng thành",
+                "question": "người đàn ông đang đi đâu?",
+                "type": 2
+            },
+            {
+                "answer": "ở một khu du lịch văn hóa",
+                "question": "người đàn ông đang đi ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "ở trước một cổng thành",
+                "question": "người đàn ông đang đứng ở đâu?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000653.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "28",
+                "question": "người đàn ông đang ngồi trong căn nhà số bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "căn nhà số 28",
+                "question": "căn nhà số mấy đang có người ngồi ở trong?",
+                "type": 0
+            },
+            {
+                "answer": "có một người đang ngồi trong căn nhà số 28",
+                "question": "có bao nhiêu người đang ngồi trong căn nhà số 28?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000654.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong một cửa hàng mỹ phẩm",
+                "question": "đây là quang cảnh được ghi nhận ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000655.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000656.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "sữa dinh dưỡng, sữa hạt, nước giải khát, sữa đặc, sữa chua",
+                "question": "cửa hàng bán những mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "không có nhân viên nào",
+                "question": "có bao nhiêu nhân viên đang đứng trong cửa hàng?",
+                "type": 1
+            },
+            {
+                "answer": "không có khách hàng nào",
+                "question": "có bao nhiêu khách hàng đang đến mua sữa",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000657.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000658.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "có một người phụ nữ đang đi bộ trên đường",
+                "question": "có bao nhiêu người đang đi bộ trên đường?",
+                "type": 1
+            },
+            {
+                "answer": "trong một con hẻm hẹp",
+                "question": "người phụ nữ đang đi bộ này được nhìn từ góc nào?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000659.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ở một khu cáp treo trên cao",
+                "question": "quang cảnh này được chụp ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000660.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000661.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "chè",
+                "question": "quán gia truyền Nam Đồng kinh doanh những mặt hàng gì?",
+                "type": 0
+            },
+            {
+                "answer": "0989859319",
+                "question": "có thể đặt chè ở quán gia truyền Nam Đồng thông qua đường dây nóng nào?",
+                "type": 0
+            },
+            {
+                "answer": "bún bò Nam Bộ, hủ tiếu, há cảo, phở cuốn, nem",
+                "question": "quán ngon bán những món ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "chè Thái Lan, chè thạch Thái Lan, chè thập cẩm - chuối, chè bưởi - ngô - khoai, chè đỗ xanh - đỗ đen, chè đỗ đỏ - hạt lựu, sữa chua, nếp cẩm",
+                "question": "quán chè Phố Cổ kinh doanh những món chè nào?",
+                "type": 0
+            },
+            {
+                "answer": "nộm bò khô, nộm sứa, nem tai lá sung, bánh bột lọc, trứng cút lộn, nem cuốn, nem chua, bia, nước ngọt, trà đá",
+                "question": "quán Hoa Mai chuyên kinh doanh những món ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "bánh gối, bánh bao, bánh tiêu",
+                "question": "quán ăn Quay Nóng kinh doanh những món ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "quán gia truyền Nam Đồng và quán chè Phố Cổ",
+                "question": "có thể ghé mua chè ở những quán ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "quán ngon",
+                "question": "có thể mua bún bò ở quán ăn nào?",
+                "type": 0
+            },
+            {
+                "answer": "quán Hoa Mai và quán ngon",
+                "question": "có thể mua nem ở quán ăn nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000662.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000663.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000664.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000665.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang có chương trình khuyến mãi giảm đến 50%",
+                "question": "siêu thị điện máy - nội thất Chợ Lớn đang có chương trình khuyến mãi gì?",
+                "type": 0
+            },
+            {
+                "answer": "siêu thị điện máy - nội thất Chợ Lớn",
+                "question": "đây là siêu thị nào?",
+                "type": 0
+            },
+            {
+                "answer": "mặt hàng điện máy và nội thất",
+                "question": "siêu thị này kinh doanh những mặt hàng nào?",
+                "type": 0
+            },
+            {
+                "answer": "Chợ Lớn",
+                "question": "siêu thị điện máy này tên gì?",
+                "type": 0
+            },
+            {
+                "answer": "mặt hàng nội thất",
+                "question": "ngoài nội thất ra thì siêu thị này còn kinh doanh mặt hàng nào?",
+                "type": 0
+            },
+            {
+                "answer": "mặt hàng điện máy",
+                "question": "ngoài nội thất ra thì siêu thị này còn kinh doanh mặt hàng nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000666.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "thông báo tuyển nhân viên",
+                "question": "quán ăn này dán thông báo gì trước cửa?",
+                "type": 0
+            },
+            {
+                "answer": "đang có nhu cầu tuyển nhân viên mới",
+                "question": "quán ăn này đang có nhu cầu gì?",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000667.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "vẽ về hình ảnh những căn nhà san sát nhau ở một con phố",
+                "question": "bức tranh này vẽ về những cảnh vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000668.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "không hút thuốc trong chợ",
+                "question": "bảng thông báo không được phép làm gì trong chợ?",
+                "type": 0
+            },
+            {
+                "answer": "quần áo",
+                "question": "đây là khu vực bán những mặt hàng nào?",
+                "type": 1
+            },
+            {
+                "answer": "khu bán quần áo",
+                "question": "những người đi chợ đang đứng ở khu nào?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000669.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang đi hướng ra khỏi căn nhà gỗ",
+                "question": "nhóm người này đang đi về hướng nào?",
+                "type": 2
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000670.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang ôm một con chó",
+                "question": "trên tay bé gái đang ôm vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "một cái lồng kính trang trí bởi ba cây thông",
+                "question": "đằng sau ba người đang đứng là gì?",
+                "type": 1
+            },
+            {
+                "answer": "với một người đàn ông và một người phụ nữ đứng ở hai bên",
+                "question": "bạn nữ đang ôm con chó đi chơi Giáng Sinh với ai?",
+                "type": 1
+            },
+            {
+                "answer": "lồng kính được trang trí bằng ba cây thông với những vật dụng trang trí Giáng Sinh",
+                "question": "lồng kính phía sau ba người đang đứng được trang trí bởi những vật gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000671.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "quầy bán thịt tươi sống",
+                "question": "những người đi siêu thị đang đứng ở quầy hàng nào?",
+                "type": 1
+            },
+            {
+                "answer": "đang lấy bịch đựng thịt tươi sống",
+                "question": "cô gái mặc áo sơ mi trắng đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "bốn người",
+                "question": "có bao nhiêu người đang lựa mua thịt tươi sống?",
+                "type": 1
+            },
+            {
+                "answer": "ba người",
+                "question": "có bao nhiêu nhân viên đang đứng ở quầy thịt tươi sống?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000672.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang dùng điện thoại để chụp hình",
+                "question": "bạn nữ đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "bạn nữ đang chụp cái cây",
+                "question": "bạn nữ đang chụp vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "bạn nữ chụp bằng điện thoại",
+                "question": "bạn nữ chụp hình bằng thiết bị nào?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000673.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ở trên nhánh cây bên cạnh cô gái",
+                "question": "cái nón lá được để ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "ở trên một nhánh cây trên mặt sông",
+                "question": "người đàn ông và người phụ nữ đang ngồi ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người mặc áo bà ba đang ngồi trên mặt sông?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000674.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "nem, chả, bánh, mứt",
+                "question": "những quầy hàng bên trái bán chủ yếu những mặt hàng gì?",
+                "type": 1
+            },
+            {
+                "answer": "không có ai đến xem",
+                "question": "có bao nhiêu người đang đến xem những quầy hàng bên trái?",
+                "type": 1
+            },
+            {
+                "answer": "lướt điện thoại",
+                "question": "những chủ sạp các quầy hàng bên trái đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000675.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trên một vách đá",
+                "question": "nhóm người này đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000676.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "bánh, kẹo",
+                "question": "quầy hàng trong cùng bên phải bán những mặt hàng gì?",
+                "type": 1
+            },
+            {
+                "answer": "sữa tắm, nước xả, bột giặt",
+                "question": "quầy hàng ở bên cạnh quầy bán bánh, kẹo bán những mặt hàng gì?",
+                "type": 1
+            },
+            {
+                "answer": "không có ai đên lựa",
+                "question": "có bao nhiêu người đang đến lựa nước xả, bột giặt?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000677.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "đang kiểm tra hàng hóa",
+                "question": "người đàn ông mặc áo xanh lá đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "đang đứng ở tiệm bán quần áo",
+                "question": "người đàn ông mặc áo xanh lá đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "từ 0 đến 2 tuổi",
+                "question": "quầy quần áo sau lưng người đàn ông dành cho đối tượng trong độ tuổi nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000678.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000679.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "có một người đang nằm ngủ",
+                "question": "có bao nhiêu người đang nằm ngủ?",
+                "type": 1
+            },
+            {
+                "answer": "trên một cái giường xếp sát bức tường",
+                "question": "người phụ nữ đang nằm ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000680.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "lướt điện thoại",
+                "question": "chủ quán ăn đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "hai người",
+                "question": "có bao nhiêu người đang đến quán ăn?",
+                "type": 1
+            },
+            {
+                "answer": "đang ăn",
+                "question": "bạn nam đối diện bạn nữ đang làm gì?",
+                "type": 2
+            },
+            {
+                "answer": "đang ăn",
+                "question": "bạn nữ đối diện bạn nam đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000681.jpeg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ở bảo tàng Quảng Ninh",
+                "question": "nhóm các bạn học sinh đang đi tham quan ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "một bộ xương cá voi",
+                "question": "phía trên của các bạn học sinh đang đi tham quan trưng bày hiện vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "ở bảo tàng Quảng Ninh",
+                "question": "bộ xương cá voi đang được trưng bày ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "một bức tượng",
+                "question": "đằng sau lưng nhóm học sinh đang đứng là hiện vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "trưng bày một bộ xương cá voi",
+                "question": "trên nóc của bảo tàng trưng bày hiện vật gì?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000682.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "29HC00198",
+                "question": "chiếc xe đi đầu có biển số bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "hai chiếc",
+                "question": "có bao nhiêu chiếc xe chở khách du lịch đang nối đuôi nhau đi trên đường?",
+                "type": 1
+            },
+            {
+                "answer": "Hà Nội",
+                "question": "những chiếc xe này đang đi trên đường phố ở đâu?",
+                "type": 0
+            },
+            {
+                "answer": "Hà Nội",
+                "question": "những khách du lịch trên chiếc xe này đang đi tham quan ở đâu?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000683.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "sữa chữa và bảo hànht",
+                "question": "cửa hàng Hoàng Giao chuyên kinh doanh dịch vụ gì?",
+                "type": 0
+            },
+            {
+                "answer": "Tây Ninh",
+                "question": "cửa hàng Hoàng Giao nằm ở tỉnh nào?",
+                "type": 0
+            },
+            {
+                "answer": "một người",
+                "question": "có bao nhiêu người đến cửa hàng?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000684.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "áo dài màu cam",
+                "question": "nhân viên tính tiền mặc đồng phục như thế nào?",
+                "type": 1
+            },
+            {
+                "answer": "gấu bông",
+                "question": "quầy hàng trực diện bán những mặt hàng nào?",
+                "type": 1
+            },
+            {
+                "answer": "hai nhân viên",
+                "question": "có bao nhiêu nhân viên tính tiền đang đứng ở quầy thu ngân?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000685.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000686.png",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "trong siêu thị",
+                "question": "bạn nam mặc áo đen đi với bạn nữ mặc áo đen đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "quầy bán trái cây",
+                "question": "bạn nam mặc áo đen đi với bạn nữ mặc áo đen đang đứng ở đâu?",
+                "type": 1
+            },
+            {
+                "answer": "khu vực bán trái cây",
+                "question": "bạn nam mặc áo đen đi với bạn nữ mặc áo đen đang đứng ở khu vực nào?",
+                "type": 1
+            },
+            {
+                "answer": "hai người",
+                "question": "có bao nhiêu người đang đến lựa trái cây?",
+                "type": 1
+            },
+            {
+                "answer": "một người",
+                "question": "bạn nam mặc áo đen đi siêu thị với bao nhiêu người?",
+                "type": 1
+            },
+            {
+                "answer": "bạn nam mặc áo đen",
+                "question": "bạn nữ mặc áo đen đi siêu thị với ai?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000687.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "ngày 24/8",
+                "question": "tiệm spa được khánh thành vào ngày nào?",
+                "type": 0
+            },
+            {
+                "answer": "thành phố Hồ Chí Minh",
+                "question": "tiệm spa nằm ở thành phố nào?",
+                "type": 0
+            },
+            {
+                "answer": "quận Tân Phú",
+                "question": "tiệm spa nằm ở quận nào?",
+                "type": 0
+            },
+            {
+                "answer": "đường Tân Hương",
+                "question": "tiệm spa nằm trên đường nào?",
+                "type": 0
+            },
+            {
+                "answer": "giảm 50% tất cả các dịch vụ cùng nhiều quà tặng",
+                "question": "nhân dịp khai trương tiệm spa ưu đãi ra sao?",
+                "type": 0
+            },
+            {
+                "answer": "218",
+                "question": "tiệm spa có số nhà bao nhiêu?",
+                "type": 0
+            },
+            {
+                "answer": "từ ngày 24/8 đến ngày 5/9/2018",
+                "question": "chương trình ưu đãi nhân dịp khai trương diễn ra trong thời gian nào?",
+                "type": 0
+            },
+            {
+                "answer": "2018",
+                "question": "tiệm spa được khai trương vào năm nào?",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000688.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": false,
+        "filename": "00000000689.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            },
+            {
+                "answer": "",
+                "question": "",
+                "type": 0
+            }
+        ],
+        "delete": true,
+        "filename": "00000000690.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "treo những cái lồng đèn",
+                "question": "phía trên những con phố treo những vật gì?",
+                "type": 1
+            },
+            {
+                "answer": "có một chiếc ô tô đang di chuyển",
+                "question": "có bao nhiêu chiếc xe ô tô đang di chuyển trên đường?",
+                "type": 1
+            },
+            {
+                "answer": "ở trên một con đường đông người đi bộ",
+                "question": "chiếc xe ô tô đang di chuyển ở đâu?",
+                "type": 1
+            }
+        ],
+        "delete": false,
+        "filename": "00000000691.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "answer": "một",
+                "question": "có bao nhiêu cô gái đang dắt xe đạp đi trên đường?",
+                "type": 1
+            },
+            {
+                "answer": "xe đạp",
+                "question": "cô gái mặc đầm trắng đi xuống phố bằng phương tiện gì?",
+                "type": 1
+            },
+            {
+                "answer": "dắt xe đạp đi dạo phố",
+                "question": "cô gái mặc đầm trắng đang làm gì?",
+                "type": 2
+            }
+        ],
+        "delete": false,
+        "filename": "00000000692.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "tiệm bán đèn trang trí",
+                "answer-type": 0,
+                "question": "những người này đang đứng ở đâu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang lựa hàng",
+                "answer-type": 0,
+                "question": "người phụ nữ đội nón bảo hiểm đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "ba người",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đến xem ở tiệm bán đèn trang trí?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000000693.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang lựa trái cây",
+                "answer-type": 0,
+                "question": "người phụ nữ cầm túi nhựa đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "hai người",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng lựa trái cây ở chung quầy hàng với người phụ nữ đang cầm túi nhựa?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang lựa trái cây ",
+                "answer-type": 0,
+                "question": "người đàn ông mặc áo khoác đen đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "ba người",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng lựa ở quầy trái cây?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000000694.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": true,
+        "filename": "00000000695.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": true,
+        "filename": "00000000696.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": true,
+        "filename": "00000000697.png",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000000698.jpg",
+        "filepath": "subset_7"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "ở trong một công viên giải trí",
+                "answer-type": 1,
+                "question": "bốn người này đi đứng ở đâu?",
+                "question-type": 2,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "trong một khu công viên giải trí",
+                "answer-type": 0,
+                "question": "bốn bạn trẻ này đang đi chơi ở đâu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bạn nữ mặc áo xanh lá cây đi với ba người",
+                "answer-type": 0,
+                "question": "bạn nữ mặc áo xanh lá cây đi với bao nhiêu người?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bạn nam mặc áo xanh dương đi với ba người",
+                "answer-type": 0,
+                "question": "bạn nam mặc áo xanh dương đi với bao nhiêu người?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "thứ hai từ trái đếm qua",
+                "answer-type": 0,
+                "question": "bạn nữ mặc áo xanh lá cây đứng ở vị trí thứ mấy từ trái đếm qua?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "thứ ba từ phải đếm qua",
+                "answer-type": 0,
+                "question": "bạn nữ mặc áo xanh lá cây đứng ở vị trí thứ mấy từ phải đếm qua?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "kế bên bạn nữ mặc áo xanh lá cây ở bên trái và bạn nữ mặc áo trắng ở phía bên phải",
+                "answer-type": 0,
+                "question": "bạn nam mặc áo xanh dương đứng kế bên ai?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "kế bên bạn nam mặc áo trắng ở phía bên trái và bạn nam mặc áo xanh dương ở phía bên phải",
+                "answer-type": 0,
+                "question": "bạn nữ mặc áo xanh lá cây đứng kế bên ai?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000000699.jpg",
+        "filepath": "subset_7"
+    }
+]
