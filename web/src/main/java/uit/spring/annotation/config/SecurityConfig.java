@@ -84,6 +84,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .hasAnyAuthority(ADMIN_WRITE.getPermission())
                     .antMatchers(HttpMethod.DELETE, SUBSETS_API + ASSIGNMENT + DELETE + "/*")
                         .hasAnyAuthority(ADMIN_WRITE.getPermission())
+                    // authorizing for image apis
+                .antMatchers(HttpMethod.GET, IMAGES_API + GET + IMAGE + "/*")
+                    .hasAnyAuthority(ADMIN_READ.getPermission(), ANNOTATOR_READ.getPermission())
+                .antMatchers(HttpMethod.GET, IMAGES_API + GET + SUBSET + "/*")
+                    .hasAnyAuthority(ADMIN_READ.getPermission(), ANNOTATOR_READ.getPermission())
+                    // authorizing for annotation apis
+                .antMatchers(HttpMethod.GET, ANNOTATIONS_API + GET + IMAGE + "/*")
+                    .hasAnyAuthority(ADMIN_READ.getPermission(), ANNOTATOR_READ.getPermission())
+                .antMatchers(HttpMethod.GET, ANNOTATIONS_API + ANNOTATION + GET + "/*")
+                    .hasAnyAuthority(ADMIN_READ.getPermission(), ANNOTATOR_READ.getPermission())
+                .antMatchers(HttpMethod.POST, ANNOTATIONS_API + ADD + "/*")
+                    .hasAnyAuthority(ADMIN_WRITE.getPermission(), ANNOTATOR_WRITE.getPermission())
+                .antMatchers(HttpMethod.POST, ANNOTATIONS_API + UPDATE + "/*")
+                    .hasAnyAuthority(ADMIN_WRITE.getPermission(), ANNOTATOR_WRITE.getPermission())
+                .antMatchers(HttpMethod.DELETE, ANNOTATIONS_API + DELETE + "/*")
+                    .hasAnyAuthority(ADMIN_WRITE.getPermission(), ANNOTATOR_WRITE.getPermission())
 
                 .anyRequest()
                     .authenticated()
