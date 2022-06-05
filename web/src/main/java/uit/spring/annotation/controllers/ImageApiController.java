@@ -2,6 +2,7 @@ package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,6 +46,7 @@ public class ImageApiController {
             return ResponseEntity.badRequest().body(message);
         }
         Image image = optionalImage.get();
+        ImageInterface imageInterface = new ImageInterface(image);
 
         if (image.getUrl() == null) {
             HttpHeaders headers = new HttpHeaders();
@@ -55,12 +57,12 @@ public class ImageApiController {
                 log.info(String.format("Loading image %s", imageId));
                 byte[] media = IOUtils.toByteArray(in);
                 String encodedImage = Base64.getEncoder().encodeToString(media);
+                imageInterface.setImage(encodedImage);
 
                 log.info(String.format("Loaded image %s successfully", imageId));
                 return ResponseEntity
                         .ok()
-                        .contentType(MediaType.TEXT_PLAIN)
-                        .body(encodedImage);
+                        .body(imageInterface);
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
@@ -69,7 +71,7 @@ public class ImageApiController {
         }
 
         log.info(String.format("Loaded image %s successfully", imageId));
-        return ResponseEntity.ok().body(new ImageInterface(image));
+        return ResponseEntity.ok().body(imageInterface);
     }
 
     @GetMapping(GET + SUBSET + "/{subsetId}")

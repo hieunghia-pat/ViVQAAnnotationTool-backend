@@ -21,6 +21,7 @@ public class ImageInterface {
     private Long subsetId;
     private boolean toDelete;
     private List<UUID> annotationIds = new ArrayList<>();
+    private String image = "";
 
     public ImageInterface() {
     }
