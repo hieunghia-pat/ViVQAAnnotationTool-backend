@@ -50,14 +50,16 @@ public class ImageApiController {
 
         if (image.getUrl() == null) {
             HttpHeaders headers = new HttpHeaders();
-            String imageFile = String.format("/WEB-INF/images/subsets/subset_%o/%s", image.getSubset().getId(), image.getFilename());
-            log.info(imageFile);
+            String imageFile = String.format("WEB-INF/images/subsets/subset_%s/%s", image.getSubset().getId(), image.getFilename());
             InputStream in = this.getClass().getClassLoader().getResourceAsStream(imageFile);
             try {
                 assert in != null;
+                log.info(String.format("Loading image %s", imageId));
                 byte[] media = IOUtils.toByteArray(in);
                 headers.setCacheControl(CacheControl.noCache().getHeaderValue());
                 ResponseEntity<Object> responseEntity = new ResponseEntity<>(media, headers, HttpStatus.OK);
+
+                log.info(String.format("Loaded image %s successfully", imageId));
                 return responseEntity;
             }
             catch (IOException exception) {
@@ -66,6 +68,7 @@ public class ImageApiController {
             }
         }
 
+        log.info(String.format("Loaded image %s successfully", imageId));
         return ResponseEntity.ok().body(new ImageInterface(image));
     }
 
@@ -73,7 +76,7 @@ public class ImageApiController {
     public ResponseEntity<Object> getImageInterfaces(@PathVariable("subsetId") Long subsetId) {
         Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
         if (optionalSubset.isEmpty()) {
-            String message = String.format("Cannot find subset %o", subsetId);
+            String message = String.format("Cannot find subset %s", subsetId);
             log.info(message);
             return ResponseEntity.badRequest().body(message);
         }
