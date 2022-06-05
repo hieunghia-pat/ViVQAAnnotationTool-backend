@@ -130,7 +130,7 @@ public class SubsetApiController {
                 .body(String.format("Added successfully assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
     }
 
-    @PostMapping(ASSIGNMENT + UPDATE + "/{assignmentId}")
+    @PutMapping(ASSIGNMENT + UPDATE + "/{assignmentId}")
     public ResponseEntity<Object> updateUserSubset(@PathVariable("assignmentId") UUID assignmentId, @RequestBody UserSubsetInterface userSubsetInterface) {
         Optional<User> optionalAnnotator = userRepository.findById(userSubsetInterface.getUserId());
         if (optionalAnnotator.isEmpty())

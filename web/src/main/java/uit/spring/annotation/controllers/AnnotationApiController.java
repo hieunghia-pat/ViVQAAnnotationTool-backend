@@ -94,7 +94,7 @@ public class AnnotationApiController {
         return ResponseEntity.ok().body(String.format("Saved successfully new annotation for image %s", imageId));
     }
 
-    @PostMapping(UPDATE + "{annotationId}")
+    @PutMapping(UPDATE + "{annotationId}")
     public ResponseEntity<Object> updateAnnotation(@PathVariable("annotationId") UUID annotationId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
