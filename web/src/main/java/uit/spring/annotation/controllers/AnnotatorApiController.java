@@ -120,13 +120,14 @@ public class AnnotatorApiController {
             log.info(exception.getMessage());
 
             return ResponseEntity
-                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(String.format("%s. Failed to update new annotator", exception.getMessage()));
+                    .internalServerError()
+                    .body(String.format("Failed to update annotator %s", annotatorName));
         }
 
+        log.info(String.format("Updated annotator %s successfully", annotatorName));
         return ResponseEntity
                 .ok()
-                .body(String.format("Updated admin %s successfully", annotatorName));
+                .body(String.format("Updated annotator %s successfully", annotatorName));
     }
 
     @DeleteMapping(path = DELETE + "/{annotatorName}")
