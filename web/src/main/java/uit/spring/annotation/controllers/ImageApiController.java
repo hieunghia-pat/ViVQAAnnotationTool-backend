@@ -50,7 +50,7 @@ public class ImageApiController {
 
         if (image.getUrl() == null) {
             HttpHeaders headers = new HttpHeaders();
-            String imageFile = String.format("WEB-INF/images/subsets/subset_%o/%s", image.getSubset().getId(), image.getFilename());
+            String imageFile = String.format("/WEB-INF/images/subsets/subset_%o/%s", image.getSubset().getId(), image.getFilename());
             log.info(imageFile);
             InputStream in = this.getClass().getClassLoader().getResourceAsStream(imageFile);
             try {
