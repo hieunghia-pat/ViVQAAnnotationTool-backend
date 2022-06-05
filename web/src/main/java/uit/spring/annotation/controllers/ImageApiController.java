@@ -3,10 +3,7 @@ package uit.spring.annotation.controllers;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.CacheControl;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,11 +53,12 @@ public class ImageApiController {
                 assert in != null;
                 log.info(String.format("Loading image %s", imageId));
                 byte[] media = IOUtils.toByteArray(in);
-                headers.setCacheControl(CacheControl.noCache().getHeaderValue());
-                ResponseEntity<Object> responseEntity = new ResponseEntity<>(media, headers, HttpStatus.OK);
 
                 log.info(String.format("Loaded image %s successfully", imageId));
-                return responseEntity;
+                return ResponseEntity
+                        .ok()
+                        .contentType(MediaType.IMAGE_JPEG)
+                        .body(media);
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
