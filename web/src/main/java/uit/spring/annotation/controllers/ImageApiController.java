@@ -19,6 +19,7 @@ import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,12 +54,13 @@ public class ImageApiController {
                 assert in != null;
                 log.info(String.format("Loading image %s", imageId));
                 byte[] media = IOUtils.toByteArray(in);
+                String encodedImage = Base64.getEncoder().encodeToString(media);
 
                 log.info(String.format("Loaded image %s successfully", imageId));
                 return ResponseEntity
                         .ok()
-                        .contentType(MediaType.IMAGE_JPEG)
-                        .body(media);
+                        .contentType(MediaType.TEXT_PLAIN)
+                        .body(encodedImage);
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
