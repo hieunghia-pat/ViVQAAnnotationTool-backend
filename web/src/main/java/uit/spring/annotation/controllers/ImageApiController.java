@@ -2,7 +2,6 @@ package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,17 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.Subset;
 import uit.spring.annotation.interfaces.ImageInterface;
-import uit.spring.annotation.interfaces.SubsetInterface;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static uit.spring.annotation.utils.Mappings.*;
 
@@ -46,10 +41,8 @@ public class ImageApiController {
             return ResponseEntity.badRequest().body(message);
         }
         Image image = optionalImage.get();
-        ImageInterface imageInterface = new ImageInterface(image);
 
         if (image.getUrl() == null) {
-            HttpHeaders headers = new HttpHeaders();
             String imageFile = String.format("WEB-INF/images/subsets/subset_%s/%s", image.getSubset().getId(), image.getFilename());
             InputStream in = this.getClass().getClassLoader().getResourceAsStream(imageFile);
             try {
@@ -57,12 +50,13 @@ public class ImageApiController {
                 log.info(String.format("Loading image %s", imageId));
                 byte[] media = IOUtils.toByteArray(in);
                 String encodedImage = Base64.getEncoder().encodeToString(media);
-                imageInterface.setImage(encodedImage);
+                Map<String, String> encodedImageObject = new HashMap<>();
+                encodedImageObject.put("image", encodedImage);
 
                 log.info(String.format("Loaded image %s successfully", imageId));
                 return ResponseEntity
                         .ok()
-                        .body(imageInterface);
+                        .body(encodedImageObject);
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
@@ -71,7 +65,7 @@ public class ImageApiController {
         }
 
         log.info(String.format("Loaded image %s successfully", imageId));
-        return ResponseEntity.ok().body(imageInterface);
+        return ResponseEntity.ok().body(new ImageInterface(image));
     }
 
     @GetMapping(GET + SUBSET + "/{subsetId}")
