@@ -21,6 +21,8 @@ import uit.spring.annotation.repositories.SubsetRepository;
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static uit.spring.annotation.utils.Mappings.*;
@@ -60,7 +62,7 @@ public class ImageApiController {
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
-                return ResponseEntity.internalServerError().body(String.format("Error occurred while loading image", imageId));
+                return ResponseEntity.internalServerError().body(String.format("Error occurred while loading image %s", imageId));
             }
         }
 
@@ -76,7 +78,11 @@ public class ImageApiController {
             return ResponseEntity.badRequest().body(message);
         }
         Subset subset = optionalSubset.get();
+        List<ImageInterface> imageInterfaces = new ArrayList<>();
+        for (Image image: subset.getImages()) {
+            imageInterfaces.add(new ImageInterface(image));
+        }
 
-        return ResponseEntity.ok().body(new SubsetInterface(subset));
+        return ResponseEntity.ok().body(imageInterfaces);
     }
 }
