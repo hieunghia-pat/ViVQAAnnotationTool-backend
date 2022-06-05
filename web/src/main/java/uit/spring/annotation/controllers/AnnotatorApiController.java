@@ -109,6 +109,7 @@ public class AnnotatorApiController {
             userRepository.save(annotator);
         }
         catch (RuntimeException exception) {
+            log.info(exception.getMessage());
             if (!(userRepository.existsById(currentAnnotator.getId()))) {
                 userRepository.save(currentAnnotator); // rollback transaction
             }
