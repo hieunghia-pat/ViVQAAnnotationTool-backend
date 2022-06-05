@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="all update handlers must be put method" />
+    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added logging to update annotator api">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotationApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotationApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/AnnotationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/AnnotationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserSubsetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserSubsetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,13 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649206629064</updated>
-    </task>
-    <task id="LOCAL-00043" summary="added default constructors and property-based constructors to all interfaces">
-      <created>1653893520439</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1653893520439</updated>
     </task>
     <task id="LOCAL-00044" summary="added debugging code in SubsetApiController">
       <created>1653893991690</created>
@@ -459,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654394286024</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="added logging to update annotator api">
+      <created>1654394716870</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1654394716870</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -480,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refined the ID for UserSubset entity and UserSubsetRepository" />
     <MESSAGE value="turned back to composite ID for UserSubset entity" />
     <MESSAGE value="UserSubset entity must implement Serializable" />
     <MESSAGE value="added @Component for interfaces" />
@@ -505,6 +512,7 @@
     <MESSAGE value="added authorization for image apis and annotation apis" />
     <MESSAGE value="added delete api for annotator api" />
     <MESSAGE value="all update handlers must be put method" />
-    <option name="LAST_COMMIT_MESSAGE" value="all update handlers must be put method" />
+    <MESSAGE value="added logging to update annotator api" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logging to update annotator api" />
   </component>
 </project>

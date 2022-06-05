@@ -102,17 +102,22 @@ public class AnnotatorApiController {
     }
 
     @PutMapping(path = UPDATE + "/{annotatorName}")
-    public ResponseEntity<Object> updateAnnotator(@PathVariable("annotatorName") String annotatorName, @RequestBody User annotator) {
-        User currentAnnotator = userRepository.findByUsername(annotatorName).get();
+    public ResponseEntity<Object> updateAnnotator(@PathVariable("annotatorName") String annotatorName, @RequestBody UserInterface annotatorInterface) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", annotatorName);
+            log.info(message);
+            return ResponseEntity.badRequest().body(message);
+        }
+
         try {
-            userRepository.delete(currentAnnotator);
-            userRepository.save(annotator);
+            log.info(String.format("Updating annotator %s", annotatorName));
+            log.info(annotatorInterface.toString());
+            userRepository.updateById(annotatorInterface.getId(), annotatorInterface.getUsername(),
+                    annotatorInterface.getFirstname(), annotatorInterface.getLastname());
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-            if (!(userRepository.existsById(currentAnnotator.getId()))) {
-                userRepository.save(currentAnnotator); // rollback transaction
-            }
 
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -124,7 +129,7 @@ public class AnnotatorApiController {
                 .body(String.format("Updated admin %s successfully", annotatorName));
     }
 
-    @DeleteMapping(path = DELETE + "{annotatorName}")
+    @DeleteMapping(path = DELETE + "/{annotatorName}")
     public ResponseEntity<Object> deleteAnnotator(@PathVariable("annotatorName") String annotatorName) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
         if (optionalAnnotator.isEmpty()) {

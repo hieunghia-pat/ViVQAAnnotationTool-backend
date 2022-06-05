@@ -156,27 +156,20 @@ public class SubsetApiController {
                     .body(String.format("Cannot find any assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
         }
 
-        UserSubset newUserSubset = new UserSubset(
-                annotator,
-                subset,
-                userSubsetInterface.getAssignedDate(),
-                userSubsetInterface.getFinishDate(),
-                userSubsetInterface.isValidation()
-        );
-
-        UserSubset oldUserSubset = optionalUserSubset.get();
         try {
             log.info(String.format("Updating assignment for annotator %s with subset %o",
                     annotator.getUsername(), userSubsetInterface.getSubsetId()));
-            userSubsetRepository.delete(oldUserSubset);
-            userSubsetRepository.save(newUserSubset);
+            userSubsetRepository.updateById(
+                    assignmentId,
+                    annotator.getId(),
+                    subset.getId(),
+                    userSubsetInterface.getAssignedDate(),
+                    userSubsetInterface.getFinishDate(),
+                    userSubsetInterface.isValidation()
+            );
         }
         catch(RuntimeException exception) {
             log.info(exception.getMessage());
-            if (!userSubsetRepository.findAll().contains(oldUserSubset)) { // rollback transaction
-                userSubsetRepository.save(oldUserSubset);
-            }
-
             return ResponseEntity.internalServerError().body(String.format("Cannot update assignment for annotator %s with subset %o",
                     annotator.getUsername(), userSubsetInterface.getSubsetId()));
         }

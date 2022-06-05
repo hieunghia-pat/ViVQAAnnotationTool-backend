@@ -101,29 +101,23 @@ public class AnnotationApiController {
             log.info(String.format("Cannot find annotation %s", annotationId));
             return ResponseEntity.badRequest().body(String.format("Cannot find annotation %s", annotationId));
         }
-        Annotation oldAnnotation = optionalAnnotation.get();
-
-        Annotation newAnnotation = new Annotation(
-                annotationInterface.getQuestion(),
-                annotationInterface.getAnswer(),
-                annotationInterface.getQuestionType(),
-                annotationInterface.getAnswerType(),
-                annotationInterface.isTextQA(),
-                annotationInterface.isStateQA(),
-                annotationInterface.isActionQA(),
-                oldAnnotation.getImage()
-        );
-        newAnnotation.setId(oldAnnotation.getId());
 
         try {
-            annotationRepository.delete(oldAnnotation);
-            annotationRepository.save(newAnnotation);
+            log.info(String.format("Updating annotation %s", annotationId));
+            annotationRepository.updateById(
+                    annotationInterface.getId(),
+                    annotationInterface.getQuestion(),
+                    annotationInterface.getAnswer(),
+                    annotationInterface.getQuestionType(),
+                    annotationInterface.getAnswerType(),
+                    annotationInterface.isTextQA(),
+                    annotationInterface.isStateQA(),
+                    annotationInterface.isActionQA(),
+                    annotationInterface.getImageId()
+            );
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-             if (!annotationRepository.existsById(oldAnnotation.getId())) { // rollback transaction
-                 annotationRepository.save(oldAnnotation);
-             }
 
              return ResponseEntity.internalServerError().body(String.format("Failed to update for annotation %s", annotationId));
         }
