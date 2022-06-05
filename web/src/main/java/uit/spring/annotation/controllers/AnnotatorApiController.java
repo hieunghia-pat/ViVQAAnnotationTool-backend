@@ -122,4 +122,42 @@ public class AnnotatorApiController {
                 .ok()
                 .body(String.format("Updated admin %s successfully", annotatorName));
     }
+
+    @DeleteMapping(path = DELETE + "{annotatorName}")
+    public ResponseEntity<Object> deleteAnnotator(@PathVariable("annotatorName") String annotatorName) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", annotatorName);
+            log.info(message);
+            return ResponseEntity.badRequest().body(message);
+        }
+        User annotator = optionalAnnotator.get();
+
+        // delete all assignments belong to this annotator
+        List<UserSubset> assignments = userSubsetRepository.findByUserId(annotator.getId());
+        for (UserSubset assignment: assignments) {
+            try {
+                userSubsetRepository.delete(assignment);
+            }
+            catch(RuntimeException deleteException) {
+                log.info(deleteException.getMessage());
+                return ResponseEntity.internalServerError().body(String.format("Failed to delete assignment %s", assignment.getId()));
+            }
+        }
+
+        // then delete the annotator
+        try {
+            userRepository.delete(annotator);
+        }
+        catch(RuntimeException deleteException) {
+            log.info(deleteException.getMessage());
+            for (UserSubset assignment: assignments) { // rollback transaction when failed to delete this annotator
+                userSubsetRepository.save(assignment);
+            }
+
+            return ResponseEntity.internalServerError().body(String.format("Failed to delete annotator %s", annotatorName));
+        }
+
+        return ResponseEntity.ok().body(String.format("Deleted annotator %s successfully", annotatorName));
+    }
 }

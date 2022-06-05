@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .hasAuthority(ADMIN_WRITE.getPermission())
                     .antMatchers(HttpMethod.GET, ADMIN_GET_SUBSET_API + "/*")
                         .hasAuthority(ADMIN_READ.getPermission())
-                    .antMatchers(HttpMethod.POST, ADMIN_UPDATE_SUBSET_API + "/*")
+                    .antMatchers(HttpMethod.PUT, ADMIN_UPDATE_SUBSET_API + "/*")
                         .hasAuthority(ADMIN_WRITE.getPermission())
                     // authorizing for annotator apis
                     .antMatchers(HttpMethod.GET, ANNOTATOR_GET_API)

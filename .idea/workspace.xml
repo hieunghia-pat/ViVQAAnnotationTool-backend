@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="fixed some bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added authorization for image apis and annotation apis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/SubsetApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/SubsetApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,13 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649206629064</updated>
-    </task>
-    <task id="LOCAL-00040" summary="added composite primary key for UserSubset entity, added apis for handling assignment">
-      <created>1653882524638</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1653882524638</updated>
     </task>
     <task id="LOCAL-00041" summary="defined new links for assignment apis">
       <created>1653882755050</created>
@@ -463,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654245336625</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="added authorization for image apis and annotation apis">
+      <created>1654272042274</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1654272042274</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -484,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed relationship between user-subset table and user, subset tables" />
     <MESSAGE value="modified the getUsers in SubsetInterface constructor" />
     <MESSAGE value="added ID for UserSubset entity" />
     <MESSAGE value="refined the ID for UserSubset entity and UserSubsetRepository" />
@@ -509,6 +510,7 @@
     <MESSAGE value="refined update assignment apis" />
     <MESSAGE value="added add, update and delete apis for annotation" />
     <MESSAGE value="fixed some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some bugs" />
+    <MESSAGE value="added authorization for image apis and annotation apis" />
+    <option name="LAST_COMMIT_MESSAGE" value="added authorization for image apis and annotation apis" />
   </component>
 </project>

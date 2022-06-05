@@ -65,7 +65,7 @@ public class SubsetApiController {
         List<UserSubsetInterface> userSubsetInterfaces = new ArrayList<>();
         for (Subset subset: subsets) {
             Optional<UserSubset> optionalUserSubset = userSubsetRepository.findByUserIdAndSubsetId(annotator.getId(), subset.getId());
-            if (optionalUserSubset.isPresent()) { //this subset was assigned to this user
+            if (optionalUserSubset.isPresent()) { // this subset was assigned to this user
                 UserSubset userSubset = optionalUserSubset.get();
                 UserSubsetInterface newUserSubsetInterface = new UserSubsetInterface(userSubset);
                 newUserSubsetInterface.setAssigned(true);
