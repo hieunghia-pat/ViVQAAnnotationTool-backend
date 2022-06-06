@@ -14,6 +14,7 @@ public class AnnotationInterface {
 
     private UUID id;
     private Long imageId;
+    private UUID userId;
     private String question;
     private String answer;
     private Integer questionType;
@@ -25,7 +26,8 @@ public class AnnotationInterface {
     public AnnotationInterface() {
     }
 
-    public AnnotationInterface(UUID id, Long imageId, String question, String answer, Integer questionType, Integer answerType, boolean textQA, boolean stateQA, boolean actionQA) {
+    public AnnotationInterface(UUID id, Long imageId, UUID userId, String question, String answer,
+                               Integer questionType, Integer answerType, boolean textQA, boolean stateQA, boolean actionQA) {
         this.id = id;
         this.imageId = imageId;
         this.question = question;
@@ -40,6 +42,7 @@ public class AnnotationInterface {
     public AnnotationInterface(Annotation annotation) {
         this.id = annotation.getId();
         this.imageId = annotation.getImage().getId();
+        this.userId = annotation.getAnnotator().getId();
         this.question = annotation.getQuestion();
         this.answer = annotation.getAnswer();
         this.questionType = annotation.getQuestionType();

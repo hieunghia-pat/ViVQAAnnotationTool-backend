@@ -6,9 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
+import uit.spring.annotation.databases.User;
 import uit.spring.annotation.interfaces.AnnotationInterface;
 import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.ImageRepository;
+import uit.spring.annotation.repositories.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,8 @@ public class AnnotationApiController {
     private ImageRepository imageRepository;
     @Autowired
     private AnnotationRepository annotationRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping(GET + IMAGE + "/{imageId}")
     public ResponseEntity<Object> getAnnotations(@PathVariable("imageId") Long imageId) {
@@ -70,6 +74,14 @@ public class AnnotationApiController {
         }
         Image image = optionalImage.get();
 
+        Optional<User> optionalAnnotator = userRepository.findById(annotationInterface.getUserId());
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator with ID %s", annotationInterface.getUserId());
+            log.info(message);
+            return ResponseEntity.ok().body(message);
+        }
+        User annotator = optionalAnnotator.get();
+
         Annotation annotation = new Annotation(
                 annotationInterface.getQuestion(),
                 annotationInterface.getAnswer(),
@@ -78,7 +90,8 @@ public class AnnotationApiController {
                 annotationInterface.isTextQA(),
                 annotationInterface.isStateQA(),
                 annotationInterface.isActionQA(),
-                image
+                image,
+                annotator
         );
 
         try {
@@ -113,12 +126,12 @@ public class AnnotationApiController {
                     annotationInterface.isTextQA(),
                     annotationInterface.isStateQA(),
                     annotationInterface.isActionQA(),
-                    annotationInterface.getImageId()
+                    annotationInterface.getImageId(),
+                    annotationInterface.getUserId()
             );
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-
              return ResponseEntity.internalServerError().body(String.format("Failed to update for annotation %s", annotationId));
         }
 

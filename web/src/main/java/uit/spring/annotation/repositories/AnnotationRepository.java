@@ -17,12 +17,12 @@ public interface AnnotationRepository extends JpaRepository<Annotation, UUID> {
     @Modifying
     @Transactional
     @Query(
-            value = "UPDATE annotation SET question=?2, answer=?3, question_type=?4, answer_type=?5, text_qa=?6, state_qa=?7, action_qa=?8, image_id=?9 " +
+            value = "UPDATE annotation SET question=?2, answer=?3, question_type=?4, answer_type=?5, text_qa=?6, state_qa=?7, action_qa=?8, image_id=?9, user_id=?10 " +
                     "WHERE id=?1",
             nativeQuery = true
     )
     void updateById(UUID id, String question, String answer, Integer questionType, Integer answerType,
-                boolean textQA, boolean stateQA, boolean actionQA, Long imageId);
+                boolean textQA, boolean stateQA, boolean actionQA, Long imageId, UUID userId);
 
     @Transactional
     @Modifying

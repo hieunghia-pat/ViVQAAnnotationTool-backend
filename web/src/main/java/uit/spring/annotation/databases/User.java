@@ -8,6 +8,7 @@ import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
+import java.util.Set;
 import java.util.UUID;
 
 import static uit.spring.annotation.security.UserRole.*;
@@ -33,6 +34,8 @@ public class User {
     private String password;
     @Column(name = "role", nullable = false)
     private String role;
+    @OneToMany(mappedBy = "annotator")
+    Set<Annotation> annotations;
 
     public Collection<? extends GrantedAuthority> getGrantedAuthorities() {
 

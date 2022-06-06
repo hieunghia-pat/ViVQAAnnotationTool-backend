@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -31,15 +32,18 @@ public class Annotation {
     @Column(name = "action_QA", nullable = false)
     private boolean actionQA;
     @ManyToOne
-    @JoinColumn(name = "image_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "image_id", nullable = false)
     private Image image;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User annotator;
 
     public Annotation() {
 
     }
 
     public Annotation(String question, String answer, Integer questionType,
-                      Integer answerType, boolean textQA, boolean stateQA, boolean actionQA, Image image) {
+                      Integer answerType, boolean textQA, boolean stateQA, boolean actionQA, Image image, User annotator) {
         this.question = question;
         this.answer = answer;
         this.questionType = questionType;
@@ -48,5 +52,6 @@ public class Annotation {
         this.stateQA = stateQA;
         this.actionQA = actionQA;
         this.image = image;
+        this.annotator = annotator;
     }
 }
