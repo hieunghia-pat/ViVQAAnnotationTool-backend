@@ -10,18 +10,19 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.TokenInterface;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+import static javax.security.auth.callback.ConfirmationCallback.OK;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 import static uit.spring.annotation.utils.Mappings.*;
 import static uit.spring.annotation.utils.SecretKeys.TOKEN_SECRET_KEY;
 
@@ -59,16 +60,19 @@ public class AuthController {
                         .withClaim("authorities", authorities)
                         .sign(algorithm);
 
-                Map<String, String> tokens = new HashMap<String, String>();
-                tokens.put("access_token", accessToken);
-                tokens.put("refresh_token", refreshToken);
-                response.setContentType(APPLICATION_JSON_VALUE);
+                TokenInterface tokens = new TokenInterface(
+                        OK,
+                        accessToken,
+                        refreshToken
+                );
                 new ObjectMapper().writeValue(response.getOutputStream(), tokens);
             }
             catch (Exception exception) {
                 log.error(exception.getMessage());
-                Map<String, String> error = new HashMap<String, String>();
-                error.put("error", exception.getMessage());
+                ErrorInterface error = new ErrorInterface(
+                        UNAUTHORIZED,
+                        exception.getMessage()
+                );
                 new ObjectMapper().writeValue(response.getOutputStream(), error);
             }
         }

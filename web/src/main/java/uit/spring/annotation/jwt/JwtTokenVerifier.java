@@ -10,18 +10,18 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
+import uit.spring.annotation.interfaces.ErrorInterface;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.http.HttpStatus.*;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static uit.spring.annotation.utils.Mappings.*;
 import static uit.spring.annotation.utils.SecretKeys.*;
 
@@ -39,7 +39,6 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
             String authorizationHeader = request.getHeader(AUTHORIZATION);
             if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
                 try {
-
                     String token = authorizationHeader.replace("Bearer ", "");
                     Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET_KEY.getBytes());
                     JWTVerifier verifier = JWT.require(algorithm).build();
@@ -59,9 +58,12 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
                 }
                 catch (Exception exception) {
                     log.error(exception.getMessage());
-                    Map<String, String> error = new HashMap<String, String>();
-                    error.put("error", exception.getMessage());
+                    ErrorInterface error = new ErrorInterface(
+                            INTERNAL_SERVER_ERROR,
+                            exception.getMessage()
+                    );
                     new ObjectMapper().writeValue(response.getOutputStream(), error);
+                    response.setContentType(APPLICATION_JSON_VALUE);
                     response.setStatus(INTERNAL_SERVER_ERROR.value());
                 }
             } else {

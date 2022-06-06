@@ -2,11 +2,12 @@ package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.*;
+import uit.spring.annotation.interfaces.ErrorInterface;
 import uit.spring.annotation.interfaces.ImageInterface;
+import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.interfaces.UserInterface;
 import uit.spring.annotation.repositories.*;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static org.springframework.http.HttpStatus.*;
 import static uit.spring.annotation.security.UserRole.ANNOTATOR;
 import static uit.spring.annotation.utils.Mappings.*;
 
@@ -40,21 +42,36 @@ public class AnnotatorApiController {
         for (User annotator: annotators)
             annotatorInterfaces.add(new UserInterface(annotator));
 
-        return ResponseEntity.ok().body(annotatorInterfaces);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                annotatorInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAnnotator(@PathVariable("annotatorName") String annotatorName) {
-        Optional<User> annotator = userRepository.findByUsername(annotatorName);
-
-        if (annotator.isEmpty())
+        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+        if (optionalAnnotator.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    String.format("Cannot find annotator %s! Make sure this annotator is available", annotatorName)
+            );
             return ResponseEntity
-                    .internalServerError()
-                    .body(String.format("Cannot find annotator %s! Make sure this annotator is available", annotatorName));
+                    .status(NOT_FOUND)
+                    .body(response);
+        }
+        User annotator = optionalAnnotator.get();
 
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                new UserInterface(annotator)
+        );
         return ResponseEntity
-                .ok()
-                .body(new UserInterface(annotator.get()));
+                .status(OK)
+                .body(response);
     }
 
     @GetMapping(GET + IMAGES + "/{annotationName}")
@@ -63,7 +80,11 @@ public class AnnotatorApiController {
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot not find annotator %s", annotationName);
             log.info(message);
-            return ResponseEntity.ok().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
         }
         User annotator = optionalAnnotator.get();
 
@@ -74,7 +95,12 @@ public class AnnotatorApiController {
             if (optionalSubset.isEmpty()) {
                 String message = String.format("Cannot find subset %s", userSubset.getSubset().getId());
                 log.info(message);
-                return ResponseEntity.internalServerError().body(message);
+                log.info(message);
+                ErrorInterface response = new ErrorInterface(
+                        NOT_FOUND,
+                        message
+                );
+                return ResponseEntity.status(NOT_FOUND).body(response);
             }
             Subset subset = optionalSubset.get();
             List<Image> images = subset.getImages();
@@ -82,7 +108,13 @@ public class AnnotatorApiController {
                 imageInterfaces.add(new ImageInterface(image));
         }
 
-        return ResponseEntity.ok().body(imageInterfaces);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                imageInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @PostMapping(ADD)
@@ -91,14 +123,23 @@ public class AnnotatorApiController {
             userRepository.save(annotator);
         }
         catch (RuntimeException exception) {
+            log.info(exception.getMessage());
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("%s. Failed to register new annotator", exception.getMessage())
+            );
             return ResponseEntity
-                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(String.format("%s. Failed to register new annotator", exception.getMessage()));
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                String.format("Registered %s successfully", annotator.getUsername())
+        );
         return ResponseEntity
-                .ok()
-                .body(String.format("Registered %s successfully", annotator.getUsername()));
+                .status(OK)
+                .body(response);
     }
 
     @PutMapping(path = UPDATE + "/{annotatorName}")
@@ -107,27 +148,40 @@ public class AnnotatorApiController {
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot find annotator %s", annotatorName);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
 
         try {
             log.info(String.format("Updating annotator %s", annotatorName));
-            log.info(annotatorInterface.toString());
             userRepository.updateById(annotatorInterface.getId(), annotatorInterface.getUsername(),
                     annotatorInterface.getFirstname(), annotatorInterface.getLastname());
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Failed to update annotator %s", annotatorName)
+            );
             return ResponseEntity
-                    .internalServerError()
-                    .body(String.format("Failed to update annotator %s", annotatorName));
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Updated annotator %s successfully", annotatorName));
+        String message = String.format("Updated annotator %s successfully", annotatorName);
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                String.format("Updated annotator %s successfully", annotatorName)
+        );
         return ResponseEntity
-                .ok()
-                .body(String.format("Updated annotator %s successfully", annotatorName));
+                .status(OK)
+                .body(response);
     }
 
     @DeleteMapping(path = DELETE + "/{annotatorName}")
@@ -136,7 +190,13 @@ public class AnnotatorApiController {
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot find annotator %s", annotatorName);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         User annotator = optionalAnnotator.get();
 
@@ -148,7 +208,13 @@ public class AnnotatorApiController {
             }
             catch(RuntimeException deleteException) {
                 log.info(deleteException.getMessage());
-                return ResponseEntity.internalServerError().body(String.format("Failed to delete assignment %s", assignment.getId()));
+                ErrorInterface response = new ErrorInterface(
+                        INTERNAL_SERVER_ERROR,
+                        String.format("Failed to delete assignment %s", assignment.getId())
+                );
+                return ResponseEntity
+                        .status(INTERNAL_SERVER_ERROR)
+                        .body(response);
             }
         }
 
@@ -158,13 +224,19 @@ public class AnnotatorApiController {
         }
         catch(RuntimeException deleteException) {
             log.info(deleteException.getMessage());
-            for (UserSubset assignment: assignments) { // rollback transaction when failed to delete this annotator
-                userSubsetRepository.save(assignment);
-            }
-
-            return ResponseEntity.internalServerError().body(String.format("Failed to delete annotator %s", annotatorName));
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Failed to delete annotator %s", annotatorName)
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        return ResponseEntity.ok().body(String.format("Deleted annotator %s successfully", annotatorName));
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                String.format("Deleted annotator %s successfully", annotatorName)
+        );
+        return ResponseEntity.ok().body(response);
     }
 }

@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.User;
+import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.interfaces.UserInterface;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
@@ -36,21 +38,32 @@ public class AdminApiController {
         for (User admin: admins)
             adminInterfaces.add(new UserInterface(admin));
 
-        return ResponseEntity.ok().body(adminInterfaces);
+        ResponseInterface response = new ResponseInterface();
+        response.setBody(adminInterfaces);
+        response.setStatus(OK.value());
+
+        return ResponseEntity.ok().body(response);
     }
 
     @GetMapping(GET + "/{adminName}")
     public ResponseEntity<Object> getAllAdmins(@PathVariable("adminName") String adminName) {
         Optional<User> admin = userRepository.findByUsername(adminName);
 
-        if (admin.isEmpty())
+        if (admin.isEmpty()) {
+            ErrorInterface response = new ErrorInterface();
+            response.setError(String.format("Cannot find admin with username %s", adminName));
+            response.setStatus(INTERNAL_SERVER_ERROR.value());
             return ResponseEntity
                     .internalServerError()
-                    .body(String.format("Cannot find admin with username %s", adminName));
+                    .body(response);
+        }
 
+        ResponseInterface response = new ResponseInterface();
+        response.setStatus(OK.value());
+        response.setBody(new UserInterface(admin.get()));
         return ResponseEntity
                 .ok()
-                .body(new UserInterface(admin.get()));
+                .body(response);
     }
 
     @PostMapping(ADD)
@@ -59,56 +72,93 @@ public class AdminApiController {
             userRepository.save(admin);
         }
         catch (RuntimeException exception) {
+            ErrorInterface response = new ErrorInterface();
+            response.setStatus(INTERNAL_SERVER_ERROR.value());
+            response.setError(String.format("%s. Failed to register new admin", exception.getMessage()));
             return ResponseEntity
                     .status(INTERNAL_SERVER_ERROR)
-                    .body(String.format("%s. Failed to register new admin", exception.getMessage()));
+                    .body(response);
         }
 
+        ResponseInterface response = new ResponseInterface();
+        response.setStatus(OK.value());
+        response.setBody(String.format("Registered %s successfully", admin.getUsername()));
         return ResponseEntity
                 .ok()
-                .body(String.format("Registered %s successfully", admin.getUsername()));
+                .body(response);
     }
 
     @PutMapping(path = UPDATE + "/{adminName}")
-    public ResponseEntity<Object> updateAdmin(@PathVariable("adminName") String adminName, @RequestBody User admin) {
-        User currentAdmin = userRepository.findByUsername(adminName).get();
+    public ResponseEntity<Object> updateAdmin(@PathVariable("adminName") String adminName, @RequestBody UserInterface adminInterface) {
+        Optional<User> optionalAdmin = userRepository.findByUsername(adminName);
+        if (optionalAdmin.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    String.format("Cannot find admin %s", adminName)
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+
         try {
-            userRepository.delete(currentAdmin);
-            userRepository.save(admin);
+            userRepository.updateById(
+                    adminInterface.getId(),
+                    adminInterface.getUsername(),
+                    adminInterface.getFirstname(),
+                    adminInterface.getLastname(),
+                    adminInterface.getPassword()
+            );
         }
         catch (RuntimeException exception) {
-            if (!(userRepository.existsById(currentAdmin.getId()))) {
-                userRepository.save(currentAdmin); // rollback transaction
-            }
-
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR.value(),
+                    String.format("Failed to update admin %s", adminName)
+            );
             return ResponseEntity
                     .status(INTERNAL_SERVER_ERROR)
-                    .body(String.format("%s. Failed to update new admin", exception.getMessage()));
+                    .body(response);
         }
 
+        ResponseInterface response = new ResponseInterface(
+                OK.value(),
+                String.format("Updated admin %s successfully", adminName)
+        );
         return ResponseEntity
-                .ok().
-                body(String.format("Updated admin %s successfully", adminName));
+                .status(OK)
+                .body(response);
     }
 
     @DeleteMapping(path = DELETE + "/{adminName}")
     public ResponseEntity<Object> deleteAdmin(@PathVariable("adminName") String adminName) {
-        User userToDelete = userRepository.findByUsername(adminName).get();
+        Optional<User> optionalAdmin = userRepository.findByUsername(adminName);
+        if (optionalAdmin.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    String.format("Cannot find admin %s", adminName)
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User admin = optionalAdmin.get();
+
         try {
-            userRepository.delete(userToDelete);
+            userRepository.delete(admin);
         }
         catch (RuntimeException exception) {
-            if (!(userRepository.existsById(userToDelete.getId()))) {
-                userRepository.save(userToDelete); // rollback transaction
-            }
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR.value(),
+                    String.format("%s. Failed to delete admin %s", exception.getMessage(), adminName)
+            );
 
             return ResponseEntity
                     .status(INTERNAL_SERVER_ERROR)
-                    .body(String.format("%s. Failed to delete admin %s", exception.getMessage(), adminName));
+                    .body(response);
         }
 
+        ResponseInterface response = new ResponseInterface(
+                OK.value(),
+                String.format("Deleted admin %s successfully", adminName)
+        );
         return ResponseEntity
-                .ok()
-                .body(String.format("Deleted admin %s successfully", adminName));
+                .status(OK)
+                .body(response);
     }
 }

@@ -2,6 +2,7 @@ package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.Subset;
+import uit.spring.annotation.interfaces.ErrorInterface;
 import uit.spring.annotation.interfaces.ImageInterface;
+import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 
@@ -19,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
+import static org.springframework.http.HttpStatus.*;
 import static uit.spring.annotation.utils.Mappings.*;
 
 @RestController
@@ -38,7 +42,13 @@ public class ImageApiController {
         if (optionalImage.isEmpty()) {
             String message = String.format("Cannot find image %s", imageId);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         Image image = optionalImage.get();
 
@@ -52,20 +62,33 @@ public class ImageApiController {
                 String encodedImage = Base64.getEncoder().encodeToString(media);
                 Map<String, String> encodedImageObject = new HashMap<>();
                 encodedImageObject.put("image", encodedImage);
-
                 log.info(String.format("Loaded image %s successfully", imageId));
+                ResponseInterface response = new ResponseInterface(
+                        OK,
+                        encodedImageObject
+                );
                 return ResponseEntity
-                        .ok()
-                        .body(encodedImageObject);
+                        .status(OK)
+                        .body(response);
             }
             catch (IOException exception) {
                 log.info(exception.getMessage());
-                return ResponseEntity.internalServerError().body(String.format("Error occurred while loading image %s", imageId));
+                ErrorInterface response = new ErrorInterface(
+                        INTERNAL_SERVER_ERROR,
+                        String.format("Error occurred while loading image %s", imageId)
+                );
+                return ResponseEntity
+                        .status(INTERNAL_SERVER_ERROR)
+                        .body(response);
             }
         }
 
         log.info(String.format("Loaded image %s successfully", imageId));
-        return ResponseEntity.ok().body(new ImageInterface(image));
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                new ImageInterface(image)
+        );
+        return ResponseEntity.ok().body(response);
     }
 
     @GetMapping(GET + SUBSET + "/{subsetId}")
@@ -74,7 +97,13 @@ public class ImageApiController {
         if (optionalSubset.isEmpty()) {
             String message = String.format("Cannot find subset %s", subsetId);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         Subset subset = optionalSubset.get();
         List<ImageInterface> imageInterfaces = new ArrayList<>();
@@ -82,6 +111,12 @@ public class ImageApiController {
             imageInterfaces.add(new ImageInterface(image));
         }
 
-        return ResponseEntity.ok().body(imageInterfaces);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                imageInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(imageInterfaces);
     }
 }

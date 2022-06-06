@@ -1,6 +1,7 @@
 package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +9,8 @@ import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.User;
 import uit.spring.annotation.interfaces.AnnotationInterface;
+import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.UserRepository;
@@ -17,6 +20,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import static org.springframework.http.HttpStatus.*;
 import static uit.spring.annotation.utils.Mappings.*;
 
 @RestController
@@ -36,7 +40,11 @@ public class AnnotationApiController {
         if (optionalImage.isEmpty()) {
             String message = String.format("Cannot find image %o", imageId);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
         }
         Image image = optionalImage.get();
 
@@ -47,21 +55,38 @@ public class AnnotationApiController {
             annotationInterfaces.add(new AnnotationInterface(annotation));
         }
 
+        ResponseInterface response = new ResponseInterface(
+                OK.value(),
+                annotationInterfaces
+        );
         return ResponseEntity
-                .ok()
-                .body(annotationInterfaces);
+                .status(OK)
+                .body(response);
     }
 
     @GetMapping(GET + ANNOTATION + "/{annotationId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("annotationId") UUID annotationId) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
-            log.info(String.format("Cannot find annotation %s", annotationId));
-            return ResponseEntity.badRequest().body(String.format("Cannot find annotation %s", annotationId));
+            String message = String.format("Cannot find annotation %s", annotationId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(message);
         }
-        Annotation annotation = optionalAnnotation.get();
 
-        return ResponseEntity.ok().body(new AnnotationInterface(annotation));
+        Annotation annotation = optionalAnnotation.get();
+        ResponseInterface response = new ResponseInterface(
+                OK.value(),
+                new AnnotationInterface(annotation)
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @PostMapping(ADD + "/{imageId}")
@@ -70,7 +95,11 @@ public class AnnotationApiController {
         if (optionalImage.isEmpty()) {
             String message = String.format("Cannot find image %o", imageId);
             log.info(message);
-            return ResponseEntity.badRequest().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
         }
         Image image = optionalImage.get();
 
@@ -78,7 +107,11 @@ public class AnnotationApiController {
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot find annotator with ID %s", annotationInterface.getUserId());
             log.info(message);
-            return ResponseEntity.ok().body(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND.value(),
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
         }
         User annotator = optionalAnnotator.get();
 
@@ -100,7 +133,13 @@ public class AnnotationApiController {
         }
         catch(RuntimeException saveException) {
             log.info(saveException.getMessage());
-            return ResponseEntity.internalServerError().body(String.format("Cannot save annotation for image %s", imageId));
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR.value(),
+                    String.format("Cannot save annotation for image %s", imageId)
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
         log.info(String.format("Saved successfully new annotation for image %s", imageId));
@@ -111,8 +150,15 @@ public class AnnotationApiController {
     public ResponseEntity<Object> updateAnnotation(@PathVariable("annotationId") UUID annotationId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
-            log.info(String.format("Cannot find annotation %s", annotationId));
-            return ResponseEntity.badRequest().body(String.format("Cannot find annotation %s", annotationId));
+            String message = String.format("Cannot find annotation %s", annotationId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(message);
         }
 
         try {
@@ -132,19 +178,39 @@ public class AnnotationApiController {
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-             return ResponseEntity.internalServerError().body(String.format("Failed to update for annotation %s", annotationId));
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Failed to update for annotation %s", annotationId)
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Updated for annotation %s successfully", annotationId));
-        return ResponseEntity.ok().body(String.format("Updated for annotation %s successfully", annotationId));
+        String message = String.format("Updated for annotation %s successfully", annotationId);
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @DeleteMapping(DELETE + "{annotationId}")
     public ResponseEntity<Object> deleteAnnotation(@PathVariable("annotationId") UUID annotationId) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
-            log.info(String.format("Cannot find annotation %s", annotationId));
-            return ResponseEntity.badRequest().body(String.format("Cannot find annotation %s", annotationId));
+            String message = String.format("Cannot find annotation %s", annotationId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         Annotation annotation = optionalAnnotation.get();
 
@@ -154,11 +220,23 @@ public class AnnotationApiController {
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
-
-            return ResponseEntity.internalServerError().body(String.format("Failed to delete for annotation %s", annotationId));
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Failed to delete for annotation %s", annotationId)
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Deleted for annotation %s successfully", annotationId));
-        return ResponseEntity.ok().body(String.format("Deleted for annotation %s successfully", annotationId));
+        String message = String.format("Deleted for annotation %s successfully", annotationId);
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 }

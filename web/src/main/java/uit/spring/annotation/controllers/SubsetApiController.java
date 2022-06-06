@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.Subset;
 import uit.spring.annotation.databases.User;
 import uit.spring.annotation.databases.UserSubset;
+import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.interfaces.SubsetInterface;
 import uit.spring.annotation.interfaces.UserSubsetInterface;
 import uit.spring.annotation.repositories.SubsetRepository;
@@ -15,6 +17,7 @@ import uit.spring.annotation.repositories.UserSubsetRepository;
 
 import java.util.*;
 
+import static org.springframework.http.HttpStatus.*;
 import static uit.spring.annotation.utils.Mappings.*;
 
 @Slf4j
@@ -39,17 +42,36 @@ public class SubsetApiController {
             subsetInterfaces.add(new SubsetInterface(subset));
         }
 
-        return ResponseEntity.ok().body(subsetInterfaces);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                subsetInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @GetMapping(GET + "/subset" + "/{subsetId}")
     public ResponseEntity<Object> getSubset(@PathVariable("subsetId") Long subsetId) {
-        Optional<Subset> subset = subsetRepository.findById(subsetId);
+        Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
+        if (optionalSubset.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    String.format("Cannot found subset %o", subsetId)
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
+        }
+        Subset subset = optionalSubset.get();
 
-        if (subset.isEmpty())
-            return ResponseEntity.badRequest().body(String.format("Cannot found subset %o", subsetId));
-
-        return ResponseEntity.ok().body(new SubsetInterface(subset.get()));
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                new SubsetInterface(subset)
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @GetMapping(GET + "/annotator" + "/{annotatorName}")
@@ -57,7 +79,14 @@ public class SubsetApiController {
         Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
 
         if (optionalAnnotator.isEmpty()) {
-            return ResponseEntity.badRequest().body(String.format("Cannot find annotator %s", annotatorName));
+            String message = String.format("Cannot find annotator %s", annotatorName);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
 
         User annotator = optionalAnnotator.get();
@@ -82,26 +111,42 @@ public class SubsetApiController {
             }
         }
 
-        return ResponseEntity.ok().body(userSubsetInterfaces);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                userSubsetInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @PostMapping(ASSIGNMENT + ADD)
     public ResponseEntity<Object> addAssignment(@RequestBody UserSubsetInterface userSubsetInterface) {
         Optional<User> optionalAnnotator = userRepository.findById(userSubsetInterface.getUserId());
         if (optionalAnnotator.isEmpty()) {
-            log.info(String.format("Cannot found annotator with id %s", userSubsetInterface.getUserId().toString()));
+            String message = String.format("Cannot found annotator with id %s", userSubsetInterface.getUserId().toString()); 
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
             return ResponseEntity
-                    .badRequest()
-                    .body(String.format("Cannot found annotator with id %s", userSubsetInterface.getUserId().toString()));
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         User annotator = optionalAnnotator.get();
 
         Optional<Subset> optionalSubset = subsetRepository.findById(userSubsetInterface.getSubsetId());
         if (optionalSubset.isEmpty()) {
-            log.info(String.format("Cannot found subset with id %s", userSubsetInterface.getSubsetId().toString()));
+            String message = String.format("Cannot found subset with id %s", userSubsetInterface.getSubsetId().toString());
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
             return ResponseEntity
-                    .badRequest()
-                    .body(String.format("Cannot found subset with id %s", userSubsetInterface.getSubsetId().toString()));
+                    .status(OK)
+                    .body(response);
         }
         Subset subset = optionalSubset.get();
 
@@ -119,15 +164,24 @@ public class SubsetApiController {
         }
         catch (RuntimeException saveException) {
             log.info(saveException.getMessage());
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Failed to add assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId())
+            );
             return ResponseEntity
-                    .internalServerError()
-                    .body(String.format("Failed to add assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Added successfully assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
+        String message = String.format("Added successfully assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId());
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
         return ResponseEntity
-                .ok()
-                .body(String.format("Added successfully assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
+                .status(OK)
+                .body(response);
     }
 
     @PutMapping(ASSIGNMENT + UPDATE + "/{assignmentId}")
@@ -135,25 +189,44 @@ public class SubsetApiController {
         Optional<User> optionalAnnotator = userRepository.findById(userSubsetInterface.getUserId());
         if (optionalAnnotator.isEmpty())
         {
-            log.info(String.format("Cannot find annotator with id %s", userSubsetInterface.getUserId()));
-            return ResponseEntity.badRequest().body(String.format("Cannot find annotator with id %s", userSubsetInterface.getUserId()));
+            String message = String.format("Cannot find annotator with id %s", userSubsetInterface.getUserId());
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         User annotator = optionalAnnotator.get();
 
         Optional<Subset> optionalSubset = subsetRepository.findById(userSubsetInterface.getSubsetId());
         if (optionalSubset.isEmpty())
         {
-            log.info(String.format("Cannot find subset id %s", userSubsetInterface.getSubsetId()));
-            return ResponseEntity.badRequest().body(String.format("Cannot find subset id %s", userSubsetInterface.getSubsetId()));
+            String message = String.format("Cannot find subset id %s", userSubsetInterface.getSubsetId());
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         Subset subset = optionalSubset.get();
 
         Optional<UserSubset> optionalUserSubset = userSubsetRepository.findById(assignmentId);
         if (optionalUserSubset.isEmpty()) {
-            log.info(String.format("Cannot find any assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
+            String message = String.format("Cannot find any assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId());
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
             return ResponseEntity
-                    .badRequest()
-                    .body(String.format("Cannot find any assignment for annotator %s with subset %o", annotator.getUsername(), subset.getId()));
+                    .status(NOT_FOUND)
+                    .body(response);
         }
 
         try {
@@ -170,33 +243,55 @@ public class SubsetApiController {
         }
         catch(RuntimeException exception) {
             log.info(exception.getMessage());
-            return ResponseEntity.internalServerError().body(String.format("Cannot update assignment for annotator %s with subset %o",
-                    annotator.getUsername(), userSubsetInterface.getSubsetId()));
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    String.format("Cannot update assignment for annotator %s with subset %o",
+                            annotator.getUsername(), userSubsetInterface.getSubsetId())
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Updated assignment successfully for annotator %s with subset %o",
-                annotator.getUsername(), userSubsetInterface.getSubsetId()));
-        return ResponseEntity.ok().body(String.format("Updated assignment successfully for annotator %s with subset %o",
-                annotator.getUsername(), userSubsetInterface.getSubsetId()));
+        String message = String.format("Updated assignment successfully for annotator %s with subset %o",
+                annotator.getUsername(), userSubsetInterface.getSubsetId());
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
     }
 
     @DeleteMapping(ASSIGNMENT + DELETE + "/{assignmentId}")
     ResponseEntity<Object> deleteUserSubset(@PathVariable("assignmentId") UUID assignmentId) {
         Optional<UserSubset> optionalUserSubset = userSubsetRepository.findById(assignmentId);
         if (optionalUserSubset.isEmpty()) {
-            log.info("There is no such assignment to delete");
+            String message = "There is no such assignment to delete";
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
             return ResponseEntity
-                    .badRequest()
-                    .body("There is no such assignment to delete");
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         UserSubset userSubset = optionalUserSubset.get();
 
         Optional<User> optionalAnnotator = userRepository.findById(userSubset.getUser().getId());
         if (optionalAnnotator.isEmpty()) {
-            log.info(String.format("Cannot find annotator with id %s", userSubset.getUser().getId()));
+            String message = String.format("Cannot find annotator with id %s", userSubset.getUser().getId());
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
             return ResponseEntity
-                    .badRequest()
-                    .body(String.format("Cannot find annotator with id %s", userSubset.getUser().getId()));
+                    .status(NOT_FOUND)
+                    .body(response);
         }
         User annotator = optionalAnnotator.get();
 
@@ -207,19 +302,27 @@ public class SubsetApiController {
         }
         catch(RuntimeException deleteException) {
             log.info(deleteException.getMessage());
-            if (!userSubsetRepository.findAll().contains(userSubset))
-                userSubsetRepository.save(userSubset); // rollback transaction
-
-            return ResponseEntity.internalServerError().body(String.format("Cannot remove assignment for annotator %s with subset %o",
-                    annotator.getUsername(), userSubset.getSubset().getId()));
+            String message = String.format("Cannot remove assignment for annotator %s with subset %o",
+                    annotator.getUsername(), userSubset.getSubset().getId());
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    message
+            );
+            return ResponseEntity
+                    .status(INTERNAL_SERVER_ERROR)
+                    .body(response);
         }
 
-        log.info(String.format("Deleted successfully assignment for annotator %s with subset %o",
-                annotator.getUsername(), userSubset.getSubset().getId()));
+        String message = String.format("Deleted successfully assignment for annotator %s with subset %o",
+                annotator.getUsername(), userSubset.getSubset().getId());
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
         return ResponseEntity
-                .ok()
-                .body(String.format("Deleted successfully assignment for annotator %s with subset %o",
-                        annotator.getUsername(), userSubset.getSubset().getId()));
+                .status(INTERNAL_SERVER_ERROR)
+                .body(response);
     }
 
 }

@@ -5,12 +5,15 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.TokenInterface;
 import uit.spring.annotation.security.UserDetails;
 
 import javax.servlet.FilterChain;
@@ -19,9 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -98,11 +99,11 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
                 .withClaim("authorities", grantedAuthorities)
                 .sign(algorithm);
 
-        Map<String, String> tokens = new HashMap<String, String>();
-        tokens.put("access_token", accessToken);
-        tokens.put("refresh_token", refreshToken);
-        tokens.put("role", getRole(grantedAuthorities));
-
+        TokenInterface tokens = new TokenInterface(
+                HttpStatus.OK,
+                accessToken,
+                refreshToken
+        );
         response.setContentType(APPLICATION_JSON_VALUE);
         new ObjectMapper().writeValue(response.getOutputStream(), tokens);
     }
@@ -112,8 +113,14 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
         UsernameAndPasswordAuthenticationRequest authenticationRequest = new ObjectMapper()
                 .readValue(request.getInputStream(), UsernameAndPasswordAuthenticationRequest.class);
 
-        log.error(String.format("Failed to authenticate user %s, please check your username or password again"));
+        String message = String.format("Failed to authenticate user %s, please check your username or password again");
+        log.error(message);
 
-        response.setHeader("error", failed.getMessage());
+        ErrorInterface error = new ErrorInterface(
+                HttpStatus.UNAUTHORIZED,
+                failed.getMessage()
+        );
+        response.setContentType(APPLICATION_JSON_VALUE);
+        new ObjectMapper().writeValue(response.getOutputStream(), error);
     }
 }
