@@ -32,10 +32,10 @@ public class Annotation {
     @Column(name = "action_QA", nullable = false)
     private boolean actionQA;
     @ManyToOne
-    @JoinColumn(name = "image_id", nullable = false)
+    @JoinColumn(name = "image_id", nullable = false, insertable = false, updatable = false)
     private Image image;
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
     private User annotator;
 
     public Annotation() {
