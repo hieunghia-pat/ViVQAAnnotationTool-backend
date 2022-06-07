@@ -8,6 +8,7 @@ import uit.spring.annotation.databases.Annotation;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
@@ -31,4 +32,10 @@ public interface AnnotationRepository extends JpaRepository<Annotation, UUID> {
             nativeQuery = true
     )
     void deleteById(UUID id);
+
+    @Query(
+            value = "SELECT * FROM annotation WHERE user_id=?1 AND image_id=?2",
+            nativeQuery = true
+    )
+    Optional<Annotation> findByUserForImage(UUID userId, Long imageId);
 }

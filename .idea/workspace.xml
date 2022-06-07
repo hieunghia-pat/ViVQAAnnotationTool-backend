@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added logging to update annotator api">
+    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added apis for getting annotation of a user of image.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotationApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotationApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AnnotatorApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/AnnotationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/AnnotationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserSubsetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/repositories/UserSubsetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,118 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649206629064</updated>
-    </task>
-    <task id="LOCAL-00044" summary="added debugging code in SubsetApiController">
-      <created>1653893991690</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1653893991690</updated>
-    </task>
-    <task id="LOCAL-00045" summary="fixed one-to-many errors">
-      <created>1653894959685</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1653894959685</updated>
-    </task>
-    <task id="LOCAL-00046" summary="added many-to-many relationship in Subset entity">
-      <created>1653895363445</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1653895363445</updated>
-    </task>
-    <task id="LOCAL-00047" summary="changed name of argument in UserSubsetRepository">
-      <created>1653896649634</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1653896649634</updated>
-    </task>
-    <task id="LOCAL-00048" summary="refined the mapping in Subset.java">
-      <created>1653896955803</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1653896955803</updated>
-    </task>
-    <task id="LOCAL-00049" summary="refined the mapping in UserSubset.java">
-      <created>1653897206953</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1653897206953</updated>
-    </task>
-    <task id="LOCAL-00050" summary="removed reference column in UserSubset entity">
-      <created>1653898022422</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1653898022423</updated>
-    </task>
-    <task id="LOCAL-00051" summary="removed relationship between user-subset table and user, subset tables">
-      <created>1653902126000</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1653902126000</updated>
-    </task>
-    <task id="LOCAL-00052" summary="modified the getUsers in SubsetInterface constructor">
-      <created>1653902771556</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1653902771556</updated>
-    </task>
-    <task id="LOCAL-00053" summary="added ID for UserSubset entity">
-      <created>1653903873791</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1653903873791</updated>
-    </task>
-    <task id="LOCAL-00054" summary="refined the ID for UserSubset entity and UserSubsetRepository">
-      <created>1653904077548</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1653904077548</updated>
-    </task>
-    <task id="LOCAL-00055" summary="refined the ID for UserSubset entity and UserSubsetRepository">
-      <created>1653904283431</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1653904283431</updated>
-    </task>
-    <task id="LOCAL-00056" summary="turned back to composite ID for UserSubset entity">
-      <created>1653904527367</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1653904527367</updated>
-    </task>
-    <task id="LOCAL-00057" summary="UserSubset entity must implement Serializable">
-      <created>1653905758023</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1653905758023</updated>
-    </task>
-    <task id="LOCAL-00058" summary="debugging">
-      <created>1653906920187</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1653906920187</updated>
-    </task>
-    <task id="LOCAL-00059" summary="debugging">
-      <created>1653907147863</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1653907147863</updated>
     </task>
     <task id="LOCAL-00060" summary="debugging">
       <created>1653907820871</created>
@@ -467,7 +350,119 @@
       <option name="project" value="LOCAL" />
       <updated>1654394716870</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="modified the way to update and delete annotation, annotator and assignment">
+      <created>1654416345986</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1654416345986</updated>
+    </task>
+    <task id="LOCAL-00094" summary="added logging when updating">
+      <created>1654419389378</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1654419389378</updated>
+    </task>
+    <task id="LOCAL-00095" summary="updated image apis">
+      <created>1654436846789</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1654436846791</updated>
+    </task>
+    <task id="LOCAL-00096" summary="adjust directory for getting images">
+      <created>1654440083284</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1654440083284</updated>
+    </task>
+    <task id="LOCAL-00097" summary="adjust logging content for image apis">
+      <created>1654442483797</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1654442483798</updated>
+    </task>
+    <task id="LOCAL-00098" summary="added contentType when return image">
+      <created>1654443696752</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1654443696752</updated>
+    </task>
+    <task id="LOCAL-00099" summary="use base64 encoder to encode image">
+      <created>1654446482695</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1654446482697</updated>
+    </task>
+    <task id="LOCAL-00100" summary="added image attribute to ImageInterface">
+      <created>1654447375126</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1654447375126</updated>
+    </task>
+    <task id="LOCAL-00101" summary="return image as json object">
+      <created>1654449011565</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1654449011566</updated>
+    </task>
+    <task id="LOCAL-00102" summary="added userId for annotation table">
+      <created>1654484536348</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1654484536349</updated>
+    </task>
+    <task id="LOCAL-00103" summary="modified constrained for annotation table">
+      <created>1654486054328</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1654486054328</updated>
+    </task>
+    <task id="LOCAL-00104" summary="changed the way to return response">
+      <created>1654531610734</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1654531610735</updated>
+    </task>
+    <task id="LOCAL-00105" summary="added role when return tokens">
+      <created>1654566434705</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1654566434707</updated>
+    </task>
+    <task id="LOCAL-00106" summary="created assignment apis">
+      <created>1654570179335</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1654570179335</updated>
+    </task>
+    <task id="LOCAL-00107" summary="return the image apis">
+      <created>1654573388841</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1654573388842</updated>
+    </task>
+    <task id="LOCAL-00108" summary="added apis for getting annotation of a user of image.">
+      <created>1654604712297</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1654604712299</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -488,22 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="turned back to composite ID for UserSubset entity" />
-    <MESSAGE value="UserSubset entity must implement Serializable" />
-    <MESSAGE value="added @Component for interfaces" />
-    <MESSAGE value="added bean of interfaces" />
-    <MESSAGE value="updated workspace.xml" />
-    <MESSAGE value="annotate interfaces as services" />
-    <MESSAGE value="added @EnableAutoConfiguration to WebConfig.java" />
-    <MESSAGE value="restructured the repository" />
-    <MESSAGE value="added relationship between tables" />
-    <MESSAGE value="removed @ManyToMany annotator" />
-    <MESSAGE value="fixed error in UserSubsetInterface" />
-    <MESSAGE value="temporarily commit for debugging" />
-    <MESSAGE value="updated relationship in Image entity" />
-    <MESSAGE value="fixed getting subset id error in ImageInterface" />
-    <MESSAGE value="commit for pushing the repository" />
-    <MESSAGE value="fixed composite primary key in UserSubset entity" />
     <MESSAGE value="added apis for updating assignment for an annotator" />
     <MESSAGE value="debugging update assignment apis" />
     <MESSAGE value="refined update assignment apis" />
@@ -513,6 +492,22 @@
     <MESSAGE value="added delete api for annotator api" />
     <MESSAGE value="all update handlers must be put method" />
     <MESSAGE value="added logging to update annotator api" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logging to update annotator api" />
+    <MESSAGE value="modified the way to update and delete annotation, annotator and assignment" />
+    <MESSAGE value="added logging when updating" />
+    <MESSAGE value="updated image apis" />
+    <MESSAGE value="adjust directory for getting images" />
+    <MESSAGE value="adjust logging content for image apis" />
+    <MESSAGE value="added contentType when return image" />
+    <MESSAGE value="use base64 encoder to encode image" />
+    <MESSAGE value="added image attribute to ImageInterface" />
+    <MESSAGE value="return image as json object" />
+    <MESSAGE value="added userId for annotation table" />
+    <MESSAGE value="modified constrained for annotation table" />
+    <MESSAGE value="changed the way to return response" />
+    <MESSAGE value="added role when return tokens" />
+    <MESSAGE value="created assignment apis" />
+    <MESSAGE value="return the image apis" />
+    <MESSAGE value="added apis for getting annotation of a user of image." />
+    <option name="LAST_COMMIT_MESSAGE" value="added apis for getting annotation of a user of image." />
   </component>
 </project>

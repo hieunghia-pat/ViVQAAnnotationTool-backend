@@ -13,6 +13,7 @@ public final class Mappings {
     public static final String IMAGE = "/image";
     public static final String IMAGES = "/images";
     public static final String ANNOTATION = "/annotation";
+    public static final String ANNOTATION_PER_IMAGE = "/annotation-per-image";
     public static final String ANNOTATIONS = "/annotations";
 
     public static final String ADMIN_API = "/api/v1/admins";
@@ -39,6 +40,7 @@ public final class Mappings {
 
     public static final String IMAGES_API = API + IMAGES;
     public static final String ANNOTATIONS_API = API + ANNOTATIONS;
+    public static final String ASSIGNMENT_API = API + ASSIGNMENT;
 
     private Mappings() {
 

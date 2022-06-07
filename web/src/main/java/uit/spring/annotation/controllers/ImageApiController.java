@@ -2,7 +2,6 @@ package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -117,6 +116,6 @@ public class ImageApiController {
         );
         return ResponseEntity
                 .status(OK)
-                .body(imageInterfaces);
+                .body(response);
     }
 }

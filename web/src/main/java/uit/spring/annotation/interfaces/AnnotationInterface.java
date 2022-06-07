@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public class AnnotationInterface {
 
-    private UUID id;
+    private UUID id = new UUID(0, 0);
     private Long imageId;
     private UUID userId;
     private String question;

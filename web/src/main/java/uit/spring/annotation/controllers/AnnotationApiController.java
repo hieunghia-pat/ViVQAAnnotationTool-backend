@@ -89,6 +89,50 @@ public class AnnotationApiController {
                 .body(response);
     }
 
+    @GetMapping(GET + ANNOTATIONS_API)
+    public ResponseEntity<Object> getAnnotationByUserForImage(@RequestParam(name = "username") String username,
+                                                              @RequestParam(name = "id") Long imageId) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(message);
+        }
+        User annotator = optionalAnnotator.get();
+
+        Optional<Image> optionalImage = imageRepository.findById(imageId);
+        if (optionalImage.isEmpty()) {
+            String message = String.format("Cannot find image with id %s", imageId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+
+        ResponseInterface response;
+        Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), imageId);
+        if (optionalAnnotation.isEmpty()) {
+            response = new ResponseInterface(
+                    OK,
+                    new AnnotationInterface()
+            );
+        }
+        else {
+            Annotation annotation = optionalAnnotation.get();
+            response = new ResponseInterface(
+                    OK,
+                    new AnnotationInterface(annotation)
+            );
+        }
+
+        return ResponseEntity.status(OK).body(response);
+    }
     @PostMapping(ADD + "/{imageId}")
     public ResponseEntity<Object> addAnnotation(@PathVariable("imageId") Long imageId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Image> optionalImage = imageRepository.findById(imageId);
