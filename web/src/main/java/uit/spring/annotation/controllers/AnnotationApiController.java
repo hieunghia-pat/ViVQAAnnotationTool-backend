@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.User;
+import uit.spring.annotation.databases.UserSubset;
 import uit.spring.annotation.interfaces.AnnotationInterface;
 import uit.spring.annotation.interfaces.ErrorInterface;
 import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.UserRepository;
+import uit.spring.annotation.repositories.UserSubsetRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,9 @@ public class AnnotationApiController {
     private AnnotationRepository annotationRepository;
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserSubsetRepository userSubsetRepository;
 
     @GetMapping(GET + IMAGE + "/{imageId}")
     public ResponseEntity<Object> getAnnotations(@PathVariable("imageId") Long imageId) {
