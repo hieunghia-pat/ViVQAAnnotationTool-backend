@@ -23,6 +23,8 @@ import java.util.List;
 import static javax.security.auth.callback.ConfirmationCallback.OK;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
+import static uit.spring.annotation.security.UserRole.ADMIN;
+import static uit.spring.annotation.security.UserRole.ANNOTATOR;
 import static uit.spring.annotation.utils.Mappings.*;
 import static uit.spring.annotation.utils.SecretKeys.TOKEN_SECRET_KEY;
 
@@ -31,6 +33,15 @@ import static uit.spring.annotation.utils.SecretKeys.TOKEN_SECRET_KEY;
 @Slf4j
 @CrossOrigin
 public class AuthController {
+
+    private static String getRole(List<String> grantedAuthorities) {
+        for (String authority: grantedAuthorities) {
+            if (authority.equals(ADMIN.getRole()))
+                return ADMIN.getRole();
+        }
+
+        return ANNOTATOR.getRole();
+    }
 
     @PostMapping(REFRESH_TOKEN)
     public static void refreshToken(HttpServletRequest request,
@@ -60,10 +71,13 @@ public class AuthController {
                         .withClaim("authorities", authorities)
                         .sign(algorithm);
 
+                String role = getRole(authorities);
+
                 TokenInterface tokens = new TokenInterface(
                         OK,
                         accessToken,
-                        refreshToken
+                        refreshToken,
+                        role
                 );
                 new ObjectMapper().writeValue(response.getOutputStream(), tokens);
             }

@@ -99,10 +99,13 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
                 .withClaim("authorities", grantedAuthorities)
                 .sign(algorithm);
 
+        String role = getRole(grantedAuthorities);
+
         TokenInterface tokens = new TokenInterface(
                 HttpStatus.OK,
                 accessToken,
-                refreshToken
+                refreshToken,
+                role
         );
         response.setContentType(APPLICATION_JSON_VALUE);
         new ObjectMapper().writeValue(response.getOutputStream(), tokens);
