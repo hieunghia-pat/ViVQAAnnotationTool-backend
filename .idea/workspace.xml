@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added apis for getting annotation of a user of image.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
