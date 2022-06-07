@@ -94,7 +94,7 @@ public class AnnotationApiController {
                 .body(response);
     }
 
-    @GetMapping(GET + ANNOTATIONS_API)
+    @GetMapping(GET + ANNOTATION_PER_IMAGE)
     public ResponseEntity<Object> getAnnotationByUserForImage(@RequestParam(name = "username") String username,
                                                               @RequestParam(name = "id") Long imageId) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(username);
