@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="added apis for getting annotation of a user of image.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e0bced75-4c09-4d4b-8f76-807dd8ddc549" name="Changes" comment="refined subset apis and application.properties">
+      <change afterPath="$PROJECT_DIR$/web/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,13 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649206629064</updated>
-    </task>
-    <task id="LOCAL-00060" summary="debugging">
-      <created>1653907820871</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1653907820871</updated>
     </task>
     <task id="LOCAL-00061" summary="debugging">
       <created>1653908136264</created>
@@ -461,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654604712299</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="refined subset apis and application.properties">
+      <created>1654607647088</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1654607647090</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -482,7 +484,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added apis for updating assignment for an annotator" />
     <MESSAGE value="debugging update assignment apis" />
     <MESSAGE value="refined update assignment apis" />
     <MESSAGE value="added add, update and delete apis for annotation" />
@@ -507,6 +508,7 @@
     <MESSAGE value="created assignment apis" />
     <MESSAGE value="return the image apis" />
     <MESSAGE value="added apis for getting annotation of a user of image." />
-    <option name="LAST_COMMIT_MESSAGE" value="added apis for getting annotation of a user of image." />
+    <MESSAGE value="refined subset apis and application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="refined subset apis and application.properties" />
   </component>
 </project>
