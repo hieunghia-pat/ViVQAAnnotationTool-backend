@@ -62,12 +62,10 @@ public class AssignmentApiController {
             }
             else {
                 List<UserSubset> userSubsetsBySubset = userSubsetRepository.findBySubsetId(subset.getId());
-                if (userSubsetsBySubset.size() == 0) { // this subset was not assigned to anyone
-                    UserSubsetInterface newUserSubsetInterface = new UserSubsetInterface(subset);
-                    newUserSubsetInterface.setAssigned(false);
-                    newUserSubsetInterface.setUserId(annotator.getId());
-                    userSubsetInterfaces.add(newUserSubsetInterface);
-                }
+                UserSubsetInterface newUserSubsetInterface = new UserSubsetInterface(subset);
+                newUserSubsetInterface.setAssigned(false);
+                newUserSubsetInterface.setUserId(annotator.getId());
+                userSubsetInterfaces.add(newUserSubsetInterface);
             }
         }
 
