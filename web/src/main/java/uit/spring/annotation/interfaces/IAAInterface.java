@@ -7,9 +7,9 @@ import java.util.List;
 
 @Data
 public class IAAInterface {
-    private ArrayList<ArrayList<Integer>> Test;
+    private Object Test;
 
-    public IAAInterface(ArrayList<ArrayList<Integer>> test) {
+    public IAAInterface(Object test) {
         Test = test;
     }
 }

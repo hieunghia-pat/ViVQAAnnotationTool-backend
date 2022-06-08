@@ -33,7 +33,7 @@ public class IAAService {
     @Autowired
     UserSubsetRepository userSubsetRepository;
 
-    public ArrayList<ArrayList<Integer>> calIAA(Long subsetId){
+    public Object calIAA(Long subsetId){
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
@@ -99,10 +99,9 @@ public class IAAService {
             i++;
         }
 
-        answerTypes.get(0).add(1);
-        answerTypes.get(1).add(2);
-        answerTypes.get(2).add(0);
+        Map<Integer, ArrayList<ArrayList>> Test = new HashMap<>();
+        Test.add(1, answerTypes);
 
-        return answerTypes;
+        return Test;
     }
 }
