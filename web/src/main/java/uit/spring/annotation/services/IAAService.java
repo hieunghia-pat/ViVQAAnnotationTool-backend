@@ -18,6 +18,8 @@ import java.util.*;
 public class IAAService {
     private Long subsetId;
 
+    public IAAService(){};
+
     public IAAService(Long subsetId) {
         this.subsetId = subsetId;
     }
