@@ -74,8 +74,9 @@ public class IAAService {
         //Create table Answer Type
         for(Long imageId:imageIdList){
             int wCount = 0, pCount = 0, sCount = 0;
-            Optional<Image> image = imageRepository.findById(imageId);
-            if(image.get().isToDelete()){
+            Optional<Image> imageOptional = imageRepository.findById(imageId);
+            Image image = imageOptional.get();
+            if(!image.isToDelete()){
                 for(UUID userId:userIdSet) {
                     Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
                     Integer answerType = annotation.getAnswerType();
