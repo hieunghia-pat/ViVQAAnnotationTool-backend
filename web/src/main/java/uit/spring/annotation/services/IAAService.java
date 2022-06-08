@@ -102,6 +102,6 @@ public class IAAService {
         Map<Integer, ArrayList<ArrayList<Integer>>> test = new HashMap<>();
         test.put(1, answerTypes);
 
-        return test;
+        return imageAnnotation;
     }
 }
