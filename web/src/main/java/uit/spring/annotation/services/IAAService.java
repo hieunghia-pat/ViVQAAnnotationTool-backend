@@ -65,7 +65,7 @@ public class IAAService {
             }
         }
 
-        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(3);
+        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
         for(int i = 0; i < nQA; i++){
             answerTypes.add(new ArrayList<>());
         }
@@ -75,7 +75,7 @@ public class IAAService {
         for(Long imageId:imageIdList){
             int wCount = 0, pCount = 0, sCount = 0;
             Optional<Image> image = imageRepository.findByImageId(imageId);
-            if(image.get().isToDelete()){
+            if(!image.get().isToDelete()){
                 for(UUID userId:userIdSet) {
                     Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
                     Integer answerType = annotation.getAnswerType();
