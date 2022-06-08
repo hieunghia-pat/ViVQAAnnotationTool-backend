@@ -99,6 +99,10 @@ public class IAAService {
             i++;
         }
 
+        answerTypes.get(0).add(1);
+        answerTypes.get(1).add(2);
+        answerTypes.get(2).add(0);
+
         return answerTypes;
     }
 }
