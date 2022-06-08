@@ -15,7 +15,7 @@ import java.util.UUID;
 public interface AnnotationRepository extends JpaRepository<Annotation, UUID> {
     List<Annotation> findByImageId(Long image_id);
 
-    @Modifying
+    @Modifying(clearAutomatically = true)
     @Transactional
     @Query(
             value = "UPDATE annotation SET question=?2, answer=?3, question_type=?4, answer_type=?5, text_qa=?6, state_qa=?7, action_qa=?8, image_id=?9, user_id=?10 " +
