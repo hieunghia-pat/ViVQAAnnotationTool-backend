@@ -218,6 +218,7 @@ public class AnnotationApiController {
 
         try {
             log.info(String.format("Updating annotation %s", annotationId));
+            log.info(annotationInterface.toString());
             annotationRepository.updateById(
                     annotationInterface.getId(),
                     annotationInterface.getQuestion(),
@@ -242,7 +243,7 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        String message = String.format("Updated for annotation %s successfully", annotationId);
+        String message = String.format("Updated annotation %s successfully", annotationId);
         log.info(message);
         ResponseInterface response = new ResponseInterface(
                 OK,
@@ -284,7 +285,7 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        String message = String.format("Deleted for annotation %s successfully", annotationId);
+        String message = String.format("Deleted annotation %s successfully", annotationId);
         log.info(message);
         ResponseInterface response = new ResponseInterface(
                 OK,
