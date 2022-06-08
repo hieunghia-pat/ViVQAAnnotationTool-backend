@@ -253,7 +253,7 @@ public class AnnotationApiController {
                 .body(response);
     }
 
-    @DeleteMapping(DELETE + "{annotationId}")
+    @DeleteMapping(DELETE + "/{annotationId}")
     public ResponseEntity<Object> deleteAnnotation(@PathVariable("annotationId") UUID annotationId) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
