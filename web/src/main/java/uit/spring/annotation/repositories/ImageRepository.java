@@ -13,11 +13,7 @@ import java.util.UUID;
 
 @Repository
 public interface ImageRepository extends JpaRepository<Image, Long> {
-    @Query(
-            value = "SELECT * FROM image WHERE id=?1",
-            nativeQuery = true
-    )
-    Optional<Image> findByImageId(Long image_id);
+    Optional<Image> findById(Long image_id);
 
     @Query(
             value = "SELECT * FROM image WHERE subset_id=?1",
