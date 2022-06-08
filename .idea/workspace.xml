@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="Added IAA Calculation">
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" afterDir="false" />
-    </list>
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="Added IAA Calculation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654668737408</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added IAA Calculation">
+      <created>1654668857502</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654668857502</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added IAA Calculation">
+      <created>1654669003558</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654669003558</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
