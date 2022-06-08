@@ -37,6 +37,8 @@ public class AnnotationApiController {
     private AnnotationRepository annotationRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private IAAService iaaService;
 
     @Autowired
     private UserSubsetRepository userSubsetRepository;
@@ -144,7 +146,7 @@ public class AnnotationApiController {
     //Test
     @GetMapping(GET + "/Test" + "/{subsetId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
-        IAAService iaaService = new IAAService();
+//        IAAService iaaService = new IAAService();
         IAAInterface iaaInterface = new IAAInterface(iaaService.calIAA(subsetId));
 
         return ResponseEntity
