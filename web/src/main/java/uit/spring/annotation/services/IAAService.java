@@ -75,24 +75,26 @@ public class IAAService {
         for(Long imageId:imageIdList){
             int wCount = 0, pCount = 0, sCount = 0;
             Optional<Image> imageOptional = imageRepository.findById(imageId);
-            Image image = imageOptional.get();
-            if(!image.isToDelete()){
-                for(UUID userId:userIdSet) {
-                    Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
-                    Integer answerType = annotation.getAnswerType();
-                    if(answerType == 0){
-                        wCount++;
+            if(imageOptional.isPresent()){
+                Image image = imageOptional.get();
+                if(!image.isToDelete()){
+                    for(UUID userId:userIdSet) {
+                        Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
+                        Integer answerType = annotation.getAnswerType();
+                        if(answerType == 0){
+                            wCount++;
+                        }
+                        if(answerType == 1){
+                            pCount++;
+                        }
+                        if(answerType == 2){
+                            sCount++;
+                        }
                     }
-                    if(answerType == 1){
-                        pCount++;
-                    }
-                    if(answerType == 2){
-                        sCount++;
-                    }
+                    answerTypes.get(i).add(wCount);
+                    answerTypes.get(i).add(pCount);
+                    answerTypes.get(i).add(sCount);
                 }
-                answerTypes.get(i).add(wCount);
-                answerTypes.get(i).add(pCount);
-                answerTypes.get(i).add(sCount);
             }
             i++;
         }
