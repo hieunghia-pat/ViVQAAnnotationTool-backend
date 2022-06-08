@@ -23,9 +23,9 @@ public class IAAService {
 //        this.subsetId = subsetId;
 //    }
 
-    Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
-    List<Long> imageIdList = new ArrayList<>();
-    Set<UUID> userIdSet = new HashSet<>();
+//    Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
+//    List<Long> imageIdList = new ArrayList<>();
+//    Set<UUID> userIdSet = new HashSet<>();
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
@@ -37,9 +37,9 @@ public class IAAService {
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
-//        List<Long> imageIdList = new ArrayList<>();
-//        Set<UUID> userIdSet = new HashSet<>();
-//        Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
+        List<Long> imageIdList = new ArrayList<>();
+        Set<UUID> userIdSet = new HashSet<>();
+        Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
 
         int nQA = 0;
 
@@ -113,12 +113,12 @@ public class IAAService {
 //            }
 //            i++;
 //        }
-        answerTypes = createTable("answerType", nQA, 3);
+        answerTypes = createTable("answerType", nQA, 3, imageIdList, userIdSet, imageAnnotation);
 
         return answerTypes;
     }
 
-    public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
+    public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType, List<Long> imageIdList, Set<UUID> userIdSet, Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation){
         Map<Integer, Integer> typeCount = new HashMap<>();
 
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
