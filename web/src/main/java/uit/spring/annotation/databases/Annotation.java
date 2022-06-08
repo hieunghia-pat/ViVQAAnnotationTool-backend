@@ -17,6 +17,10 @@ public class Annotation {
     @GeneratedValue
     @Column(name = "id", nullable = false, unique = true)
     private UUID id;
+    @Column(name = "user_id")
+    private UUID userId;
+    @Column(name = "image_id")
+    Long imageId;
     @Column(name = "question")
     private String question;
     @Column(name = "answer")
@@ -51,7 +55,20 @@ public class Annotation {
         this.textQA = textQA;
         this.stateQA = stateQA;
         this.actionQA = actionQA;
-        this.image = image;
-        this.annotator = annotator;
+        this.imageId = image.getId();
+        this.userId = annotator.getId();
+    }
+
+    public Annotation(UUID userId, Long imageId, String question, String answer,
+                      Integer questionType, Integer answerType, boolean textQA, boolean stateQA, boolean actionQA) {
+        this.userId = userId;
+        this.imageId = imageId;
+        this.question = question;
+        this.answer = answer;
+        this.questionType = questionType;
+        this.answerType = answerType;
+        this.textQA = textQA;
+        this.stateQA = stateQA;
+        this.actionQA = actionQA;
     }
 }

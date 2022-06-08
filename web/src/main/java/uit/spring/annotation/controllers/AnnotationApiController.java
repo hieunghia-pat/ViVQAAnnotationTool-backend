@@ -178,19 +178,21 @@ public class AnnotationApiController {
         }
         User annotator = optionalAnnotator.get();
 
+        Annotation annotation = new Annotation(
+                annotationInterface.getQuestion(),
+                annotationInterface.getAnswer(),
+                annotationInterface.getQuestionType(),
+                annotationInterface.getAnswerType(),
+                annotationInterface.isTextQA(),
+                annotationInterface.isStateQA(),
+                annotationInterface.isActionQA(),
+                image,
+                annotator
+        );
+
         try {
             log.info(String.format("Saving new annotation for image %s", imageId));
-            annotationRepository.insert(
-                    annotator.getId(),
-                    image.getId(),
-                    annotationInterface.getQuestion(),
-                    annotationInterface.getAnswer(),
-                    annotationInterface.getQuestionType(),
-                    annotationInterface.getAnswerType(),
-                    annotationInterface.isTextQA(),
-                    annotationInterface.isStateQA(),
-                    annotationInterface.isActionQA()
-            );
+            annotationRepository.save(annotation);
         }
         catch(RuntimeException saveException) {
             log.info(saveException.getMessage());
@@ -203,11 +205,16 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        log.info(String.format("Saved successfully new annotation for image %s", imageId));
-        return ResponseEntity.ok().body(String.format("Saved successfully new annotation for image %s", imageId));
+        String message = String.format("Saved successfully new annotation for image %s", imageId);
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
+        return ResponseEntity.status(OK).body(response);
     }
 
-    @PutMapping(UPDATE + "{annotationId}")
+    @PutMapping(UPDATE + "/{annotationId}")
     public ResponseEntity<Object> updateAnnotation(@PathVariable("annotationId") UUID annotationId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
@@ -224,6 +231,7 @@ public class AnnotationApiController {
 
         try {
             log.info(String.format("Updating annotation %s", annotationId));
+            log.info(annotationInterface.toString());
             annotationRepository.updateById(
                     annotationInterface.getId(),
                     annotationInterface.getQuestion(),
@@ -248,7 +256,7 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        String message = String.format("Updated for annotation %s successfully", annotationId);
+        String message = String.format("Updated annotation %s successfully", annotationId);
         log.info(message);
         ResponseInterface response = new ResponseInterface(
                 OK,
@@ -259,7 +267,7 @@ public class AnnotationApiController {
                 .body(response);
     }
 
-    @DeleteMapping(DELETE + "{annotationId}")
+    @DeleteMapping(DELETE + "/{annotationId}")
     public ResponseEntity<Object> deleteAnnotation(@PathVariable("annotationId") UUID annotationId) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {
@@ -275,6 +283,7 @@ public class AnnotationApiController {
         }
         Annotation annotation = optionalAnnotation.get();
 
+
         try {
             annotationRepository.delete(annotation);
         }
@@ -289,7 +298,7 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        String message = String.format("Deleted for annotation %s successfully", annotationId);
+        String message = String.format("Deleted annotation %s successfully", annotationId);
         log.info(message);
         ResponseInterface response = new ResponseInterface(
                 OK,
