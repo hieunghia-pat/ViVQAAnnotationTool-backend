@@ -79,16 +79,18 @@ public class IAAService {
                 Image image = imageOptional.get();
                 if(!image.isToDelete()){
                     for(UUID userId:userIdSet) {
-                        Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
-                        Integer answerType = annotation.getAnswerType();
-                        if(answerType == 0){
-                            wCount++;
-                        }
-                        if(answerType == 1){
-                            pCount++;
-                        }
-                        if(answerType == 2){
-                            sCount++;
+                        if(imageAnnotation.get(imageId).get(userId).isPresent()){
+                            Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
+                            Integer answerType = annotation.getAnswerType();
+                            if(answerType == 0){
+                                wCount++;
+                            }
+                            if(answerType == 1){
+                                pCount++;
+                            }
+                            if(answerType == 2){
+                                sCount++;
+                            }
                         }
                     }
                     answerTypes.get(i).add(wCount);
