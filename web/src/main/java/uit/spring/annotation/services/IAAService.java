@@ -26,7 +26,6 @@ public class IAAService {
     Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
     List<Long> imageIdList = new ArrayList<>();
     Set<UUID> userIdSet = new HashSet<>();
-    ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>();
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
@@ -79,7 +78,7 @@ public class IAAService {
             }
         }
 
-//        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
+        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
 //        for(int i = 0; i < nQA; i++){
 //            answerTypes.add(new ArrayList<>());
 //        }
@@ -121,11 +120,11 @@ public class IAAService {
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
         Map<Integer, Integer> typeCount = new HashMap<>();
+
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
         for(int i = 0; i < nQA; i++){
             typeTable.add(new ArrayList<>());
         }
-
 
         Integer index = 0;
         for(Long imageId:imageIdList){
