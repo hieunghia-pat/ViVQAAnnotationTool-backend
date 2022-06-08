@@ -192,8 +192,13 @@ public class AnnotationApiController {
                     .body(response);
         }
 
-        log.info(String.format("Saved successfully new annotation for image %s", imageId));
-        return ResponseEntity.ok().body(String.format("Saved successfully new annotation for image %s", imageId));
+        String message = String.format("Saved successfully new annotation for image %s", imageId);
+        log.info(message);
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                message
+        );
+        return ResponseEntity.status(OK).body(response);
     }
 
     @PutMapping(UPDATE + "{annotationId}")
