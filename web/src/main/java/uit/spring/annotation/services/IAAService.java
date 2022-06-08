@@ -15,18 +15,15 @@ import java.util.*;
 @Slf4j
 @Service
 public class IAAService {
-//    private Long subsetId;
-//
-//    public IAAService(){};
-//
-//    public IAAService(Long subsetId) {
-//        this.subsetId = subsetId;
-//    }
 
     Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
+
     List<Long> imageIdList = new ArrayList<>();
+
     Set<UUID> userIdSet = new HashSet<>();
+
     ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>();
+
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
@@ -37,10 +34,6 @@ public class IAAService {
     public Object calIAA(Long subsetId){
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
-
-//        List<Long> imageIdList = new ArrayList<>();
-//        Set<UUID> userIdSet = new HashSet<>();
-//        Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
 
         int nQA = 0;
 
@@ -53,6 +46,7 @@ public class IAAService {
             userIdSet.add(userSubset.getUser().getId());
         }
 
+        //Create image annotation type
         for(Long imageId:imageIdList){
             for(UUID userId:userIdSet){
                 Optional<Annotation> annotationOptional = annotationRepository.findByUserForImage(userId, imageId);
@@ -78,42 +72,6 @@ public class IAAService {
                 nQA++;
             }
         }
-
-//        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
-//        for(int i = 0; i < nQA; i++){
-//            answerTypes.add(new ArrayList<>());
-//        }
-
-//        int i = 0;
-//        //Create table Answer Type
-//        for(Long imageId:imageIdList){
-//            int wCount = 0, pCount = 0, sCount = 0;
-//            Optional<Image> imageOptional = imageRepository.findById(imageId);
-//            if(imageOptional.isPresent()){
-//                Image image = imageOptional.get();
-//                if(!image.isToDelete()){
-//                    for(UUID userId:userIdSet) {
-//                        if(imageAnnotation.get(imageId).get(userId).isPresent()){
-//                            Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
-//                            Integer answerType = annotation.getAnswerType();
-//                            if(answerType == 0){
-//                                wCount++;
-//                            }
-//                            if(answerType == 1){
-//                                pCount++;
-//                            }
-//                            if(answerType == 2){
-//                                sCount++;
-//                            }
-//                        }
-//                    }
-//                    answerTypes.get(i).add(wCount);
-//                    answerTypes.get(i).add(pCount);
-//                    answerTypes.get(i).add(sCount);
-//                }
-//            }
-//            i++;
-//        }
         answerTypes = createTable("answerType", nQA, 3);
 
         return answerTypes;
@@ -127,7 +85,7 @@ public class IAAService {
             typeTable.add(new ArrayList<>());
         }
 
-        Integer index = 0;
+        int index = 0;
         for(Long imageId:imageIdList){
             for(int i = 0; i < numType; i++){
                 typeCount.put(i, 0);
@@ -141,14 +99,14 @@ public class IAAService {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
                         Integer value = annotationType.get(key);
-//                        typeCount.put(1, typeCount.get(1)+1);
+//                        typeCount.put(value, typeCount.get(value)+1);
                         typeCount.put(0, value);
                     }
                 }
             }
             for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
-//                typeTable.get((int) (long) imageId).add(entry.getValue());
-                typeTable.get(index).add(entry.getValue());
+                typeTable.get((int) (long) imageId).add(entry.getValue());
+//                typeTable.get(index).add(entry.getValue());
             }
             index++;
         }
