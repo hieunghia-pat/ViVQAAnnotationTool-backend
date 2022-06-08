@@ -127,6 +127,7 @@ public class IAAService {
         }
 
 
+        Integer index = 0;
         for(Long imageId:imageIdList){
             for(int i = 0; i < numType; i++){
                 typeCount.put(i, 0);
@@ -146,8 +147,10 @@ public class IAAService {
                 }
             }
             for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
-                typeTable.get((int) (long) imageId).add(entry.getValue());
+//                typeTable.get((int) (long) imageId).add(entry.getValue());
+                typeTable.get(index).add(entry.getValue());
             }
+            index++;
         }
 
         return typeTable;
