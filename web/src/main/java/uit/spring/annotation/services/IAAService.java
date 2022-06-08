@@ -23,6 +23,10 @@ public class IAAService {
 //        this.subsetId = subsetId;
 //    }
 
+    Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
+    List<Long> imageIdList = new ArrayList<>();
+    Set<UUID> userIdSet = new HashSet<>();
+    ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>();
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
@@ -34,9 +38,9 @@ public class IAAService {
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
-        List<Long> imageIdList = new ArrayList<>();
-        Set<UUID> userIdSet = new HashSet<>();
-        Map<Long, Map<UUID, Optional<Annotation>>> imageAnnotation = new HashMap<>();
+//        List<Long> imageIdList = new ArrayList<>();
+//        Set<UUID> userIdSet = new HashSet<>();
+//        Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
 
         int nQA = 0;
 
@@ -52,8 +56,18 @@ public class IAAService {
         for(Long imageId:imageIdList){
             for(UUID userId:userIdSet){
                 Optional<Annotation> annotationOptional = annotationRepository.findByUserForImage(userId, imageId);
-                Map<UUID, Optional<Annotation>> userAnnotation = new HashMap<>();
-                userAnnotation.put(userId, annotationOptional);
+                Map<String, Integer> annotationType = new HashMap<>();
+                if(annotationOptional.isPresent()){
+                    Annotation annotation = annotationOptional.get();
+                    annotationType.put("answerType", annotation.getAnswerType());
+                    annotationType.put("questionType", annotation.getQuestionType());
+                    annotationType.put("stateQA", annotation.isStateQA() ? 1 : 0);
+                    annotationType.put("textQA", annotation.isTextQA() ? 1 : 0);
+                    annotationType.put("actionQA", annotation.isActionQA() ? 1 : 0);
+                }
+
+                Map<UUID, Map<String, Integer>> userAnnotation = new HashMap<>();
+                userAnnotation.put(userId, annotationType);
                 imageAnnotation.put(imageId, userAnnotation);
             }
         }
@@ -65,45 +79,77 @@ public class IAAService {
             }
         }
 
-        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
-        for(int i = 0; i < nQA; i++){
-            answerTypes.add(new ArrayList<>());
-        }
+//        ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
+//        for(int i = 0; i < nQA; i++){
+//            answerTypes.add(new ArrayList<>());
+//        }
 
-        int i = 0;
-        //Create table Answer Type
-        for(Long imageId:imageIdList){
-            int wCount = 0, pCount = 0, sCount = 0;
-            Optional<Image> imageOptional = imageRepository.findById(imageId);
-            if(imageOptional.isPresent()){
-                Image image = imageOptional.get();
-                if(!image.isToDelete()){
-                    for(UUID userId:userIdSet) {
-                        if(imageAnnotation.get(imageId).get(userId).isPresent()){
-                            Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
-                            Integer answerType = annotation.getAnswerType();
-                            if(answerType == 0){
-                                wCount++;
-                            }
-                            if(answerType == 1){
-                                pCount++;
-                            }
-                            if(answerType == 2){
-                                sCount++;
-                            }
-                        }
-                    }
-                    answerTypes.get(i).add(wCount);
-                    answerTypes.get(i).add(pCount);
-                    answerTypes.get(i).add(sCount);
-                }
-            }
-            i++;
-        }
-
-        Map<Integer, ArrayList<ArrayList<Integer>>> test = new HashMap<>();
-        test.put(1, answerTypes);
+//        int i = 0;
+//        //Create table Answer Type
+//        for(Long imageId:imageIdList){
+//            int wCount = 0, pCount = 0, sCount = 0;
+//            Optional<Image> imageOptional = imageRepository.findById(imageId);
+//            if(imageOptional.isPresent()){
+//                Image image = imageOptional.get();
+//                if(!image.isToDelete()){
+//                    for(UUID userId:userIdSet) {
+//                        if(imageAnnotation.get(imageId).get(userId).isPresent()){
+//                            Annotation annotation = imageAnnotation.get(imageId).get(userId).get();
+//                            Integer answerType = annotation.getAnswerType();
+//                            if(answerType == 0){
+//                                wCount++;
+//                            }
+//                            if(answerType == 1){
+//                                pCount++;
+//                            }
+//                            if(answerType == 2){
+//                                sCount++;
+//                            }
+//                        }
+//                    }
+//                    answerTypes.get(i).add(wCount);
+//                    answerTypes.get(i).add(pCount);
+//                    answerTypes.get(i).add(sCount);
+//                }
+//            }
+//            i++;
+//        }
+        answerTypes = createTable("answerType", nQA, 3);
 
         return answerTypes;
+    }
+
+    public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
+        Map<Integer, Integer> typeCount = new HashMap<>();
+        ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
+        for(int i = 0; i < nQA; i++){
+            typeTable.add(new ArrayList<>());
+        }
+
+
+        for(Long imageId:imageIdList){
+            for(int i = 0; i < numType; i++){
+                typeCount.put(i, 0);
+            }
+
+            Optional<Image> imageOptional = imageRepository.findById(imageId);
+
+            if(imageOptional.isPresent()) {
+                Image image = imageOptional.get();
+
+                if (!image.isToDelete()) {
+                    for (UUID userId : userIdSet) {
+                        Map<String, Integer> annotation = imageAnnotation.get(imageId).get(userId);
+                        Integer value = annotation.get(key);
+                        typeCount.put(value, typeCount.get(value)+1);
+                    }
+                }
+            }
+            for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
+                typeTable.get((int) (long) imageId).add(entry.getValue());
+            }
+        }
+
+        return typeTable;
     }
 }
