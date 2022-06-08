@@ -15,13 +15,13 @@ public class AnnotationInterface {
     private UUID id = new UUID(0, 0);
     private Long imageId;
     private UUID userId;
-    private String question;
-    private String answer;
-    private Integer questionType;
-    private Integer answerType;
-    private boolean textQA;
-    private boolean stateQA;
-    private boolean actionQA;
+    private String question = "";
+    private String answer = "";
+    private Integer questionType = 0;
+    private Integer answerType = 2;
+    private boolean textQA = false;
+    private boolean stateQA = false;
+    private boolean actionQA = false;
 
     public AnnotationInterface() {
     }
@@ -37,6 +37,11 @@ public class AnnotationInterface {
         this.textQA = textQA;
         this.stateQA = stateQA;
         this.actionQA = actionQA;
+    }
+
+    public AnnotationInterface(Long imageId, UUID userId) {
+        this.imageId = imageId;
+        this.userId = userId;
     }
 
     public AnnotationInterface(Annotation annotation) {

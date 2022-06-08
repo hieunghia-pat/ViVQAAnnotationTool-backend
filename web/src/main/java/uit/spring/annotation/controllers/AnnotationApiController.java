@@ -125,7 +125,7 @@ public class AnnotationApiController {
         if (optionalAnnotation.isEmpty()) {
             response = new ResponseInterface(
                     OK,
-                    new AnnotationInterface()
+                    new AnnotationInterface(imageId, annotator.getId())
             );
         }
         else {
@@ -138,6 +138,7 @@ public class AnnotationApiController {
 
         return ResponseEntity.status(OK).body(response);
     }
+
     @PostMapping(ADD + "/{imageId}")
     public ResponseEntity<Object> addAnnotation(@PathVariable("imageId") Long imageId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Image> optionalImage = imageRepository.findById(imageId);
