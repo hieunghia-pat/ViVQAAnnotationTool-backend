@@ -99,8 +99,11 @@ public class IAAService {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
                         Integer value = annotationType.get(key);
-//                        typeCount.put(value, typeCount.get(value)+1);
-                        typeCount.put(0, value);
+                        if(value == null){
+                            value = 0;
+                        }
+                        typeCount.put(value, typeCount.get(value)+1);
+//                        typeCount.put(0, value);
                     }
                 }
             }
