@@ -141,7 +141,8 @@ public class IAAService {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
                         Integer value = annotationType.get(key);
-                        typeCount.put(1, typeCount.get(1)+1);
+//                        typeCount.put(1, typeCount.get(1)+1);
+                        typeCount.put(0, value);
                     }
                 }
             }
