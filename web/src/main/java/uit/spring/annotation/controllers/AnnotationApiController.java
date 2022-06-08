@@ -201,7 +201,7 @@ public class AnnotationApiController {
         return ResponseEntity.status(OK).body(response);
     }
 
-    @PutMapping(UPDATE + "{annotationId}")
+    @PutMapping(UPDATE + "/{annotationId}")
     public ResponseEntity<Object> updateAnnotation(@PathVariable("annotationId") UUID annotationId, @RequestBody AnnotationInterface annotationInterface) {
         Optional<Annotation> optionalAnnotation = annotationRepository.findById(annotationId);
         if (optionalAnnotation.isEmpty()) {

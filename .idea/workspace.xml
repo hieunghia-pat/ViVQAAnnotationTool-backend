@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="return ResponseInterface">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="fixed the link for deleting annotation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654652926991</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed the link for deleting annotation">
+      <created>1654653252602</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654653252602</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +115,7 @@
     <MESSAGE value="added insert query for annotation table" />
     <MESSAGE value="turned back to using save method of repository for adding new annotation" />
     <MESSAGE value="return ResponseInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="return ResponseInterface" />
+    <MESSAGE value="fixed the link for deleting annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the link for deleting annotation" />
   </component>
 </project>
