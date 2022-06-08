@@ -38,4 +38,13 @@ public interface AnnotationRepository extends JpaRepository<Annotation, UUID> {
             nativeQuery = true
     )
     Optional<Annotation> findByUserForImage(UUID userId, Long imageId);
+
+    @Transactional
+    @Modifying
+    @Query(
+            value = "INSERT INTO annotation (question, answer, question_type, answer_type, text_QA, state_QA, action_QA, image_id, user_id) " +
+                    "VALUES (?3, ?4, ?5, ?6, ?7, ?8, ?9, ?2, ?1)",
+            nativeQuery = true
+    )
+    void insert(UUID userId, Long imageId, String question, String answer, Integer questionType, Integer answerType, boolean textQA, boolean stateQA, boolean actionQA);
 }
