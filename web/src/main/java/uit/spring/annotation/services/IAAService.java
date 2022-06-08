@@ -12,6 +12,7 @@ import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
 
 import javax.swing.text.html.Option;
+import java.lang.reflect.Array;
 import java.util.*;
 
 @Slf4j
@@ -32,7 +33,7 @@ public class IAAService {
     @Autowired
     UserSubsetRepository userSubsetRepository;
 
-    public Object calIAA(Long subsetId){
+    public ArrayList<ArrayList<Integer>> calIAA(Long subsetId){
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
@@ -95,6 +96,7 @@ public class IAAService {
                 answerTypes.get(i).add(pCount);
                 answerTypes.get(i).add(sCount);
             }
+            i++;
         }
 
         return answerTypes;
