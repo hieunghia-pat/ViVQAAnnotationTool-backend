@@ -99,9 +99,9 @@ public class IAAService {
             i++;
         }
 
-        Map<Integer, ArrayList<ArrayList>> Test = new HashMap<>();
-        Test.add(1, answerTypes);
+        Map<Integer, ArrayList<ArrayList>> test = new HashMap<>();
+        test.add(1, answerTypes);
 
-        return Test;
+        return test;
     }
 }
