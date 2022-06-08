@@ -99,8 +99,8 @@ public class IAAService {
             i++;
         }
 
-        Map<Integer, ArrayList<ArrayList>> test = new HashMap<>();
-        test.add(1, answerTypes);
+        Map<Integer, ArrayList<ArrayList<Integer>>> test = new HashMap<>();
+        test.put(1, answerTypes);
 
         return test;
     }
