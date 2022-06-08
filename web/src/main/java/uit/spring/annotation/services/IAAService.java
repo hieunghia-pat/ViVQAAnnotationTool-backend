@@ -16,13 +16,13 @@ import java.util.*;
 @Slf4j
 @Service
 public class IAAService {
-    private Long subsetId;
-
-    public IAAService(){};
-
-    public IAAService(Long subsetId) {
-        this.subsetId = subsetId;
-    }
+//    private Long subsetId;
+//
+//    public IAAService(){};
+//
+//    public IAAService(Long subsetId) {
+//        this.subsetId = subsetId;
+//    }
 
     @Autowired
     AnnotationRepository annotationRepository;
@@ -31,7 +31,7 @@ public class IAAService {
     @Autowired
     UserSubsetRepository userSubsetRepository;
 
-    public Object calIAA(){
+    public Object calIAA(Long subsetId){
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
