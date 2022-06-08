@@ -38,6 +38,7 @@ public class IAAService {
         List<Long> imageIdList = new ArrayList<>();
         Set<UUID> userIdSet = new HashSet<>();
         Map<Long, Object> imageAnnotation = new HashMap<>();
+        Map<UUID, Object> userAnnotation = new HashMap<>();
 
         for(Image image:imageList){
             imageIdList.add(image.getId());
@@ -49,12 +50,12 @@ public class IAAService {
         for(Long imageId:imageIdList){
             for(UUID userId:userIdSet){
                 Optional<Annotation> annotationOptional = annotationRepository.findByUserForImage(userId, imageId);
-                Map<UUID, Object> userAnnotation = new HashMap<>();
+//                Map<UUID, Object> userAnnotation = new HashMap<>();
                 userAnnotation.put(userId, annotationOptional);
                 imageAnnotation.put(imageId, userAnnotation);
             }
         }
 
-        return imageAnnotation;
+        return userAnnotation;
     }
 }
