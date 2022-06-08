@@ -79,9 +79,9 @@ public class IAAService {
         }
 
         ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>(nQA);
-//        for(int i = 0; i < nQA; i++){
-//            answerTypes.add(new ArrayList<>());
-//        }
+        for(int i = 0; i < nQA; i++){
+            answerTypes.add(new ArrayList<>());
+        }
 
 //        int i = 0;
 //        //Create table Answer Type
