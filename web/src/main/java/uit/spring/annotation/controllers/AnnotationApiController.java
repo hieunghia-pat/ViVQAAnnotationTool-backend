@@ -165,19 +165,21 @@ public class AnnotationApiController {
         }
         User annotator = optionalAnnotator.get();
 
+        Annotation annotation = new Annotation(
+                annotationInterface.getQuestion(),
+                annotationInterface.getAnswer(),
+                annotationInterface.getQuestionType(),
+                annotationInterface.getAnswerType(),
+                annotationInterface.isTextQA(),
+                annotationInterface.isStateQA(),
+                annotationInterface.isActionQA(),
+                image,
+                annotator
+        );
+
         try {
             log.info(String.format("Saving new annotation for image %s", imageId));
-            annotationRepository.insert(
-                    annotator.getId(),
-                    image.getId(),
-                    annotationInterface.getQuestion(),
-                    annotationInterface.getAnswer(),
-                    annotationInterface.getQuestionType(),
-                    annotationInterface.getAnswerType(),
-                    annotationInterface.isTextQA(),
-                    annotationInterface.isStateQA(),
-                    annotationInterface.isActionQA()
-            );
+            annotationRepository.save(annotation);
         }
         catch(RuntimeException saveException) {
             log.info(saveException.getMessage());
@@ -261,6 +263,7 @@ public class AnnotationApiController {
                     .body(response);
         }
         Annotation annotation = optionalAnnotation.get();
+
 
         try {
             annotationRepository.delete(annotation);
