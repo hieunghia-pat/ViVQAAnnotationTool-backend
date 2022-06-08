@@ -11,11 +11,13 @@ import uit.spring.annotation.databases.User;
 import uit.spring.annotation.databases.UserSubset;
 import uit.spring.annotation.interfaces.AnnotationInterface;
 import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.IAAInterface;
 import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
+import uit.spring.annotation.services.IAAService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,6 +139,17 @@ public class AnnotationApiController {
         }
 
         return ResponseEntity.status(OK).body(response);
+    }
+
+    //Test
+    @GetMapping(GET + ANNOTATION + "/{subsetId}")
+    public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
+        IAAService iaaService = new IAAService(subsetId);
+        IAAInterface iaaInterface = new IAAInterface(iaaService.calIAA());
+
+        return ResponseEntity
+                .status(OK)
+                .body(iaaInterface);
     }
 
     @PostMapping(ADD + "/{imageId}")
