@@ -140,7 +140,7 @@ public class IAAService {
                 if (!image.isToDelete()) {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotation = imageAnnotation.get(imageId).get(userId);
-                        Integer value = annotation.get(key);
+                        Integer value = annotation.get("answerType");
                         typeCount.put(value, typeCount.get(value)+1);
                     }
                 }
