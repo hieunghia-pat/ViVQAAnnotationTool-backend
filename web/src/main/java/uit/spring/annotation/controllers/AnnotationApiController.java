@@ -142,7 +142,7 @@ public class AnnotationApiController {
     }
 
     //Test
-    @GetMapping(GET + ANNOTATION + "/{subsetId}")
+    @GetMapping(GET + "/Test" + "/{subsetId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
         IAAService iaaService = new IAAService(subsetId);
         IAAInterface iaaInterface = new IAAInterface(iaaService.calIAA());
