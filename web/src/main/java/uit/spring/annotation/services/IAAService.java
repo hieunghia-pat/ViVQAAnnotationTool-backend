@@ -80,6 +80,7 @@ public class IAAService {
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
         Map<Integer, Integer> typeCount = new HashMap<>();
 
+        nQA = 100;
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
         for(int i = 0; i <= nQA; i++){
             typeTable.add(new ArrayList<>());
