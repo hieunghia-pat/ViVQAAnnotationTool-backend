@@ -80,7 +80,7 @@ public class IAAService {
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
         Map<Integer, Integer> typeCount = new HashMap<>();
 
-        nQA = 100;
+//        nQA = 100;
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
         for(int i = 0; i <= nQA; i++){
             typeTable.add(new ArrayList<>());
@@ -107,12 +107,13 @@ public class IAAService {
                         typeCount.put(value, typeCount.get(value)+1);
 //                        typeCount.put(0, value);
                     }
+                    for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
+//                typeTable.get((int) (long) imageId).add(entry.getValue());
+                        typeTable.get(index).add(entry.getValue());
+                    }
                 }
             }
-            for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
-//                typeTable.get((int) (long) imageId).add(entry.getValue());
-                typeTable.get(index).add(entry.getValue());
-            }
+
             index++;
         }
 
