@@ -48,6 +48,7 @@ public class IAAService {
 
         //Create image annotation type
         for(Long imageId:imageIdList){
+            Map<UUID, Map<String, Integer>> userAnnotation = new HashMap<>();
             for(UUID userId:userIdSet){
                 Optional<Annotation> annotationOptional = annotationRepository.findByUserForImage(userId, imageId);
                 Map<String, Integer> annotationType = new HashMap<>();
@@ -59,11 +60,9 @@ public class IAAService {
                     annotationType.put("textQA", annotation.isTextQA() ? 1 : 0);
                     annotationType.put("actionQA", annotation.isActionQA() ? 1 : 0);
                 }
-
-                Map<UUID, Map<String, Integer>> userAnnotation = new HashMap<>();
                 userAnnotation.put(userId, annotationType);
-                imageAnnotation.put(imageId, userAnnotation);
             }
+            imageAnnotation.put(imageId, userAnnotation);
         }
 
         //Count number of annotation
