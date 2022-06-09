@@ -14,6 +14,7 @@ import java.util.UUID;
 @Repository
 public interface AnnotationRepository extends JpaRepository<Annotation, UUID> {
     List<Annotation> findByImageId(Long image_id);
+    List<Annotation> findByUserId(UUID user_id);
 
     @Modifying(clearAutomatically = true)
     @Transactional
