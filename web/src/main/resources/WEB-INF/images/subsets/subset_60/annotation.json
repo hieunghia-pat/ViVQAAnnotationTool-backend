@@ -1,0 +1,3492 @@
+[
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đứng bên trái người phụ nữ áo đỏ",
+                "answer-type": 0,
+                "question": "người đàn ông áo trắng đang đứng ở đâu so với người phụ nữ áo đỏ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba người đang đứng bên trái người đàn ông áo trắng",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng bên trái người đàn ông áo trắng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang cầm những chiếc điện thoại di động",
+                "answer-type": 0,
+                "question": "trên tay mọi người đang cầm thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005900.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đứng đối diện những người đang ngồi",
+                "answer-type": 0,
+                "question": "người đàn ông đang cầm micro đang đứng ở đâu so với những người đang ngồi?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "mặc áo màu trắng",
+                "answer-type": 0,
+                "question": "người đàn ông cầm micro đang mặc áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc ghế có màu xanh",
+                "answer-type": 0,
+                "question": "chiếc ghế mọi người đang ngồi có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005901.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005902.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đeo đồng hồ ở tay trái",
+                "answer-type": 0,
+                "question": "cô gái đeo đồng hồ ở tay nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc áo có màu đen chấm trắng",
+                "answer-type": 0,
+                "question": "chiếc áo cô gái đang mang có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "cô gái đeo một cái bông tai ở tai",
+                "answer-type": 0,
+                "question": "trên tai của cô gái có đeo vật gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005903.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai món khô gà được trưng bày",
+                "answer-type": 0,
+                "question": "có bao nhiêu món khô gà được trưng bày?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "được đặt gần món truyền thống, nước mắm gia truyền, và khô gà phô mai lá chanh",
+                "answer-type": 0,
+                "question": "món khô heo xé cay được đặt gần những món nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bông hoa có màu vàng",
+                "answer-type": 0,
+                "question": "bông hoa được trang trí gần các món ăn có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005904.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005905.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "bức tường có màu vàng",
+                "answer-type": 0,
+                "question": "bức tường của các căn nhà có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đàn ông đang mang áo màu xanh",
+                "answer-type": 0,
+                "question": "người đàn ông lái chiếc xe màu trắng đang mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang mang một chiếc nón bào hiểm",
+                "answer-type": 0,
+                "question": "người đàn ông áo xanh đang mang thứ gì trên đầu?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005906.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005907.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "chiếc kệ có màu vàng",
+                "answer-type": 0,
+                "question": "chiếc chuông được đặt trên chiếc kệ có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "thuộc về thời Ngô, Đinh, Tiền Lê, Lý, Trần",
+                "answer-type": 0,
+                "question": "những cổ vật trong bảo tàng thuộc về thời nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "trên chiếc kệ là một cái chuông ",
+                "answer-type": 0,
+                "question": "trên chiếc kệ màu vàng đặt cạnh tường là vật gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005908.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "đang quét rác",
+                "answer-type": 0,
+                "question": "người phụ nữ đội nón vàng đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người đang cầm chổi",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang cầm chổi?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng phía sau người phụ nữ đội nón vàng",
+                "answer-type": 0,
+                "question": "người cầm chổi còn lại đang đứng ở đâu so với người phụ nữ đội nón vàng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005909.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có bốn khúc thân chuối trong ảnh",
+                "answer-type": 0,
+                "question": "có bao nhiêu khúc thân chuối trong ảnh?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "một khúc thân chuối có giá là 280,000 đồng",
+                "answer-type": 0,
+                "question": "một khúc thân chuối có giá là bao nhiêu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "trên những khay xốp là những khúc thân chuối",
+                "answer-type": 0,
+                "question": "bên trên những khay xốp là thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005910.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005911.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai người đang cầm tấm bảng khen",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang cầm tấm bảng khen?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đàn ông bên phải đang mang đồ màu xanh",
+                "answer-type": 0,
+                "question": "người đàn ông bên phải đang mang đồ màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "trên tay hai người đàn ông là một tấm bảng khen",
+                "answer-type": 0,
+                "question": "trên tay hai người đàn ông là thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005912.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang mặc áo màu vàng",
+                "answer-type": 0,
+                "question": "người phụ nữ dắt xe đạp đang mặc áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang cầm một chiếc nón lá",
+                "answer-type": 0,
+                "question": "người đang ông bên phải người phụ nữ áo vàng đang cầm thứ gì trên tay?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người phía sau người phụ nữ",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đi phía sau người phụ nữ dắt xe đạp?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005913.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005914.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "mặc áo màu đen",
+                "answer-type": 0,
+                "question": "cô gái đang mặc áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bên phải là một bộ bàn ghế",
+                "answer-type": 0,
+                "question": "bên phải của cô gái là thứ gi?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có một cái bàn bên phải cô gái",
+                "answer-type": 0,
+                "question": "có bao nhiêu cái bàn bên phải cô gái?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005915.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005916.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "trên đầu của người đàn ông áo vàng có một cặp kính",
+                "answer-type": 0,
+                "question": "trên đầu của người đàn ông áo vàng có thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người phụ nữ đứng trước mặt người đàn ông",
+                "answer-type": 0,
+                "question": "trước mặt người đàn ông áo vàng có bao nhiêu người phụ nữ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang cầm một tấm vải trên tay",
+                "answer-type": 0,
+                "question": "người phụ nữ áo đỏ đang cầm gì trên tay?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005917.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai ông già noel trên chiếc bánh",
+                "answer-type": 0,
+                "question": "có bao nhiêu ông già noel trên chiếc bánh?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai cây thông trên chiếc bánh",
+                "answer-type": 0,
+                "question": "có bao nhiêu cây thông trên chiếc bánh?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "những chiếc chuôn có màu ánh kim",
+                "answer-type": 0,
+                "question": "những chiếc chuông có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005918.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "đang dắt một chiếc xe",
+                "answer-type": 0,
+                "question": "chàng trai đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "cô gái đứng bên trái của chàng trai",
+                "answer-type": 0,
+                "question": "cô gái đứng phía bên nào của chàng trai?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "tay trái đang cầm một bó hoa",
+                "answer-type": 0,
+                "question": "tay trái của cô gái đang cầm thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005919.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005920.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005921.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "mang áo khoác màu nâu",
+                "answer-type": 0,
+                "question": "người đàn ông đứng ở quầy rau củ mang áo khoác màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng kế bên quầy rau củ",
+                "answer-type": 0,
+                "question": "người đàn ông áo khoác nâu đang đứng ở đâu?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "mang khẩu trang màu xanh",
+                "answer-type": 0,
+                "question": "người đàn ông đứng ở quầy rau củ mang khẩu trang màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005922.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang cầm một chiếc túi ",
+                "answer-type": 0,
+                "question": "người phụ nữ đang cầm thứ gì trên tay?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đội mũ màu xanh",
+                "answer-type": 0,
+                "question": "người đàn ông bên trái người phụ nữ đội mũ màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người ở phía bên phải người phụ nữ",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang ở bên phải người phụ nữ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005923.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cửa hàng tên là CK Mart",
+                "answer-type": 0,
+                "question": "tên của cửa hàng là gi?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "biển tên có màu đỏ",
+                "answer-type": 0,
+                "question": "biển tên của cửa hàng có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "được đặt ở phía trên cùng của kệ",
+                "answer-type": 0,
+                "question": "nước giải khát được cửa hàng trưng bày ở vị trí nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005924.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005925.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "thuộc quận Ba Đình",
+                "answer-type": 0,
+                "question": "chợ Long Biên thuộc địa phương nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng trước cổng chợ Long Biên",
+                "answer-type": 0,
+                "question": "người đàn ông cầm loa đang đứng ở đâu?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai xe hàng đang được đẩy đi",
+                "answer-type": 0,
+                "question": "có bao nhiêu xe hàng đang được đẩy đi trước mặt người đàn ông cầm loa?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005926.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cửa tiệm có địa chỉ là 451 Phạm Văn Thuận",
+                "answer-type": 0,
+                "question": "địa chỉ của cửa tiệm là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng có tên là 30 Shine",
+                "answer-type": 0,
+                "question": "tên của cửa hàng là gi?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "đang dắt một chiếc xe",
+                "answer-type": 0,
+                "question": "người bảo vệ của cửa tiệm đang làm gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe có màu trắng",
+                "answer-type": 0,
+                "question": "chiếc xe người bảo vệ đang dắt có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005927.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005928.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "những cái chén có màu đen",
+                "answer-type": 0,
+                "question": "những cái chén được bày trên bàn có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe có màu vàng",
+                "answer-type": 0,
+                "question": "chàng trai áo đỏ đang đứng tựa vào chiếc xe có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba dãy bàn ghế được bày trước cửa hàng",
+                "answer-type": 0,
+                "question": "có bao nhiêu dãy bàn ghế được bày trước cửa hàng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "trên bàn ăn của quán có những chai nước, chén, đũa và thực đơn quán",
+                "answer-type": 0,
+                "question": "có những thứ gì được đặt sẵn trên bàn ăn của quán?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005929.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "thuộc công ty Trường Giang Phát",
+                "answer-type": 0,
+                "question": "xường sơ chế thuộc công ty nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "xường có địa chỉ ở tổ 17, khu phố 2A, phường Long Bình, Biên Hoà, Đồng Nai",
+                "answer-type": 0,
+                "question": "địa chỉ của xưởng sơ chế là gi?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có bốn bóng đèn được gắn trên biển tên",
+                "answer-type": 0,
+                "question": "có bao nhiêu bóng đèn được gắn trên biển tên của xưởng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005930.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005931.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005932.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005933.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005934.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "một cái bánh mì thanh long có giá là 3,500 đồng",
+                "answer-type": 0,
+                "question": "một cái bánh mì thanh long có giá bao nhiêu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "phía sau là một quầy thanh long",
+                "answer-type": 0,
+                "question": "phía sau quầy bán bánh mì thanh long là gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "một hộp thạch thanh long có giá 10,000 đồng",
+                "answer-type": 0,
+                "question": "một hộp thạch thanh long có giá bao nhiêu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005935.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "nhà hàng có tên là Bê Vàng",
+                "answer-type": 0,
+                "question": "nhà hàng có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "nhà hàng Bê Vàng nhận đặt tiệc cưới hỏi, liên hoan, sinh nhật, họp mặt",
+                "answer-type": 0,
+                "question": "nhà hàng Bê Vàng nhận đặt những dịch vụ nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người bảo vệ đang đứng trước nhà hàng",
+                "answer-type": 0,
+                "question": "có bao nhiêu người bảo vệ đang đứng trước nhà hàng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "nhà hàng Bê Vàng có địa chỉ ở phường Bình Trị Đông B, quận Bình Tân",
+                "answer-type": 0,
+                "question": "nhà hàng Bê Vàng có địa chỉ ở đâu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005936.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005937.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đặt một tấm bảng thông báo",
+                "answer-type": 0,
+                "question": "người dân quân đang làm gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "do ban quản lý chợ Long Biên thực hiện",
+                "answer-type": 0,
+                "question": "tấm bảng thông báo do ai làm thực hiện?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "phải đeo khẩu trang",
+                "answer-type": 0,
+                "question": "những người sinh hoạt tại chợ bị bắt buộc phải làm gi?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005938.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "quán ăn có tên là Bia Tô",
+                "answer-type": 0,
+                "question": "quán ăn hải sản có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có một chiếc xe hơi đang đậu trước quán",
+                "answer-type": 0,
+                "question": "có bao nhiêu chiếc xe hơi đang được đậu trước quán Bia Tô?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "số điện thoại của quán là 0937101079",
+                "answer-type": 0,
+                "question": "số điện thoại của quán Bia Tô là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005939.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "biển số xe của người đội nón bảo hiểm màu hồng là 62K4-2647",
+                "answer-type": 0,
+                "question": "biển số xe của người đội nón bảo hiểm màu hồng là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người đang đi xe máy trong chợ",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đi xe máy trong chợ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe của người áo xanh có màu đỏ và đen",
+                "answer-type": 0,
+                "question": "chiếc xe của người áo xanh có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005940.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "thông báo về việc tạm ngưng hoạt động của khu du lịch Đại Nam",
+                "answer-type": 0,
+                "question": "tấm biển thông báo về vấn đề gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "bắt đầu từ ngày 6 tháng 5 năm 2021",
+                "answer-type": 0,
+                "question": "khu du lịch Đại Nam bắt đầu ngưng hoạt động từ khi nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "khu du lịch Đại Nam ngừng hoạt động vì diễn biến phức tạp của dịch Covid-19",
+                "answer-type": 0,
+                "question": "lý do khiến khu du lịch Đại Nam ngừng hoạt động là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "số đường dây nóng của Đại Nam là 02743845845",
+                "answer-type": 0,
+                "question": "số đường dây nóng để liên lạc với khu du lịch Đại Nam là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005941.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005942.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai người đang đứng trước quầy hoa quả",
+                "answer-type": 0,
+                "question": "có bao nhiêu người phụ nữ mang áo đỏ đang đứng trước quầy hoa quả?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng bên trái của hai người áo đỏ",
+                "answer-type": 0,
+                "question": "người phụ nữ áo trắng đang đứng ở đâu so với hai người áo đỏ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc ghế có màu xanh",
+                "answer-type": 0,
+                "question": "chiếc ghế kế bên người phụ nữ áo đỏ có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005943.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có một người đang lái xe máy",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang lái xe máy?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "hai người đang mang áo màu trắng",
+                "answer-type": 0,
+                "question": "hai người đang đi phía bên phải toà nhà đang mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người đang đi bộ phía trước toà nhà",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đi bộ phía trước toà nhà?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005944.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "phía trước căn nhà đang treo bốn chiếc đèn lồng",
+                "answer-type": 0,
+                "question": "phía trước căn nhà có treo bao nhiêu chiếc đèn lồng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đàn ông đang cầm điện thoại bằng tay trái",
+                "answer-type": 0,
+                "question": "người đàn ông đang ngồi phía trước căn nhà đang cầm điện thoại bằng tay nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang mang tạp dề màu xanh",
+                "answer-type": 0,
+                "question": "người nhân viên phục vụ đang mang tạp dề màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005945.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "căn nhà bên trái có treo hai chiếc đèn lồng",
+                "answer-type": 0,
+                "question": "có bao nhiêu chiếc đèn lồng được treo ở căn nhà bên trái?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba người đang đứng trước quầy giầy dép",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng trước quầy giày dép?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng phía bên trái người phụ nữ áo đen",
+                "answer-type": 0,
+                "question": "người phụ nữ áo xanh đang đứng ở phía bên nào so với người phụ nữ áo đen?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005946.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005947.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "bức tường được trang trí bằng những bức ảnh ",
+                "answer-type": 0,
+                "question": "bức tường ở phía cầu thang được trang trí bằng thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai chiếc xe được dựng kế bên cầu thang",
+                "answer-type": 0,
+                "question": "có bao nhiêu chiếc xe được dựng kế bên cầu thang?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe có màu xanh",
+                "answer-type": 0,
+                "question": "chiếc xe nằm ở lối lên cầu thang có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005948.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "những bông hoa có màu vàng",
+                "answer-type": 0,
+                "question": "những bông hoa trên cây có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "mỗi chậu cây được trồng một cây",
+                "answer-type": 0,
+                "question": "mỗi chậu cây được trồng bao nhiêu cây?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "thành chậu được vẽ hoặc in chữ Hán",
+                "answer-type": 0,
+                "question": "thành chậu được trang trí như thế nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005949.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang ngồi bên phải người đội nón",
+                "answer-type": 0,
+                "question": "chàng trai đang ngồi phía nào so với người đội nón?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đang đứng đội nón bảo hiểm màu đen",
+                "answer-type": 0,
+                "question": "người đang đứng đội nón bảo hiểm màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang ở trong quầy hàng đồ trang trí",
+                "answer-type": 0,
+                "question": "hai người áo đen đang ở trong quầy hàng gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005950.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "chiếc ghế có màu xanh",
+                "answer-type": 0,
+                "question": "chiếc ghế đằng sau người phụ nữ áo xanh có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng phía sau người phụ nữ áo đỏ",
+                "answer-type": 0,
+                "question": "người phụ nữ áo vàng đang đứng ở đâu so với người phụ nữ áo đỏ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": true,
+                "answer": "đang ngồi lựa hàng",
+                "answer-type": 0,
+                "question": "người phụ nữ áo đỏ ngồi phía trước người phụ nữ áo vàng đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005951.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai người đang đi xe đạp",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đi xe đạp?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bên trái người đàn ông áo đỏ đi xe đạp là những cái cây cổ thụ",
+                "answer-type": 0,
+                "question": "bên trái người đàn ông áo đỏ đi xe đạp là gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang ở phía trước người đàn ông áo đỏ",
+                "answer-type": 0,
+                "question": "người đàn ông áo xám đang ở phía nào so với người đàn ông áo đỏ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005952.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cửa hàng Sơn có mã số là 435",
+                "answer-type": 0,
+                "question": "cửa hàng Sơn có mã số là bao nhiêu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng có tên là Hai Khanh",
+                "answer-type": 0,
+                "question": "cửa hàng có mã số 434 có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng Sơn bán đồ inox và đồ nhôm gia dụng",
+                "answer-type": 0,
+                "question": "cửa hàng Sơn bán những loại hàng gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba người đang đứng trước cửa hàng Sơn",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng trước cửa hàng Sơn?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005953.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "quán ăn có tên là Ốc Ngon 109",
+                "answer-type": 0,
+                "question": "tên của quán ăn là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "quán ốc có địa chỉ là 109 Cao Đạt, phường 1, quận 5, thành phố Hồ Chí Minh",
+                "answer-type": 0,
+                "question": "địa chỉ của quán ốc là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "tên của quán có màu vàng",
+                "answer-type": 0,
+                "question": "tên của quán ăn tên biển hiệu có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005954.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đeo một chiếc tai nghe không dây",
+                "answer-type": 0,
+                "question": "cô gái đang ngồi đang đeo thứ gì trên tai?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": true,
+                "answer": "đang gõ máy tính",
+                "answer-type": 0,
+                "question": "chàng trai ngồi kế bên cô gái đang ngồi đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang cầm một chiếc điện thoại di động",
+                "answer-type": 0,
+                "question": "cô gái đang ngồi đang cầm vật gì trên tay?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005955.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005956.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có ba kệ hàng",
+                "answer-type": 0,
+                "question": "có bao nhiêu kệ hàng trong cửa hàng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai tầng bị bỏ trống",
+                "answer-type": 0,
+                "question": "có bao nhiêu tầng bị bỏ trống ở kệ hàng bên phải?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có một người đang ở trong cửa hàng",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang ở trong cửa hàng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005957.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005958.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cầu Chà Và bắc ngang qua kênh Tàu Hủ",
+                "answer-type": 0,
+                "question": "cầu Chà Và bắc ngang qua con kênh nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "được tô màu xanh",
+                "answer-type": 0,
+                "question": "hình ảnh những con sông được tô màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có một cây cầu bắc ngang qua Rạch Bến Nghé",
+                "answer-type": 0,
+                "question": "có bao nhiêu cây cầu bắc ngang qua Rạch Bến Nghé?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005959.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "trên áo của chàng trai có in hình những bông hoa",
+                "answer-type": 0,
+                "question": "hoạ tiết trên áo của chàng trai là gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chàng trai đang nhìn về phía bên trái",
+                "answer-type": 0,
+                "question": "chàng trai đang nhìn về phía bên nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "những căn nhà có phần tường màu vàng",
+                "answer-type": 0,
+                "question": "những căn nhà phía trước chàng trai có phần tường màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005960.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có ba công nhân đang đứng trên giàn giáo",
+                "answer-type": 0,
+                "question": "có bao nhiêu công nhân đang đứng trên giàn giáo?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "biển hiệu có màu chủ đạo là màu vàng",
+                "answer-type": 0,
+                "question": "biển hiệu của cửa hàng điện thoại có màu chủ đạo là màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "các công nhân đang mang áo màu xanh",
+                "answer-type": 0,
+                "question": "các công nhân đang mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005961.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005962.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "phần mái có ba tầng",
+                "answer-type": 0,
+                "question": "phần mái của cổng chính có bao nhiêu tầng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "cổng chính có mái màu đỏ",
+                "answer-type": 0,
+                "question": "cổng chính có mái màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai dòng chữ được khắc phía trước cổng",
+                "answer-type": 0,
+                "question": "có bao nhiêu dòng chữ được khắc phía trước cổng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005963.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "người đàn ông đang đứng phía bên phải bức tranh",
+                "answer-type": 0,
+                "question": "người đàn ông đang đứng về phía bên nào của bức tranh?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đàn ông mang áo màu tím",
+                "answer-type": 0,
+                "question": "người đàn ông đứng bên phải bức tranh mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai lon nước ngọt phía trước người đàn ông",
+                "answer-type": 0,
+                "question": "có bao nhiêu lon nước ngọt phía trước người đàn ông?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai chiếc xe được vẽ trong bức tranh",
+                "answer-type": 0,
+                "question": "có bao nhiêu chiếc xe được vẽ trong bức tranh?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005964.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đưa tay phải ",
+                "answer-type": 0,
+                "question": "cô gái đang đưa tay nào lên cao?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bên phải của cô gái có một ly nước",
+                "answer-type": 0,
+                "question": "bên phải của cô gái có thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đôi dép có màu trắng",
+                "answer-type": 0,
+                "question": "đôi dép cô gái mang có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005965.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cái cây có màu xanh",
+                "answer-type": 0,
+                "question": "cái cây bên phải người lái xe có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "phần tường có màu vàng",
+                "answer-type": 0,
+                "question": "những ngôi nhà có phần tường màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người đang đạp xe mang áo màu xanh",
+                "answer-type": 0,
+                "question": "người đang đạp xe mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005966.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có hai cái đèn lồng được treo trước cổng",
+                "answer-type": 0,
+                "question": "phía trước cổng có treo bao nhiêu cái đèn lồng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "những chiếc đèn lồng có màu đỏ",
+                "answer-type": 0,
+                "question": "những chiếc đèn lồng được treo trước cổng có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đứa bé mang áo màu vàng",
+                "answer-type": 0,
+                "question": "đứa bé được người phụ nữ bế đang mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005967.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005968.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có một người đang quỳ khấn",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang quỳ khấn?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": true,
+                "answer": "đang quỳ khấn",
+                "answer-type": 0,
+                "question": "người đàn ông ở giữa đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có bốn người đang đứng bên phải người đang quỳ",
+                "answer-type": 0,
+                "question": "có bao nhiêu người đang đứng ở bên phải người đang quỳ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc mũ có màu đen",
+                "answer-type": 0,
+                "question": "chiếc mũ trên đầu những người đang đứng có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005969.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "trên tên của cửa hàng có biểu tượng một chiếc váy cưới ",
+                "answer-type": 0,
+                "question": "trên tên của cửa hàng có biểu tượng gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng kinh doanh áo cưới",
+                "answer-type": 0,
+                "question": "cửa hàng kinh doanh mặt hàng nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng bắt đầu kinh doanh vào ngày 30 tháng 4 năm 2013",
+                "answer-type": 0,
+                "question": "cửa hàng áo cưới bắt đầu kinh doanh từ ngày nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "dịch vụ trọn gói album cưới có giá là 3,999,000 đồng",
+                "answer-type": 0,
+                "question": "giá dịch vụ khi đăng kí trọn gói album cưới là bao nhiêu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005970.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "đang sử dụng điện thoại di động",
+                "answer-type": 0,
+                "question": "cô gái bên phải chàng trai đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc mũ có màu trắng",
+                "answer-type": 0,
+                "question": "chiếc mũ cô gái đang mang có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chàng trai đang đứng phía bên trái cô gái",
+                "answer-type": 0,
+                "question": "chàng trai đang đứng về phía bên nào so với cô gái?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005971.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "phía trước toà nhà được trang trí bằng những cây thông",
+                "answer-type": 0,
+                "question": "phía trước toà nhà được trang trí bằng vật gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba bông tuyết được gắn bên phải cây thông lớn",
+                "answer-type": 0,
+                "question": "có bao nhiêu bông tuyết được gắn bên phải của cây thông lớn?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": true,
+                "answer": "đang đứng tạo dáng chụp ảnh",
+                "answer-type": 0,
+                "question": "cô gái đang đứng ở cây thông bên phải đang làm gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005972.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "quán ăn có tên là Quán Chay Hạnh Phúc",
+                "answer-type": 0,
+                "question": "quán ăn có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "quán ăn có số điện thoại là 0886505605",
+                "answer-type": 0,
+                "question": "số điện thoại của quán ăn là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "quán ăn bán các loại thức ăn chay và sữa hạt",
+                "answer-type": 0,
+                "question": "quán ăn bán những loại thực phẩm nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "quán ăn có địa chỉ  Cộng Hoà, phường 12, quận Tân Bình, thành phố Hồ Chí Minh",
+                "answer-type": 0,
+                "question": "địa chỉ của quán chay là ở đâu?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005973.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang mang áo màu xanh",
+                "answer-type": 0,
+                "question": "người phụ nữ đang mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có bốn chiếc micro trước mặt người phụ nữ",
+                "answer-type": 0,
+                "question": "có bao nhiêu chiếc micro trước mặt người phụ nữ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "bên phải người phụ nữ có một lá cờ Việt Nam",
+                "answer-type": 0,
+                "question": "bên phải người phụ nữ có thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005974.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có một hình nhân được trưng bày trước mặt người phụ nữ",
+                "answer-type": 0,
+                "question": "có bao nhiêu hình nhân được trưng bày trước mặt người phụ nữ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đứng bên trái người phụ nữ",
+                "answer-type": 0,
+                "question": "người đàn ông đang đứng về phía nào so với người phụ nữ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "đang đeo một cái balo",
+                "answer-type": 0,
+                "question": "người đàn ông bên trái người phụ nữ đang đang đeo thứ gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005975.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "chiếc xe có màu đen",
+                "answer-type": 0,
+                "question": "chiếc xe có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "dòng chữ phát sáng trên xe có màu đỏ",
+                "answer-type": 0,
+                "question": "dòng chữ phát sáng trên xe có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "con số trên xe có màu đỏ",
+                "answer-type": 0,
+                "question": "con số trên xe có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005976.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "đang đeo túi xách màu đỏ",
+                "answer-type": 0,
+                "question": "người phụ nữ áo sọc trắng đen đang đeo túi xách màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "là quầy bán quần áo",
+                "answer-type": 0,
+                "question": "phía sau người phụ nữ áo sọc trắng đen là quầy bán hàng gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai chùm bong bóng trong khu chợ",
+                "answer-type": 0,
+                "question": "có bao nhiêu chùm bong bong trong khu chợ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005977.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "lá cờ có màu đỏ",
+                "answer-type": 0,
+                "question": "lá cờ được treo ở cây cột có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe hơi có màu vàng",
+                "answer-type": 0,
+                "question": "chiếc xe hơi đỗ bên lề đường có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai chiếc xe máy đang lưu thông",
+                "answer-type": 0,
+                "question": "bên trái chiếc xe hơi màu vàng có bao nhiêu chiếc xe máy đang lưu thông?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005978.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005979.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "những người lái xích lô mang áo màu đen",
+                "answer-type": 0,
+                "question": "những người lái xích lô mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có một người lái xe máy ngược chiều với hàng xe xích lô",
+                "answer-type": 0,
+                "question": "có bao nhiêu người lái xe máy ngược chiều với hàng xe xích lô?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "những căn nhà có màu vàng",
+                "answer-type": 0,
+                "question": "những căn nhà bên phải hàng xe xích lô có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005980.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "đang đưa tay lấy một bó hoa",
+                "answer-type": 1,
+                "question": "cô gái quấn khăn đỏ đang làm gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chàng trai đứng phía bên trái cô gái",
+                "answer-type": 0,
+                "question": "chàng trai áo xanh đứng phía bên nào của cô gái quấn khăn đỏ?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "cô gái quấn khăn đỏ lấy bó hoa bằng tay phải",
+                "answer-type": 0,
+                "question": "cô gái quấn khăn đỏ lấy bó hoa bằng tay nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005981.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "tầng 1 có diện tích là 100 mét vuông",
+                "answer-type": 2,
+                "question": "tầng 1 của căn nhà cho thuê có diện tích như thế nào?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "căn nhà có năm tầng",
+                "answer-type": 2,
+                "question": "căn nhà cho thuê có tổng cộng bao nhiêu tầng?",
+                "question-type": 5,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "số điện thoại là 0985856282 hoặc 0913327559",
+                "answer-type": 2,
+                "question": "số điện thoại dùng để thuê cửa hàng có địa chỉ 14 Hàng Đào là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005982.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "người phụ nữ mang áo màu đỏ",
+                "answer-type": 2,
+                "question": "người phụ nữ lái xe đạp phía sau người lái xích lô mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "tấm băng rôn có chữ màu vàng",
+                "answer-type": 2,
+                "question": "tấm băng rôn được treo trên đường có chữ màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai chiếc xích lô không chở khách",
+                "answer-type": 2,
+                "question": "có bao nhiêu chiếc xích lô không chở khách?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005983.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có bốn lá cờ phía sau chiếc xe tăng",
+                "answer-type": 2,
+                "question": "có bao nhiêu lá cờ có hai màu xanh đỏ phía sau chiếc xe tăng?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc xe tăng được trưng bày chính giữa căn phòng",
+                "answer-type": 2,
+                "question": "phương tiện gì được trưng bày chính giữa căn phòng?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "dòng chữ có màu đỏ",
+                "answer-type": 2,
+                "question": "dòng chữ được in trên bức tường có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005984.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005985.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "quán ăn bán món bún cá",
+                "answer-type": 2,
+                "question": "quán ăn Luyến bán món ăn gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "địa chỉ quán cũ của quán ăn Luyến ở 42 Hàng Đậu",
+                "answer-type": 2,
+                "question": "địa chỉ quán cũ của quán ăn Luyến là ở đâu?",
+                "question-type": 2,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cô gái mang áo màu trắng",
+                "answer-type": 2,
+                "question": "cô gái đứng trước quán Luyến mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005986.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "những người bảo vệ mang áo màu xanh",
+                "answer-type": 2,
+                "question": "những người bảo vệ mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "băng đeo có màu đỏ",
+                "answer-type": 2,
+                "question": "băng đeo trên tay hai người bảo vệ có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người đội nón lá",
+                "answer-type": 2,
+                "question": "có bao nhiêu người đội nón lá đang ngồi trước mặt hai người bảo vệ?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005987.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005988.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "món ăn được bày trên dĩa là món bánh cốm",
+                "answer-type": 2,
+                "question": "món ăn được bày trên dĩa là món ăn gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có năm cái bánh được bày trên dĩa",
+                "answer-type": 2,
+                "question": "có bao nhiêu cái bánh được bày trên dĩa?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "món bánh cốm có thương hiệu là Ngọc Ninh",
+                "answer-type": 2,
+                "question": "thương hiệu của món bánh cốm là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005989.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "phần mái chính giữa cổng thành có màu đỏ",
+                "answer-type": 0,
+                "question": "phần mái chính giữa cổng thành có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có ba cây cầu dẫn đến cổng thành",
+                "answer-type": 2,
+                "question": "có bao nhiêu cây cầu dẫn đến cổng thành?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": true,
+                "answer": "mọi người đang tập thể dục",
+                "answer-type": 2,
+                "question": "mọi người đang làm gì trên sân trước cổng thành?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005990.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cửa hàng xe máy có tên là Hải Anh",
+                "answer-type": 2,
+                "question": "cửa hàng xe máy có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "số điện thoại của cửa hàng Hải Anh là 0915787878",
+                "answer-type": 2,
+                "question": "số điện thoại của cửa hàng Hải Anh là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có bốn chiếc xe máy được dựng trên vỉa hè ",
+                "answer-type": 2,
+                "question": "có bao nhiêu chiếc xe máy được dựng trên vỉa hè trước cửa hàng Hải Anh?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005991.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005992.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "cửa hàng Huế có địa chỉ là 994C Nguyễn Thị Định, phường Thạnh Mỹ Lợi, quận 2",
+                "answer-type": 2,
+                "question": "địa chỉ của cửa hàng Huế là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "cửa hàng có tên là Huế",
+                "answer-type": 2,
+                "question": "cửa hàng có tên là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "số điện thoại của cửa hàng Huế là 0989404682",
+                "answer-type": 2,
+                "question": "số điện thoại của cửa hàng Huế là gì?",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005993.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "có bốn người ngồi quanh cái bàn",
+                "answer-type": 2,
+                "question": "có bao nhiêu người đang ngồi quanh cái bàn?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "chiếc ghế có màu nâu",
+                "answer-type": 2,
+                "question": "chiếc ghế mọi người đang ngồi có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người phụ nữ mang áo màu vàng",
+                "answer-type": 2,
+                "question": "người phụ nữ đang ngồi mang áo màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005994.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005995.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "nhà sản xuất có biểu tượng hình nhà máy",
+                "answer-type": 2,
+                "question": "biểu tượng của nhà sản xuất là gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "có bốn biểu tượng chiếc xe đẩy",
+                "answer-type": 2,
+                "question": "có bao nhiêu biểu tượng chiếc xe đẩy?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "phần mái có màu vàng",
+                "answer-type": 2,
+                "question": "phần mái của biểu tượng nhà bán lẻ có màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005996.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "",
+                "answer-type": 0,
+                "question": "",
+                "question-type": 0,
+                "state-QA": false,
+                "text-QA": true
+            }
+        ],
+        "delete": true,
+        "filename": "00000005997.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "có hai người đang đứng trên mái nhà",
+                "answer-type": 2,
+                "question": "có bao nhiêu người đang đứng trên mái nhà nhìn xuống đường?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người mang quần dài đứng bên trái người mang quần đùi",
+                "answer-type": 2,
+                "question": "người mang quần dài đang đứng ở đâu so với người mang quần đùi?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "người mang quần đùi đứng bên phải người mang quần dài",
+                "answer-type": 2,
+                "question": "người mang quần đùi đang đứng ở đâu so với người mang quần dài?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            }
+        ],
+        "delete": false,
+        "filename": "00000005998.jpg",
+        "filepath": "subset_60"
+    },
+    {
+        "annotations": [
+            {
+                "action-QA": true,
+                "answer": "người đàn ông đang nhìn về phía sau bên trái",
+                "answer-type": 2,
+                "question": "người đàn ông lái chiếc xe màu xanh đang nhìn về hướng nào?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": false
+            },
+            {
+                "action-QA": false,
+                "answer": "có hai người đang đứng trước cửa hàng 234",
+                "answer-type": 2,
+                "question": "có bao nhiêu người đang đứng trước cửa hàng 234?",
+                "question-type": 5,
+                "state-QA": true,
+                "text-QA": true
+            },
+            {
+                "action-QA": false,
+                "answer": "người đứng trước cửa hàng 234 mang áo thun màu vàng",
+                "answer-type": 2,
+                "question": "người đứng trước cửa hàng 234 mang áo thun màu gì?",
+                "question-type": 0,
+                "state-QA": true,
+                "text-QA": true
+            }
+        ],
+        "delete": false,
+        "filename": "00000005999.jpg",
+        "filepath": "subset_60"
+    }
+]
