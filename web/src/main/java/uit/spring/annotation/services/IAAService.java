@@ -74,7 +74,9 @@ public class IAAService {
         }
         answerTypes = createTable("answerType", nQA, 3);
 
-        return answerTypes;
+//        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
+
+        return annotationType;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
@@ -82,7 +84,7 @@ public class IAAService {
 
 //        nQA = 100;
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
-        for(int i = 0; i <= nQA; i++){
+        for(int i = 0; i < nQA; i++){
             typeTable.add(new ArrayList<>());
         }
 
@@ -99,8 +101,8 @@ public class IAAService {
                 if (!image.isToDelete()) {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
-//                        Integer value = annotationType.get(key);
-                        Integer value = 0;
+                        Integer value = annotationType.get(key);
+//                        Integer value = 0;
                         if(value == null){
                             value = 0;
                         }
@@ -108,8 +110,8 @@ public class IAAService {
 //                        typeCount.put(0, value);
                     }
                     for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
-//                        typeTable.get(index).add(entry.getValue());
-                        typeTable.get(index).add(index);
+                        typeTable.get(index).add(entry.getValue());
+//                        typeTable.get(index).add(index);
                     }
                     index++;
                 }
