@@ -74,46 +74,45 @@ public class IAAService {
         }
         answerTypes = createTable("answerType", nQA, 3);
 
-        return answerTypes;
+        return imageAnnotation;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
         Map<Integer, Integer> typeCount = new HashMap<>();
 
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
-        for(int i = 0; i < nQA; i++) {
+        for(int i = 0; i <= nQA; i++){
             typeTable.add(new ArrayList<>());
+        }
 
+        int index = 0;
+        for(Long imageId:imageIdList){
+            for(int i = 0; i < numType; i++){
+                typeCount.put(i, 0);
+            }
 
-//        int index = 0;
-            for (Long imageId : imageIdList) {
-                for (int j = 0; j < numType; j++) {
-                    typeCount.put(j, 0);
-                }
+            Optional<Image> imageOptional = imageRepository.findById(imageId);
 
-                Optional<Image> imageOptional = imageRepository.findById(imageId);
-
-                if (imageOptional.isPresent()) {
-                    Image image = imageOptional.get();
-                    if (!image.isToDelete()) {
-                        for (UUID userId : userIdSet) {
-                            Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
+            if(imageOptional.isPresent()) {
+                Image image = imageOptional.get();
+                if (!image.isToDelete()) {
+                    for (UUID userId : userIdSet) {
+                        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
 //                        Integer value = annotationType.get(key);
-                            Integer value = 0;
-                            if (value == null) {
-                                value = 0;
-                            }
-                            typeCount.put(value, typeCount.get(value) + 1);
-//                        typeCount.put(0, value);
+                        Integer value = 0;
+                        if(value == null){
+                            value = 0;
                         }
+                        typeCount.put(value, typeCount.get(value)+1);
+//                        typeCount.put(0, value);
                     }
                 }
-                for (Map.Entry<Integer, Integer> entry : typeCount.entrySet()) {
-//                typeTable.get((int) (long) imageId).add(entry.getValue());
-                    typeTable.get(i).add(entry.getValue());
-                }
-//                index++;
             }
+            for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
+//                typeTable.get((int) (long) imageId).add(entry.getValue());
+                typeTable.get(index).add(entry.getValue());
+            }
+            index++;
         }
 
         return typeTable;
