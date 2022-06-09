@@ -86,7 +86,7 @@ public class IAAService {
 
 //        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
 
-        return questionTypes;
+        return userIdSet;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
