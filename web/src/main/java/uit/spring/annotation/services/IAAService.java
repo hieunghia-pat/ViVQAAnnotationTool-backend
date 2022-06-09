@@ -23,6 +23,11 @@ public class IAAService {
     Set<UUID> userIdSet = new HashSet<>();
 
     ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> questionTypes = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> stateQAs = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> textQAs = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> actionQAs = new ArrayList<>();
+
 
     @Autowired
     AnnotationRepository annotationRepository;
@@ -72,10 +77,16 @@ public class IAAService {
             }
         }
         answerTypes = createTable("answerType", nQA, 3);
+        questionTypes = createTable("questionType", nQA, 6);
+        stateQAs = createTable("stateQA", nQA, 2);
+        textQAs = createTable("textQA", nQA, 2);
+        actionQAs = createTable("actionQA", nQA, 2);
+
+
 
 //        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
 
-        return answerTypes;
+        return questionTypes;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
