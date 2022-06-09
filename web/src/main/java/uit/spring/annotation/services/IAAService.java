@@ -28,7 +28,6 @@ public class IAAService {
     ArrayList<ArrayList<Integer>> textQAs = new ArrayList<>();
     ArrayList<ArrayList<Integer>> actionQAs = new ArrayList<>();
 
-
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
@@ -82,17 +81,13 @@ public class IAAService {
         textQAs = createTable("textQA", nQA, 2);
         actionQAs = createTable("actionQA", nQA, 2);
 
-
-
-//        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
-
-        return userIdSet;
+        return questionTypes;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
+
         Map<Integer, Integer> typeCount = new HashMap<>();
 
-//        nQA = 100;
         ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
         for(int i = 0; i < nQA; i++){
             typeTable.add(new ArrayList<>());
@@ -112,22 +107,15 @@ public class IAAService {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
                         Integer value = annotationType.get(key);
-//                        Integer value = 0;
-//                        if(value == null){
-//                            value = 0;
-//                        }
                         typeCount.put(value, typeCount.get(value)+1);
-//                        typeCount.put(0, value);
                     }
                     for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
                         typeTable.get(index).add(entry.getValue());
-//                        typeTable.get(index).add(index);
                     }
                     index++;
                 }
             }
         }
-
         return typeTable;
     }
 }
