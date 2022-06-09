@@ -4,12 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import uit.spring.annotation.databases.Subset;
-import uit.spring.annotation.databases.User;
-import uit.spring.annotation.databases.UserSubset;
+import uit.spring.annotation.databases.*;
 import uit.spring.annotation.interfaces.ErrorInterface;
+import uit.spring.annotation.interfaces.ProgressInterface;
 import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.interfaces.UserSubsetInterface;
+import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
@@ -33,6 +33,8 @@ public class AssignmentApiController {
     private SubsetRepository subsetRepository;
     @Autowired
     private UserSubsetRepository userSubsetRepository;
+    @Autowired
+    private AnnotationRepository annotationRepository;
 
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAssignmentByUsername(@PathVariable("annotatorName") String annotatorName) {
@@ -76,6 +78,56 @@ public class AssignmentApiController {
         return ResponseEntity
                 .status(OK)
                 .body(response);
+    }
+
+    @GetMapping(GET + PROGRESS)
+    public ResponseEntity<Object> getProgressStatistic(@RequestParam(name = "username") String username,
+                                                       @RequestParam(name = "subset-id") Long subsetId) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
+        if (optionalSubset.isEmpty()) {
+            String message = String.format("Cannot find subset %s", subsetId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        Subset subset = optionalSubset.get();
+
+        List<Image> images = subset.getImages();
+        Integer totalImages = images.size();
+        Integer totalTextQA = 0;
+        Integer totalStateQA = 0;
+        Integer totalActionQA = 0;
+        Integer totalAnnotatedImages = 0;
+        for (Image image: images) {
+            Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
+            if (optionalAnnotation.isPresent()) {
+                totalAnnotatedImages += 1;
+                totalTextQA += optionalAnnotation.get().isTextQA() ? 1 : 0;
+                totalStateQA += optionalAnnotation.get().isStateQA() ? 1 : 0;
+                totalActionQA += optionalAnnotation.get().isActionQA() ? 1 : 0;
+            }
+        }
+
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                new ProgressInterface(totalImages, totalAnnotatedImages, totalTextQA, totalStateQA, totalActionQA)
+        );
+        return ResponseEntity.status(OK).body(response);
     }
 
     @PostMapping(ADD)

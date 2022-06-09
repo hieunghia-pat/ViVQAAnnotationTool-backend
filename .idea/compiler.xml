@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="web" />
+        <module name="vncorenlp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="databases" options="-parameters" />
       <module name="uit-annotation-databases" options="-parameters" />
       <module name="uit.ise.annotation.databases" options="-parameters" />
+      <module name="vncorenlp" options="-parameters" />
       <module name="web" options="-parameters" />
     </option>
   </component>
