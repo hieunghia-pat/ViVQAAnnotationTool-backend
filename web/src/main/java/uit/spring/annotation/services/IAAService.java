@@ -72,11 +72,11 @@ public class IAAService {
                 nQA++;
             }
         }
-        answerTypes = createTable("answerType", nQA, 3);
+//        answerTypes = createTable("answerType", nQA, 3);
 
 //        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
 
-        return answerTypes;
+        return userIdSet;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
