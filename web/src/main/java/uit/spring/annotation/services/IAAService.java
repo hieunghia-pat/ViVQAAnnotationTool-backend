@@ -108,13 +108,12 @@ public class IAAService {
 //                        typeCount.put(0, value);
                     }
                     for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
-//                typeTable.get((int) (long) imageId).add(entry.getValue());
-                        typeTable.get(index).add(entry.getValue());
+//                        typeTable.get(index).add(entry.getValue());
+                        typeTable.get(index).add(index);
                     }
+                    index++;
                 }
             }
-
-            index++;
         }
 
         return typeTable;
