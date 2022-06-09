@@ -67,14 +67,14 @@ public class IAAService {
         }
 
         //Count number of annotation
-        for(Image image:imageList){
-            if(!image.isToDelete()){
-                nQA++;
-            }
-        }
-        answerTypes = createTable("answerType", nQA, 3);
+//        for(Image image:imageList){
+//            if(!image.isToDelete()){
+//                nQA++;
+//            }
+//        }
+//        answerTypes = createTable("answerType", nQA, 3);
 
-        return answerTypes;
+        return imageAnnotation;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
