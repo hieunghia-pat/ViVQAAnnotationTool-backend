@@ -67,12 +67,12 @@ public class IAAService {
         }
 
         //Count number of annotation
-//        for(Image image:imageList){
-//            if(!image.isToDelete()){
-//                nQA++;
-//            }
-//        }
-//        answerTypes = createTable("answerType", nQA, 3);
+        for(Image image:imageList){
+            if(!image.isToDelete()){
+                nQA++;
+            }
+        }
+        answerTypes = createTable("answerType", nQA, 3);
 
         return imageAnnotation;
     }
@@ -98,7 +98,8 @@ public class IAAService {
                 if (!image.isToDelete()) {
                     for (UUID userId : userIdSet) {
                         Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
-                        Integer value = annotationType.get(key);
+//                        Integer value = annotationType.get(key);
+                        Integer value = 0;
                         if(value == null){
                             value = 0;
                         }
