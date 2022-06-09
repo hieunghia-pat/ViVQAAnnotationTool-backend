@@ -74,7 +74,7 @@ public class IAAService {
         }
         answerTypes = createTable("answerType", nQA, 3);
 
-        return imageAnnotation;
+        return answerTypes;
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
