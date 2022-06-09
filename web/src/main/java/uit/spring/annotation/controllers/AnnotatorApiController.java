@@ -14,6 +14,7 @@ import uit.spring.annotation.repositories.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import static org.springframework.http.HttpStatus.*;
 import static uit.spring.annotation.security.UserRole.ANNOTATOR;
@@ -142,11 +143,11 @@ public class AnnotatorApiController {
                 .body(response);
     }
 
-    @PutMapping(path = UPDATE + "/{annotatorName}")
-    public ResponseEntity<Object> updateAnnotator(@PathVariable("annotatorName") String annotatorName, @RequestBody UserInterface annotatorInterface) {
-        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+    @PutMapping(path = UPDATE + "/{annotatorId}")
+    public ResponseEntity<Object> updateAnnotator(@PathVariable("annotatorId") UUID annotatorId, @RequestBody UserInterface annotatorInterface) {
+        Optional<User> optionalAnnotator = userRepository.findById(annotatorId);
         if (optionalAnnotator.isEmpty()) {
-            String message = String.format("Cannot find annotator %s", annotatorName);
+            String message = String.format("Cannot find annotator with id %s", annotatorId);
             log.info(message);
             ErrorInterface response = new ErrorInterface(
                     NOT_FOUND,
@@ -156,28 +157,33 @@ public class AnnotatorApiController {
                     .status(NOT_FOUND)
                     .body(response);
         }
+        User annotator = optionalAnnotator.get();
 
         try {
-            log.info(String.format("Updating annotator %s", annotatorName));
-            userRepository.updateById(annotatorInterface.getId(), annotatorInterface.getUsername(),
-                    annotatorInterface.getFirstname(), annotatorInterface.getLastname());
+            log.info(String.format("Updating annotator with id %s", annotatorId));
+            userRepository.updateById(
+                    annotatorInterface.getId(),
+                    annotatorInterface.getUsername(),
+                    annotatorInterface.getFirstname(),
+                    annotatorInterface.getLastname(),
+                    annotatorInterface.getPassword() == null ? annotator.getPassword() : annotatorInterface.getPassword());
         }
         catch (RuntimeException exception) {
             log.info(exception.getMessage());
             ErrorInterface response = new ErrorInterface(
                     INTERNAL_SERVER_ERROR,
-                    String.format("Failed to update annotator %s", annotatorName)
+                    String.format("Failed to update annotator with id %s", annotatorId)
             );
             return ResponseEntity
                     .status(INTERNAL_SERVER_ERROR)
                     .body(response);
         }
 
-        String message = String.format("Updated annotator %s successfully", annotatorName);
+        String message = String.format("Updated annotator with id %s successfully", annotatorId);
         log.info(message);
         ResponseInterface response = new ResponseInterface(
                 OK,
-                String.format("Updated annotator %s successfully", annotatorName)
+                String.format("Updated annotator with id %s successfully", annotatorId)
         );
         return ResponseEntity
                 .status(OK)
