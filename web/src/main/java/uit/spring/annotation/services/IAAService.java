@@ -1,6 +1,7 @@
 package uit.spring.annotation.services;
 
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uit.spring.annotation.databases.Annotation;
@@ -81,7 +82,9 @@ public class IAAService {
         textQAs = createTable("textQA", nQA, 2);
         actionQAs = createTable("actionQA", nQA, 2);
 
-        return questionTypes;
+
+
+        return calculate("answerType", answerTypes);
     }
 
     public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
@@ -117,5 +120,24 @@ public class IAAService {
             }
         }
         return typeTable;
+    }
+
+    public float calculate(String key, ArrayList<ArrayList<Integer>> annArrayList){
+
+        Long[][] annArray = arrayList2Array(annArrayList);
+        return FleissKappa.compute(annArray);
+    }
+
+    public Long[][] arrayList2Array(ArrayList<ArrayList<Integer>> arrayList){
+        Long[][] annArray = new Long[arrayList.size()][];
+        Long[] typeArray = new Long[arrayList.get(0).size()];
+
+        int index = 0;
+        for(ArrayList<Integer> array:arrayList){
+            typeArray = array.toArray(typeArray);
+            annArray[index] = typeArray;
+            index++;
+        }
+        return annArray;
     }
 }
