@@ -10,6 +10,8 @@ public final class Mappings {
     public static final String SUBSET = "/subset";
     public static final String SUBSETS = "/subsets";
     public static final String ASSIGNMENT = "/assignment";
+    public static final String PROGRESS = "/progress";
+    public static final String STATISTICS = "/statistics";
     public static final String IMAGE = "/image";
     public static final String IMAGES = "/images";
     public static final String ANNOTATION = "/annotation";

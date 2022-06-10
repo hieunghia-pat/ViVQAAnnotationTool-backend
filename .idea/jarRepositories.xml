@@ -7,6 +7,11 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="vncorenlp" />
+      <option name="name" value="vncorenlp thirdparty repo" />
+      <option name="url" value="https://github.com/vncorenlp/thirdparty/raw/repository/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />

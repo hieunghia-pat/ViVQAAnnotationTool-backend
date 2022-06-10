@@ -4,20 +4,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import uit.spring.annotation.databases.Subset;
-import uit.spring.annotation.databases.User;
-import uit.spring.annotation.databases.UserSubset;
-import uit.spring.annotation.interfaces.ErrorInterface;
-import uit.spring.annotation.interfaces.ResponseInterface;
-import uit.spring.annotation.interfaces.UserSubsetInterface;
+import uit.spring.annotation.databases.*;
+import uit.spring.annotation.interfaces.*;
+import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
+import vn.corenlp.postagger.PosTagger;
+import vn.pipeline.Sentence;
+import vn.pipeline.Word;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.io.IOException;
+import java.util.*;
 
 import static org.springframework.http.HttpStatus.*;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
@@ -33,6 +31,15 @@ public class AssignmentApiController {
     private SubsetRepository subsetRepository;
     @Autowired
     private UserSubsetRepository userSubsetRepository;
+    @Autowired
+    private AnnotationRepository annotationRepository;
+    @Autowired
+    private PosTagger posTagger;
+
+    AssignmentApiController() {
+        if (posTagger == null)
+            log.info("Cannot inject POS Tagger");
+    }
 
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAssignmentByUsername(@PathVariable("annotatorName") String annotatorName) {
@@ -76,6 +83,196 @@ public class AssignmentApiController {
         return ResponseEntity
                 .status(OK)
                 .body(response);
+    }
+
+    @GetMapping(GET + STATISTICS + SUBSET)
+    public ResponseEntity<Object> getStatisticsPerSubset(@RequestParam(name = "username") String username,
+                                                @RequestParam(name = "subset-id") Long subsetId) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
+        if (optionalSubset.isEmpty()) {
+            String message = String.format("Cannot find subset %s", subsetId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        Subset subset = optionalSubset.get();
+
+        List<Image> images = subset.getImages();
+        Integer totalImages = images.size();
+        Integer totalTextQA = 0;
+        Integer totalStateQA = 0;
+        Integer totalActionQA = 0;
+        Integer totalAnnotatedImages = 0;
+        Integer totalDeletedImages = 0;
+        List<Integer> questionLengths = new ArrayList<>();
+        List<Integer> answerLengths = new ArrayList<>();
+        Set<String> objects = new HashSet<>();
+        Set<String> verbs = new HashSet<>();
+        Sentence question;
+        Sentence answer;
+        for (Image image: images) {
+            Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
+            if (optionalAnnotation.isPresent()) {
+                Annotation annotation = optionalAnnotation.get();
+                if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals(""))
+                    totalAnnotatedImages += 1;
+                else
+                    totalDeletedImages += 1;
+                totalTextQA += annotation.isTextQA() ? 1 : 0;
+                totalStateQA += annotation.isStateQA() ? 1 : 0;
+                totalActionQA += annotation.isActionQA() ? 1 : 0;
+
+                try {
+                    question = new Sentence(annotation.getQuestion(), null,
+                            posTagger, null, null);
+                    answer = new Sentence(annotation.getAnswer(), null,
+                            posTagger, null, null);
+                    questionLengths.add(question.getTokens().size());
+                    answerLengths.add(answer.getTokens().size());
+                    for (Word word: question.getWords()) {
+                        if (word.getPosTag().equals("N"))
+                            objects.add(word.getForm());
+                        if (word.getPosTag().equals("V"))
+                            verbs.add(word.getForm());
+                    }
+                }
+                catch (IOException ioException) {
+                    String message = String.format(ioException.getMessage());
+                    ErrorInterface response = new ErrorInterface(
+                            INTERNAL_SERVER_ERROR,
+                            ioException.getMessage()
+                    );
+                    return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
+                }
+            }
+        }
+
+        SubsetStatisticsInterface subsetStatisticsInterface = new SubsetStatisticsInterface(
+                annotator.getId(),
+                subsetId,
+                totalImages,
+                totalTextQA,
+                totalStateQA,
+                totalActionQA,
+                totalAnnotatedImages,
+                totalDeletedImages,
+                questionLengths,
+                answerLengths,
+                objects,
+                verbs
+        );
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                subsetStatisticsInterface
+        );
+
+        return ResponseEntity.status(OK).body(response);
+    }
+
+    @GetMapping(GET + STATISTICS + SUBSETS)
+    public ResponseEntity<Object> getStatistics(@RequestParam("username") String username) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        List<UserSubset> assignments = userSubsetRepository.findByUserId(annotator.getId());
+        List<Subset> subsets = assignments.stream().map(UserSubset::getSubset).toList();
+
+        Integer totalImages = 0;
+        Integer totalTextQA = 0;
+        Integer totalStateQA = 0;
+        Integer totalActionQA = 0;
+        Integer totalAnnotatedImages = 0;
+        Integer totalDeletedImages = 0;
+        List<Integer> questionLengths = new ArrayList<>();
+        List<Integer> answerLengths = new ArrayList<>();
+        Set<String> objects = new HashSet<>();
+        Set<String> verbs = new HashSet<>();
+        for (Subset subset: subsets) {
+            List<Image> images = subset.getImages();
+            totalImages += images.size();
+            for (Image image: images) {
+                Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
+                if (optionalAnnotation.isPresent()) {
+                    Annotation annotation = optionalAnnotation.get();
+                    if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals(""))
+                        totalAnnotatedImages += 1;
+                    else
+                        totalDeletedImages += 1;
+                    totalTextQA += annotation.isTextQA() ? 1 : 0;
+                    totalStateQA += annotation.isStateQA() ? 1 : 0;
+                    totalActionQA += annotation.isActionQA() ? 1 : 0;
+
+                    Sentence question;
+                    Sentence answer;
+                    try {
+                        question = new Sentence(annotation.getQuestion(), null,
+                                posTagger, null, null);
+                        answer = new Sentence(annotation.getAnswer(), null,
+                                posTagger, null, null);
+                        questionLengths.add(question.getTokens().size());
+                        answerLengths.add(answer.getTokens().size());
+                        for (Word word : question.getWords()) {
+                            if (word.getPosTag().equals("N"))
+                                objects.add(word.getForm());
+                            if (word.getPosTag().equals("V"))
+                                verbs.add(word.getForm());
+                        }
+                    } catch (IOException ioException) {
+                        String message = String.format(ioException.getMessage());
+                        ErrorInterface response = new ErrorInterface(
+                                INTERNAL_SERVER_ERROR,
+                                ioException.getMessage()
+                        );
+                        return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
+                    }
+                }
+            }
+        }
+
+        SubsetStatisticsInterface subsetStatisticsInterface = new SubsetStatisticsInterface(
+                annotator.getId(),
+                null,
+                totalImages,
+                totalTextQA,
+                totalStateQA,
+                totalActionQA,
+                totalAnnotatedImages,
+                totalDeletedImages,
+                questionLengths,
+                answerLengths,
+                objects,
+                verbs
+        );
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                subsetStatisticsInterface
+        );
+
+        return ResponseEntity.status(OK).body(response);
     }
 
     @PostMapping(ADD)

@@ -17,8 +17,6 @@ import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 
 import javax.servlet.ServletContext;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 import static org.springframework.http.HttpStatus.*;
@@ -50,37 +48,6 @@ public class ImageApiController {
                     .body(response);
         }
         Image image = optionalImage.get();
-
-        if (image.getUrl() == null) {
-            String imageFile = String.format("WEB-INF/images/subsets/subset_%s/%s", image.getSubset().getId(), image.getFilename());
-            InputStream in = this.getClass().getClassLoader().getResourceAsStream(imageFile);
-            try {
-                assert in != null;
-                log.info(String.format("Loading image %s", imageId));
-                byte[] media = IOUtils.toByteArray(in);
-                String encodedImage = Base64.getEncoder().encodeToString(media);
-                Map<String, String> encodedImageObject = new HashMap<>();
-                encodedImageObject.put("image", encodedImage);
-                log.info(String.format("Loaded image %s successfully", imageId));
-                ResponseInterface response = new ResponseInterface(
-                        OK,
-                        encodedImageObject
-                );
-                return ResponseEntity
-                        .status(OK)
-                        .body(response);
-            }
-            catch (IOException exception) {
-                log.info(exception.getMessage());
-                ErrorInterface response = new ErrorInterface(
-                        INTERNAL_SERVER_ERROR,
-                        String.format("Error occurred while loading image %s", imageId)
-                );
-                return ResponseEntity
-                        .status(INTERNAL_SERVER_ERROR)
-                        .body(response);
-            }
-        }
 
         log.info(String.format("Loaded image %s successfully", imageId));
         ResponseInterface response = new ResponseInterface(
