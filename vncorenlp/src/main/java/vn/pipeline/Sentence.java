@@ -1,7 +1,6 @@
 package vn.pipeline;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 import vn.corenlp.ner.NerRecognizer;
 import vn.corenlp.parser.DependencyParser;
 import vn.corenlp.postagger.PosTagger;
@@ -13,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@Component
 public class Sentence {
     private String rawSentence;
     private List<String> tokens;

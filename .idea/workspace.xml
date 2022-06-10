@@ -7,15 +7,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="Added IAA Calculation">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="removed @Component for some types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,12 +45,43 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2AHCau9bndpYxwyNvgN4foaKQc1" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.27900553&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\Java\ViVQAAnnotationTool-backend\web\src\main\java\uit\spring\annotation\services" />
+      <recent name="$PROJECT_DIR$/vncorenlp/src/main/resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -49,7 +89,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="uit.spring.annotation.Main" />
       <module name="web" />
@@ -59,6 +99,31 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VnCoreNLP" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.pipeline.VnCoreNLP" />
+      <module name="vncorenlp" />
+      <option name="PROGRAM_PARAMETERS" value="-fin vncorenlp/src/main/resources/input.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uit.spring.annotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,20 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00001" summary="redefined permissions for apis">
-      <created>1654651094610</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654651094617</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added insert query for annotation table">
-      <created>1654651867737</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654651867737</updated>
     </task>
     <task id="LOCAL-00003" summary="turned back to using save method of repository for adding new annotation">
       <created>1654652659971</created>
@@ -393,14 +444,49 @@
       <option name="project" value="LOCAL" />
       <updated>1654682179908</updated>
     </task>
-    <task id="LOCAL-00046" summary="Added IAA Calculation">
-      <created>1654846008003</created>
+    <task id="LOCAL-00046" summary="updated annotation api for updating annotator">
+      <created>1654760737156</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1654846008003</updated>
+      <updated>1654760737156</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added vncorenlp module">
+      <created>1654771658989</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1654771658989</updated>
+    </task>
+    <task id="LOCAL-00048" summary="updated workspace.xml">
+      <created>1654771775234</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1654771775234</updated>
+    </task>
+    <task id="LOCAL-00049" summary="removed .gitattributes">
+      <created>1654772035793</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1654772035793</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added statistics apis for assignment">
+      <created>1654832870853</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1654832870854</updated>
+    </task>
+    <task id="LOCAL-00051" summary="removed @Component for some types">
+      <created>1654845914314</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1654845914314</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -422,7 +508,14 @@
     <MESSAGE value="fixed the link for deleting annotation" />
     <MESSAGE value="fixed the link for updating annotation" />
     <MESSAGE value="debugging" />
+    <MESSAGE value="make update query work" />
     <MESSAGE value="Added IAA Calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added IAA Calculation" />
+    <MESSAGE value="updated annotation api for updating annotator" />
+    <MESSAGE value="added vncorenlp module" />
+    <MESSAGE value="updated workspace.xml" />
+    <MESSAGE value="removed .gitattributes" />
+    <MESSAGE value="added statistics apis for assignment" />
+    <MESSAGE value="removed @Component for some types" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed @Component for some types" />
   </component>
 </project>

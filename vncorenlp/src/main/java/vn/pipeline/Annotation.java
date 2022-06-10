@@ -1,13 +1,11 @@
 package vn.pipeline;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.*;
 
 @Slf4j
-@Component
 public class Annotation {
     private String rawText;
     private List<String> tokens;

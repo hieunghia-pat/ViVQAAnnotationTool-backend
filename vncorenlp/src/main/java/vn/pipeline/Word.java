@@ -1,8 +1,6 @@
 package vn.pipeline;
 
-import org.springframework.stereotype.Component;
 
-@Component
 public class Word {
     private int index = -1;
     private String form;
