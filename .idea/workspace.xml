@@ -8,10 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="fixed errors after removing NER and Dependency Parser">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,13 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixed the link for updating annotation">
-      <created>1654653662517</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1654653662517</updated>
     </task>
     <task id="LOCAL-00007" summary="debugging">
       <created>1654654054288</created>
@@ -489,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654852818181</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="fixed errors after removing NER and Dependency Parser">
+      <created>1654853205119</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1654853205119</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
