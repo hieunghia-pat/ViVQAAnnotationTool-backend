@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uit.spring.annotation.services;
 
-/**
- *
- * @author vinnie-d
- */
 public class PercentAgreement {
     public static float compute(Long[][] annArray){
         final int N = annArray.length;          

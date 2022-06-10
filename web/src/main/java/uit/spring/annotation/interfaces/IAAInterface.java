@@ -2,14 +2,25 @@ package uit.spring.annotation.interfaces;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Data
 public class IAAInterface {
-    private Object Test;
+    private Object answerType;
+    private Object questionType;
+    private Object textQA;
+    private Object stateQA;
+    private Object actionQA;
 
-    public IAAInterface(Object test) {
-        Test = test;
+    public IAAInterface(){};
+
+    public IAAInterface(Object answerType,
+                        Object questionType,
+                        Object textQA,
+                        Object stateQA,
+                        Object actionQA) {
+        this.answerType = answerType;
+        this.questionType = questionType;
+        this.textQA = textQA;
+        this.stateQA = stateQA;
+        this.actionQA = actionQA;
     }
 }

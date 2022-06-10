@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.UserSubset;
+import uit.spring.annotation.interfaces.IAAInterface;
 import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.ImageRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
@@ -15,18 +16,20 @@ import java.util.*;
 @Slf4j
 @Service
 public class IAAService {
+    IAAInterface IAAScores;
 
-    Map<Long, Map<UUID, Map<String, Integer>>> imageAnnotation = new HashMap<>();
+    Map<Long, Map<UUID, Map<String, Long>>> imageAnnotation = new HashMap<>();
 
     List<Long> imageIdList = new ArrayList<>();
 
     Set<UUID> userIdSet = new HashSet<>();
 
-    ArrayList<ArrayList<Integer>> answerTypes = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> questionTypes = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> stateQAs = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> textQAs = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> actionQAs = new ArrayList<>();
+    ArrayList<ArrayList<Long>> answerTypes = new ArrayList<>();
+    ArrayList<ArrayList<Long>> questionTypes = new ArrayList<>();
+    ArrayList<ArrayList<Long>> stateQAs = new ArrayList<>();
+    ArrayList<ArrayList<Long>> textQAs = new ArrayList<>();
+    ArrayList<ArrayList<Long    >> actionQAs = new ArrayList<>();
+
 
     @Autowired
     AnnotationRepository annotationRepository;
@@ -35,7 +38,7 @@ public class IAAService {
     @Autowired
     UserSubsetRepository userSubsetRepository;
 
-    public Object calIAA(Long subsetId){
+    public IAAInterface calIAA(Long subsetId){
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
@@ -52,17 +55,17 @@ public class IAAService {
 
         //Create image annotation type
         for(Long imageId:imageIdList){
-            Map<UUID, Map<String, Integer>> userAnnotation = new HashMap<>();
+            Map<UUID, Map<String, Long>> userAnnotation = new HashMap<>();
             for(UUID userId:userIdSet){
                 Optional<Annotation> annotationOptional = annotationRepository.findByUserForImage(userId, imageId);
-                Map<String, Integer> annotationType = new HashMap<>();
+                Map<String, Long> annotationType = new HashMap<>();
                 if(annotationOptional.isPresent()){
                     Annotation annotation = annotationOptional.get();
-                    annotationType.put("answerType", annotation.getAnswerType());
-                    annotationType.put("questionType", annotation.getQuestionType());
-                    annotationType.put("stateQA", annotation.isStateQA() ? 1 : 0);
-                    annotationType.put("textQA", annotation.isTextQA() ? 1 : 0);
-                    annotationType.put("actionQA", annotation.isActionQA() ? 1 : 0);
+                    annotationType.put("answerType", Long.valueOf(annotation.getAnswerType()));
+                    annotationType.put("questionType", Long.valueOf(annotation.getQuestionType()));
+                    annotationType.put("stateQA", (long) (annotation.isStateQA() ? 1 : 0));
+                    annotationType.put("textQA", (long) (annotation.isTextQA() ? 1 : 0));
+                    annotationType.put("actionQA", (long) (annotation.isActionQA() ? 1 : 0));
                 }
                 userAnnotation.put(userId, annotationType);
             }
@@ -81,14 +84,20 @@ public class IAAService {
         textQAs = createTable("textQA", nQA, 2);
         actionQAs = createTable("actionQA", nQA, 2);
 
-        return calculate("answerType", answerTypes);
+        IAAScores = new IAAInterface(calculate(answerTypes),
+                                    calculate(questionTypes),
+                                    calculate(stateQAs),
+                                    calculate(textQAs),
+                                    calculate(actionQAs));
+
+        return IAAScores;
     }
 
-    public ArrayList<ArrayList<Integer>> createTable(String key, Integer nQA, Integer numType){
+    public ArrayList<ArrayList<Long>> createTable(String key, Integer nQA, Integer numType){
 
-        Map<Integer, Integer> typeCount = new HashMap<>();
+        Map<Long, Long> typeCount = new HashMap<>();
 
-        ArrayList<ArrayList<Integer>> typeTable = new ArrayList<>(nQA);
+        ArrayList<ArrayList<Long>> typeTable = new ArrayList<>(nQA);
         for(int i = 0; i < nQA; i++){
             typeTable.add(new ArrayList<>());
         }
@@ -96,7 +105,7 @@ public class IAAService {
         int index = 0;
         for(Long imageId:imageIdList){
             for(int i = 0; i < numType; i++){
-                typeCount.put(i, 0);
+                typeCount.put((long) i, (long) 0);
             }
 
             Optional<Image> imageOptional = imageRepository.findById(imageId);
@@ -105,11 +114,11 @@ public class IAAService {
                 Image image = imageOptional.get();
                 if (!image.isToDelete()) {
                     for (UUID userId : userIdSet) {
-                        Map<String, Integer> annotationType = imageAnnotation.get(imageId).get(userId);
-                        Integer value = annotationType.get(key);
+                        Map<String, Long> annotationType = imageAnnotation.get(imageId).get(userId);
+                        Long value = annotationType.get(key);
                         typeCount.put(value, typeCount.get(value)+1);
                     }
-                    for(Map.Entry<Integer, Integer> entry : typeCount.entrySet()){
+                    for(Map.Entry<Long, Long> entry : typeCount.entrySet()){
                         typeTable.get(index).add(entry.getValue());
                     }
                     index++;
@@ -119,22 +128,16 @@ public class IAAService {
         return typeTable;
     }
 
-    public float calculate(String key, ArrayList<ArrayList<Integer>> annArrayList){
+    public Map<String, Float> calculate(ArrayList<ArrayList<Long>> annArrayList){
 
-        Long[][] annArray = arrayList2Array(annArrayList);
-        return FleissKappa.compute(annArray);
-    }
+        //Convert 2D ArrayList to 2D Array
+        Long[][] annArray = annArrayList.stream().map(u -> u.toArray(new Long[0])).toArray(Long[][]::new);
 
-    public Long[][] arrayList2Array(ArrayList<ArrayList<Integer>> arrayList){
-        Long[][] annArray = new Long[arrayList.size()][];
-        Long[] typeArray = new Long[arrayList.get(0).size()];
+        Map<String, Float> scores = new HashMap<>();
+        scores.put("fleissKappa", FleissKappa.compute(annArray));
+        scores.put("percentAgreement", PercentAgreement.compute(annArray));
 
-        int index = 0;
-        for(ArrayList<Integer> array:arrayList){
-            typeArray = array.toArray(typeArray);
-            annArray[index] = typeArray;
-            index++;
-        }
-        return annArray;
+
+        return scores;
     }
 }

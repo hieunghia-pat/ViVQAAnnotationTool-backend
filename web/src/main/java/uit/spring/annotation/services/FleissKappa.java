@@ -1,15 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uit.spring.annotation.services;
 import java.util.Arrays;
 
-
-/**
- *
- * @author vinnie-d
- */
 public class FleissKappa {
     public static final boolean DEBUG = false ;
 
