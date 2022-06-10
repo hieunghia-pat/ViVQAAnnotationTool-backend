@@ -6,15 +6,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
+import uit.spring.annotation.databases.Subset;
 import uit.spring.annotation.databases.User;
 import uit.spring.annotation.interfaces.AnnotationInterface;
 import uit.spring.annotation.interfaces.ErrorInterface;
 import uit.spring.annotation.interfaces.IAAInterface;
 import uit.spring.annotation.interfaces.ResponseInterface;
-import uit.spring.annotation.repositories.AnnotationRepository;
-import uit.spring.annotation.repositories.ImageRepository;
-import uit.spring.annotation.repositories.UserRepository;
-import uit.spring.annotation.repositories.UserSubsetRepository;
+import uit.spring.annotation.repositories.*;
 import uit.spring.annotation.services.IAAService;
 
 import java.util.ArrayList;
@@ -35,6 +33,8 @@ public class AnnotationApiController {
     private AnnotationRepository annotationRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private SubsetRepository subsetRepository;
     @Autowired
     private UserSubsetRepository userSubsetRepository;
     @Autowired
@@ -143,6 +143,16 @@ public class AnnotationApiController {
     //Test
     @GetMapping(GET + USER_AGREEMENT + "/{subsetId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
+        Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
+        if (optionalSubset.isEmpty()) {
+            String message = String.format("Cannot find subset %s", subsetId);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+
         IAAInterface iaaInterface = iaaService.calIAA(subsetId);
 
         return ResponseEntity
