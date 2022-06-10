@@ -8,26 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added statistics apis for assignment">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/interfaces/SubsetStatisticsInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vncorenlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/ner/NerRecognizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/ner/NerRecognizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/parser/DependencyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/parser/DependencyParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/postagger/PosTagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/postagger/PosTagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/tokenizer/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/tokenizer/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/ImageApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/ImageApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/interfaces/ProgressInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +95,20 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="uit.spring.annotation.Main" />
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uit.spring.annotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VnCoreNLP" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.pipeline.VnCoreNLP" />
       <module name="vncorenlp" />
@@ -133,6 +134,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -142,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00001" summary="redefined permissions for apis">
-      <created>1654651094610</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654651094617</updated>
     </task>
     <task id="LOCAL-00002" summary="added insert query for annotation table">
       <created>1654651867737</created>
@@ -486,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654772035793</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="added statistics apis for assignment">
+      <created>1654832870853</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1654832870854</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

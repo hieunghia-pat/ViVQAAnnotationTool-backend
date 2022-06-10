@@ -36,11 +36,6 @@ public class AssignmentApiController {
     @Autowired
     private PosTagger posTagger;
 
-    AssignmentApiController() {
-        if (posTagger == null)
-            log.info("Cannot inject POS Tagger");
-    }
-
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAssignmentByUsername(@PathVariable("annotatorName") String annotatorName) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
