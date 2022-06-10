@@ -6,6 +6,7 @@ import marmot.morph.Sentence;
 import marmot.morph.Word;
 
 import marmot.util.FileUtils;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Slf4j
+@Component
 public class PosTagger {
     private static PosTagger posTagger = null;
     private MorphTagger tagger;

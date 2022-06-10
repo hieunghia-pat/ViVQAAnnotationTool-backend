@@ -1,9 +1,12 @@
 package vn.corenlp.tokenizer;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Component
 public class StringUtils
 {
 

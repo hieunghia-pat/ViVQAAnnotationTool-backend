@@ -103,6 +103,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .hasAuthority(ASSIGNMENT_WRITE.getPermission())
                 .antMatchers(HttpMethod.DELETE, ASSIGNMENT_API + DELETE + "/*")
                     .hasAuthority(ASSIGNMENT_WRITE.getPermission())
+                .antMatchers(HttpMethod.GET, ASSIGNMENT_API + GET + STATISTICS + SUBSET)
+                    .hasAnyAuthority(ASSIGNMENT_READ.getPermission())
+                .antMatchers(HttpMethod.GET, ASSIGNMENT_API + GET + STATISTICS + SUBSETS)
+                    .hasAnyAuthority(ASSIGNMENT_READ.getPermission())
 
                 .anyRequest()
                     .authenticated()

@@ -7,13 +7,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="removed .gitattributes">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added statistics apis for assignment">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/interfaces/SubsetStatisticsInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/ner/NerRecognizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/ner/NerRecognizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/parser/DependencyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/parser/DependencyParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/postagger/PosTagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/postagger/PosTagger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/tokenizer/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/corenlp/tokenizer/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/VnCoreNLP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/ImageApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/ImageApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/interfaces/ProgressInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,23 +73,30 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2AHCau9bndpYxwyNvgN4foaKQc1" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/vncorenlp/pom.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27900553&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27900553",
+    "settings.editor.selected.configurable": "preferences.sourceCode"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vncorenlp/src/main/resources" />
@@ -89,6 +118,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -474,6 +514,7 @@
     <MESSAGE value="added vncorenlp module" />
     <MESSAGE value="updated workspace.xml" />
     <MESSAGE value="removed .gitattributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed .gitattributes" />
+    <MESSAGE value="added statistics apis for assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added statistics apis for assignment" />
   </component>
 </project>

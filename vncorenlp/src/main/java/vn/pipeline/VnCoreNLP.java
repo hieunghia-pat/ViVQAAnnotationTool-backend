@@ -101,6 +101,9 @@ public class VnCoreNLP {
             if (line.trim().length() > 0) {
                 Annotation annotation = new Annotation(line);
                 pipeline.annotate(annotation);
+                for (Sentence sentence: annotation.getSentences())
+                    for (Word word: sentence.getWords())
+                        log.info(String.format("%s - %s - %s", word.getIndex(), word.getForm(), word.getPosTag()));
                 osw.write(annotation.toString());
             }
         }

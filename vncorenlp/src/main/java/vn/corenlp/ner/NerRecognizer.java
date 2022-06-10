@@ -8,6 +8,7 @@ import edu.emory.mathcs.nlp.component.template.node.FeatMap;
 import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 import edu.emory.mathcs.nlp.decode.NLPDecoder;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 import vn.corenlp.wordsegmenter.Vocabulary;
 import vn.pipeline.LexicalInitializer;
 import vn.pipeline.Word;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+@Component
 public class NerRecognizer {
     private NLPDecoder nlpDecoder ;
     private static NerRecognizer nerRecognizer;

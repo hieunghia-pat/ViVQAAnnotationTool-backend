@@ -2,8 +2,7 @@
 
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="vn.corenlp" level="DEBUG"/>
-    <logger name="vn.pipeline" level="DEBUG"/>
+    <logger name="vn" level="DEBUG"/>
     <logger name="org.springframework" level="INFO"/>
 
 </configuration>
