@@ -1,7 +1,6 @@
 package uit.spring.annotation.services;
 
 import lombok.extern.slf4j.Slf4j;
-import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uit.spring.annotation.databases.Annotation;
@@ -81,8 +80,6 @@ public class IAAService {
         stateQAs = createTable("stateQA", nQA, 2);
         textQAs = createTable("textQA", nQA, 2);
         actionQAs = createTable("actionQA", nQA, 2);
-
-
 
         return calculate("answerType", answerTypes);
     }
