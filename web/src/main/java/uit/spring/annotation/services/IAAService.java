@@ -14,20 +14,8 @@ import uit.spring.annotation.repositories.UserSubsetRepository;
 import java.util.*;
 
 @Slf4j
+@Service
 public class IAAService {
-    IAAInterface IAAScores;
-
-    Map<Long, Map<UUID, Map<String, Long>>> imageAnnotation = new HashMap<>();
-
-    List<Long> imageIdList = new ArrayList<>();
-
-    Set<UUID> userIdSet = new HashSet<>();
-
-    ArrayList<ArrayList<Long>> answerTypes = new ArrayList<>();
-    ArrayList<ArrayList<Long>> questionTypes = new ArrayList<>();
-    ArrayList<ArrayList<Long>> stateQAs = new ArrayList<>();
-    ArrayList<ArrayList<Long>> textQAs = new ArrayList<>();
-    ArrayList<ArrayList<Long>> actionQAs = new ArrayList<>();
 
     @Autowired
     AnnotationRepository annotationRepository;
@@ -40,13 +28,18 @@ public class IAAService {
         List<Image> imageList = imageRepository.findBySubsetId(subsetId);
         List<UserSubset> userSubsetsList= userSubsetRepository.findBySubsetId(subsetId);
 
+        Map<Long, Map<UUID, Map<String, Long>>> imageAnnotation = new HashMap<>();
+
         int nQA = 0;
 
         //Get image ID list
+        List<Long> imageIdList = new ArrayList<>();
         for(Image image:imageList){
             imageIdList.add(image.getId());
         }
+
         //Get user ID set
+        Set<UUID> userIdSet = new HashSet<>();
         for(UserSubset userSubset:userSubsetsList){
             userIdSet.add(userSubset.getUser().getId());
         }
@@ -76,13 +69,18 @@ public class IAAService {
                 nQA++;
             }
         }
-        answerTypes = createTable("answerType", nQA, 3);
-        questionTypes = createTable("questionType", nQA, 6);
-        stateQAs = createTable("stateQA", nQA, 2);
-        textQAs = createTable("textQA", nQA, 2);
-        actionQAs = createTable("actionQA", nQA, 2);
+        ArrayList<ArrayList<Long>> answerTypes = createTable("answerType", nQA, 3,
+                imageIdList, userIdSet, imageAnnotation);
+        ArrayList<ArrayList<Long>> questionTypes = createTable("questionType", nQA, 6,
+                imageIdList, userIdSet, imageAnnotation);
+        ArrayList<ArrayList<Long>> stateQAs = createTable("stateQA", nQA, 2,
+                imageIdList, userIdSet, imageAnnotation);
+        ArrayList<ArrayList<Long>> textQAs = createTable("textQA", nQA, 2,
+                imageIdList, userIdSet, imageAnnotation);
+        ArrayList<ArrayList<Long>> actionQAs = createTable("actionQA", nQA, 2,
+                imageIdList, userIdSet, imageAnnotation);
 
-        IAAScores = new IAAInterface(calculate(answerTypes),
+        IAAInterface IAAScores = new IAAInterface(calculate(answerTypes),
                                     calculate(questionTypes),
                                     calculate(stateQAs),
                                     calculate(textQAs),
@@ -91,7 +89,8 @@ public class IAAService {
         return IAAScores;
     }
 
-    public ArrayList<ArrayList<Long>> createTable(String key, Integer nQA, Integer numType){
+    public ArrayList<ArrayList<Long>> createTable(String key, Integer nQA, Integer numType, List<Long> imageIdList,
+                                                  Set<UUID> userIdSet, Map<Long, Map<UUID, Map<String, Long>>> imageAnnotation){
 
         Map<Long, Long> typeCount = new HashMap<>();
 
