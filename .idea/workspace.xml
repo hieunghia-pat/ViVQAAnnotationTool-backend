@@ -7,14 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added statistics apis for assignment">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="removed @Component for some types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Annotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/vncorenlp/src/main/java/vn/pipeline/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,20 +65,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.27900553",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.27900553&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vncorenlp/src/main/resources" />
@@ -148,13 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added insert query for annotation table">
-      <created>1654651867737</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654651867737</updated>
     </task>
     <task id="LOCAL-00003" summary="turned back to using save method of repository for adding new annotation">
       <created>1654652659971</created>
@@ -492,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654832870854</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="removed @Component for some types">
+      <created>1654845914314</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1654845914314</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -521,6 +515,7 @@
     <MESSAGE value="updated workspace.xml" />
     <MESSAGE value="removed .gitattributes" />
     <MESSAGE value="added statistics apis for assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added statistics apis for assignment" />
+    <MESSAGE value="removed @Component for some types" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed @Component for some types" />
   </component>
 </project>
