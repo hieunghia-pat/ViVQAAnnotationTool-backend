@@ -1,14 +1,12 @@
 package uit.spring.annotation.controllers;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uit.spring.annotation.databases.Annotation;
 import uit.spring.annotation.databases.Image;
 import uit.spring.annotation.databases.User;
-import uit.spring.annotation.databases.UserSubset;
 import uit.spring.annotation.interfaces.AnnotationInterface;
 import uit.spring.annotation.interfaces.ErrorInterface;
 import uit.spring.annotation.interfaces.IAAInterface;
@@ -146,8 +144,7 @@ public class AnnotationApiController {
     //Test
     @GetMapping(GET + "/Test" + "/{subsetId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
-//        IAAService iaaService = new IAAService();
-        IAAInterface iaaInterface = new IAAInterface(iaaService.calIAA(subsetId));
+        IAAInterface iaaInterface = iaaService.calIAA(subsetId);
 
         return ResponseEntity
                 .status(OK)
