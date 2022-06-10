@@ -136,7 +136,6 @@ public class IAAService {
         scores.put("fleissKappa", FleissKappa.compute(annArray));
         scores.put("percentAgreement", PercentAgreement.compute(annArray));
 
-
         return scores;
     }
 }
