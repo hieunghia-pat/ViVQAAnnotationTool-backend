@@ -116,48 +116,24 @@ public class AssignmentApiController {
         Integer totalDeletedImages = 0;
         List<Integer> questionLengths = new ArrayList<>();
         List<Integer> answerLengths = new ArrayList<>();
-        Set<String> objects = new HashSet<>();
-        Set<String> verbs = new HashSet<>();
-        Sentence question;
-        Sentence answer;
         for (Image image: images) {
             Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
             if (optionalAnnotation.isPresent()) {
                 Annotation annotation = optionalAnnotation.get();
-                if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals(""))
+                if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals("")) {
                     totalAnnotatedImages += 1;
+                    questionLengths.add(annotation.getQuestion().replaceAll("\\s+", " ").split(" ").length);
+                    answerLengths.add(annotation.getQuestion().replaceAll("\\s+", " ").split(" ").length);
+                }
                 else
                     totalDeletedImages += 1;
                 totalTextQA += annotation.isTextQA() ? 1 : 0;
                 totalStateQA += annotation.isStateQA() ? 1 : 0;
                 totalActionQA += annotation.isActionQA() ? 1 : 0;
-
-                try {
-                    question = new Sentence(annotation.getQuestion(), null,
-                            posTagger, null, null);
-                    answer = new Sentence(annotation.getAnswer(), null,
-                            posTagger, null, null);
-                    questionLengths.add(question.getTokens().size());
-                    answerLengths.add(answer.getTokens().size());
-                    for (Word word: question.getWords()) {
-                        if (word.getPosTag().equals("N"))
-                            objects.add(word.getForm());
-                        if (word.getPosTag().equals("V"))
-                            verbs.add(word.getForm());
-                    }
-                }
-                catch (IOException ioException) {
-                    String message = String.format(ioException.getMessage());
-                    ErrorInterface response = new ErrorInterface(
-                            INTERNAL_SERVER_ERROR,
-                            ioException.getMessage()
-                    );
-                    return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
-                }
             }
         }
 
-        SubsetStatisticsInterface subsetStatisticsInterface = new SubsetStatisticsInterface(
+        StatisticsInterface statisticsInterface = new StatisticsInterface(
                 annotator.getId(),
                 subsetId,
                 totalImages,
@@ -167,13 +143,119 @@ public class AssignmentApiController {
                 totalAnnotatedImages,
                 totalDeletedImages,
                 questionLengths,
-                answerLengths,
+                answerLengths
+        );
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                statisticsInterface
+        );
+
+        return ResponseEntity.status(OK).body(response);
+    }
+    
+    @GetMapping(GET + POS + SUBSET)
+    public ResponseEntity<Object> getPosTaggingPerSubset(@RequestParam(name = "username") String username,
+                                                 @RequestParam(name = "subset-id") Long subsetId) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);
+        if (optionalSubset.isEmpty()) {
+            String message = String.format("Cannot find subset %s", subsetId);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        Subset subset = optionalSubset.get();
+
+        List<Image> images = subset.getImages();
+        Sentence question;
+        Sentence answer;
+        Map<String, Integer> objects = new HashMap<>();
+        Map<String, Integer> verbs = new HashMap<>();
+        for (Image image: images) {
+            Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
+            if (optionalAnnotation.isPresent()) {
+                Annotation annotation = optionalAnnotation.get();
+                try {
+                    question = new Sentence(annotation.getQuestion(), null,
+                            posTagger, null, null);
+                    answer = new Sentence(annotation.getAnswer(), null,
+                            posTagger, null, null);
+                    // collecting objects or verbs in question
+                    for (Word word : question.getWords()) {
+                        if (word.getPosTag().equals("N")) {
+                            if (objects.containsKey(word.getForm())) {
+                                String token = word.getForm();
+                                objects.put(token, objects.get(token) + 1);
+                            } else {
+                                String token = word.getForm();
+                                objects.put(token, 1);
+                            }
+                        }
+                        if (word.getPosTag().equals("V")) {
+                            if (verbs.containsKey(word.getForm())) {
+                                String token = word.getForm();
+                                verbs.put(token, verbs.get(token) + 1);
+                            } else {
+                                String token = word.getForm();
+                                verbs.put(token, 1);
+                            }
+                        }
+                    }
+                    // collecting words or objects in answer
+                    for (Word word : answer.getWords()) {
+                        if (word.getPosTag().equals("N")) {
+                            if (objects.containsKey(word.getForm())) {
+                                String token = word.getForm();
+                                objects.put(token, objects.get(token) + 1);
+                            } else {
+                                String token = word.getForm();
+                                objects.put(token, 1);
+                            }
+                        }
+                        if (word.getPosTag().equals("V")) {
+                            if (verbs.containsKey(word.getForm())) {
+                                String token = word.getForm();
+                                verbs.put(token, verbs.get(token) + 1);
+                            } else {
+                                String token = word.getForm();
+                                verbs.put(token, 1);
+                            }
+                        }
+                    }
+                }
+                catch (IOException ioException) {
+                    ErrorInterface response = new ErrorInterface(
+                            INTERNAL_SERVER_ERROR,
+                            ioException.getMessage()
+                    );
+                    return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
+                }
+            }
+        }
+
+        PosInterface posInterface = new PosInterface(
+                annotator.getId(),
+                subsetId,
                 objects,
                 verbs
         );
         ResponseInterface response = new ResponseInterface(
                 OK,
-                subsetStatisticsInterface
+                posInterface
         );
 
         return ResponseEntity.status(OK).body(response);
@@ -204,8 +286,6 @@ public class AssignmentApiController {
         Integer totalDeletedImages = 0;
         List<Integer> questionLengths = new ArrayList<>();
         List<Integer> answerLengths = new ArrayList<>();
-        Set<String> objects = new HashSet<>();
-        Set<String> verbs = new HashSet<>();
         for (Subset subset: subsets) {
             List<Image> images = subset.getImages();
             totalImages += images.size();
@@ -213,42 +293,21 @@ public class AssignmentApiController {
                 Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
                 if (optionalAnnotation.isPresent()) {
                     Annotation annotation = optionalAnnotation.get();
-                    if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals(""))
+                    if (!annotation.getQuestion().equals("") && !annotation.getAnswer().equals("")) {
                         totalAnnotatedImages += 1;
+                        questionLengths.add(annotation.getQuestion().replaceAll("\\s+", " ").split(" ").length);
+                        answerLengths.add(annotation.getQuestion().replaceAll("\\s+", " ").split(" ").length);
+                    }
                     else
                         totalDeletedImages += 1;
                     totalTextQA += annotation.isTextQA() ? 1 : 0;
                     totalStateQA += annotation.isStateQA() ? 1 : 0;
                     totalActionQA += annotation.isActionQA() ? 1 : 0;
-
-                    Sentence question;
-                    Sentence answer;
-                    try {
-                        question = new Sentence(annotation.getQuestion(), null,
-                                posTagger, null, null);
-                        answer = new Sentence(annotation.getAnswer(), null,
-                                posTagger, null, null);
-                        questionLengths.add(question.getTokens().size());
-                        answerLengths.add(answer.getTokens().size());
-                        for (Word word : question.getWords()) {
-                            if (word.getPosTag().equals("N"))
-                                objects.add(word.getForm());
-                            if (word.getPosTag().equals("V"))
-                                verbs.add(word.getForm());
-                        }
-                    } catch (IOException ioException) {
-                        String message = String.format(ioException.getMessage());
-                        ErrorInterface response = new ErrorInterface(
-                                INTERNAL_SERVER_ERROR,
-                                ioException.getMessage()
-                        );
-                        return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
-                    }
                 }
             }
         }
 
-        SubsetStatisticsInterface subsetStatisticsInterface = new SubsetStatisticsInterface(
+        StatisticsInterface statisticsInterface = new StatisticsInterface(
                 annotator.getId(),
                 null,
                 totalImages,
@@ -258,13 +317,112 @@ public class AssignmentApiController {
                 totalAnnotatedImages,
                 totalDeletedImages,
                 questionLengths,
-                answerLengths,
+                answerLengths
+        );
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                statisticsInterface
+        );
+
+        return ResponseEntity.status(OK).body(response);
+    }
+
+    @GetMapping(GET + POS + SUBSETS)
+    public ResponseEntity<Object> getPosTagging(@RequestParam("username") String username) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(username);
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", username);
+            log.info(message);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity.status(NOT_FOUND).body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        List<UserSubset> assignments = userSubsetRepository.findByUserId(annotator.getId());
+        List<Subset> subsets = assignments.stream().map(UserSubset::getSubset).toList();
+
+        Map<String, Integer> objects = new HashMap<>();
+        Map<String, Integer> verbs = new HashMap<>();
+        for (Subset subset : subsets) {
+            List<Image> images = subset.getImages();
+            for (Image image : images) {
+                Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
+                if (optionalAnnotation.isPresent()) {
+                    Annotation annotation = optionalAnnotation.get();
+                    Sentence question;
+                    Sentence answer;
+                    try {
+                        question = new Sentence(annotation.getQuestion(), null,
+                                posTagger, null, null);
+                        answer = new Sentence(annotation.getAnswer(), null,
+                                posTagger, null, null);
+                        // collecting objects or verbs in question
+                        for (Word word : question.getWords()) {
+                            if (word.getPosTag().equals("N")) {
+                                if (objects.containsKey(word.getForm())) {
+                                    String token = word.getForm();
+                                    objects.put(token, objects.get(token) + 1);
+                                } else {
+                                    String token = word.getForm();
+                                    objects.put(token, 1);
+                                }
+                            }
+                            if (word.getPosTag().equals("V")) {
+                                if (verbs.containsKey(word.getForm())) {
+                                    String token = word.getForm();
+                                    verbs.put(token, verbs.get(token) + 1);
+                                } else {
+                                    String token = word.getForm();
+                                    verbs.put(token, 1);
+                                }
+                            }
+                        }
+                        // collecting words or objects in answer
+                        for (Word word : answer.getWords()) {
+                            if (word.getPosTag().equals("N")) {
+                                if (objects.containsKey(word.getForm())) {
+                                    String token = word.getForm();
+                                    objects.put(token, objects.get(token) + 1);
+                                } else {
+                                    String token = word.getForm();
+                                    objects.put(token, 1);
+                                }
+                            }
+                            if (word.getPosTag().equals("V")) {
+                                if (verbs.containsKey(word.getForm())) {
+                                    String token = word.getForm();
+                                    verbs.put(token, verbs.get(token) + 1);
+                                } else {
+                                    String token = word.getForm();
+                                    verbs.put(token, 1);
+                                }
+                            }
+                        }
+                    } catch (IOException ioException) {
+                        log.info(ioException.getMessage());
+                        String message = String.format("Failed to perform POS tagging on annotations of annotator %s", username);
+                        ErrorInterface response = new ErrorInterface(
+                                INTERNAL_SERVER_ERROR,
+                                message
+                        );
+                        return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
+                    }
+                }
+            }
+        }
+
+        PosInterface posInterface = new PosInterface(
+                annotator.getId(),
+                null,
                 objects,
                 verbs
         );
         ResponseInterface response = new ResponseInterface(
                 OK,
-                subsetStatisticsInterface
+                posInterface
         );
 
         return ResponseEntity.status(OK).body(response);
