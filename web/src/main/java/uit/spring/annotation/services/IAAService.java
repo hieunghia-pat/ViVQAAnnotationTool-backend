@@ -14,7 +14,6 @@ import uit.spring.annotation.repositories.UserSubsetRepository;
 import java.util.*;
 
 @Slf4j
-@Service
 public class IAAService {
     IAAInterface IAAScores;
 

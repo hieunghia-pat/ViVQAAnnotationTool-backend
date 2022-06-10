@@ -11,6 +11,7 @@ public final class Mappings {
     public static final String SUBSETS = "/subsets";
     public static final String ASSIGNMENT = "/assignment";
     public static final String POS = "/pos";
+    public static final String USER_AGREEMENT = "/user-agreement";
     public static final String STATISTICS = "/statistics";
     public static final String IMAGE = "/image";
     public static final String IMAGES = "/images";

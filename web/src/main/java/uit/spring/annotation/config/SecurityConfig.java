@@ -94,6 +94,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .hasAuthority(ANNOTATION_WRITE.getPermission())
                 .antMatchers(HttpMethod.DELETE, ANNOTATIONS_API + DELETE + "/*")
                     .hasAuthority(ANNOTATION_WRITE.getPermission())
+                .antMatchers(HttpMethod.GET, GET + USER_AGREEMENT + "/*")
+                .hasAuthority(USER_AGREEMENT_READ.getPermission())
                 // authorizing for assignment apis
                 .antMatchers(HttpMethod.GET, ASSIGNMENT_API + GET + "/*")
                     .hasAuthority(ASSIGNMENT_READ.getPermission())

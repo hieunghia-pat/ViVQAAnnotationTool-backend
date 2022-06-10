@@ -12,7 +12,8 @@ public enum UserPermission {
     SUBSET_READ("subset:read"),
     SUBSET_WRITE("subset:write"),
     ASSIGNMENT_READ("assignment:read"),
-    ASSIGNMENT_WRITE("assignment:write");
+    ASSIGNMENT_WRITE("assignment:write"),
+    USER_AGREEMENT_READ("user-agrement:read");
 
     private final String permission;
 
