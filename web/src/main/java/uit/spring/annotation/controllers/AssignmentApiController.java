@@ -11,6 +11,7 @@ import uit.spring.annotation.repositories.SubsetRepository;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
 import vn.corenlp.postagger.PosTagger;
+import vn.corenlp.wordsegmenter.WordSegmenter;
 import vn.pipeline.Sentence;
 import vn.pipeline.Word;
 
@@ -35,6 +36,8 @@ public class AssignmentApiController {
     private AnnotationRepository annotationRepository;
     @Autowired
     private PosTagger posTagger;
+    @Autowired
+    private WordSegmenter wordSegmenter;
 
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAssignmentByUsername(@PathVariable("annotatorName") String annotatorName) {
@@ -190,10 +193,8 @@ public class AssignmentApiController {
             if (optionalAnnotation.isPresent()) {
                 Annotation annotation = optionalAnnotation.get();
                 try {
-                    question = new Sentence(annotation.getQuestion(), null,
-                            posTagger, null, null);
-                    answer = new Sentence(annotation.getAnswer(), null,
-                            posTagger, null, null);
+                    question = new Sentence(annotation.getQuestion(), wordSegmenter, posTagger);
+                    answer = new Sentence(annotation.getAnswer(), wordSegmenter, posTagger);
                     // collecting objects or verbs in question
                     for (Word word : question.getWords()) {
                         if (word.getPosTag().equals("N")) {
@@ -355,10 +356,8 @@ public class AssignmentApiController {
                     Sentence question;
                     Sentence answer;
                     try {
-                        question = new Sentence(annotation.getQuestion(), null,
-                                posTagger, null, null);
-                        answer = new Sentence(annotation.getAnswer(), null,
-                                posTagger, null, null);
+                        question = new Sentence(annotation.getQuestion(), wordSegmenter, posTagger);
+                        answer = new Sentence(annotation.getAnswer(), wordSegmenter, posTagger);
                         // collecting objects or verbs in question
                         for (Word word : question.getWords()) {
                             if (word.getPosTag().equals("N")) {

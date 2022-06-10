@@ -1,8 +1,6 @@
 package vn.pipeline;
 
 import lombok.extern.slf4j.Slf4j;
-import vn.corenlp.ner.NerRecognizer;
-import vn.corenlp.parser.DependencyParser;
 import vn.corenlp.postagger.PosTagger;
 import vn.corenlp.wordsegmenter.WordSegmenter;
 import vn.corenlp.tokenizer.Tokenizer;
@@ -21,14 +19,9 @@ public class Sentence {
 
     private WordSegmenter wordSegmenter ;
     private PosTagger posTagger;
-    private NerRecognizer nerRecognizer;
-    private DependencyParser dependencyParser;
 
-    public Sentence(String rawSentence, WordSegmenter wordSegmenter, PosTagger tagger,
-                    NerRecognizer nerRecognizer, DependencyParser dependencyParser) throws IOException {
+    public Sentence(String rawSentence, WordSegmenter wordSegmenter, PosTagger tagger) throws IOException {
         this.posTagger = tagger;
-        this.nerRecognizer = nerRecognizer;
-        this.dependencyParser = dependencyParser;
         this.wordSegmenter = wordSegmenter;
         init(rawSentence.trim());
     }
@@ -69,11 +62,6 @@ public class Sentence {
                 this.words.add(word);
             }
         }
-
-        if (this.nerRecognizer != null)
-            this.nerRecognizer.tagSentence(this.words);
-        if (this.dependencyParser != null)
-            this.dependencyParser.tagSentence(this.words);
 
     }
 

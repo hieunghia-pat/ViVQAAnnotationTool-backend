@@ -1,8 +1,6 @@
 package vn.pipeline;
 
 import lombok.extern.slf4j.Slf4j;
-import vn.corenlp.ner.NerRecognizer;
-import vn.corenlp.parser.DependencyParser;
 import vn.corenlp.postagger.PosTagger;
 import vn.corenlp.tokenizer.Tokenizer;
 import vn.corenlp.wordsegmenter.WordSegmenter;
@@ -17,8 +15,6 @@ public class VnCoreNLP {
     private PosTagger posTagger;
 
     private WordSegmenter wordSegmenter;
-    private NerRecognizer nerRecognizer;
-    private DependencyParser dependencyParser;
 
     public VnCoreNLP() throws IOException {
         String[] annotators = {"wseg", "pos", "ner", "parse"};
@@ -33,12 +29,6 @@ public class VnCoreNLP {
     public void initAnnotators(String[] annotators) throws IOException{
         for(String annotator : annotators) {
             switch (annotator.trim()) {
-                case "parse":
-                    this.dependencyParser = DependencyParser.initialize();
-                    break;
-                case "ner":
-                    this.nerRecognizer = NerRecognizer.initialize();
-                    break;
                 case "pos":
                     this.posTagger = PosTagger.initialize();
                     break;
@@ -68,7 +58,7 @@ public class VnCoreNLP {
         annotation.setSentences(new ArrayList<>());
         for (String rawSentence : rawSentences) {
             if (rawSentence.trim().length() > 0) {
-                Sentence sentence = new Sentence(rawSentence, wordSegmenter, posTagger, nerRecognizer, dependencyParser);
+                Sentence sentence = new Sentence(rawSentence, wordSegmenter, posTagger);
                 annotation.getSentences().add(sentence);
                 annotation.getTokens().addAll(sentence.getTokens());
                 annotation.getWords().addAll(sentence.getWords());
