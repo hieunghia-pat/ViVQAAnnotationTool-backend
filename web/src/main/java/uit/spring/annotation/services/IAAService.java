@@ -30,7 +30,6 @@ public class IAAService {
     ArrayList<ArrayList<Long>> textQAs = new ArrayList<>();
     ArrayList<ArrayList<Long    >> actionQAs = new ArrayList<>();
 
-
     @Autowired
     AnnotationRepository annotationRepository;
     @Autowired
