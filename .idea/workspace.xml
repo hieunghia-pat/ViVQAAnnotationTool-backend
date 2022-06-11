@@ -10,9 +10,8 @@
     <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added @Component for WordSegmenter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/databases/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/databases/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="Added IAA Calculation"></list>
       <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/services/IAAService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +67,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.27900553",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nguyennghiauit/Projects/ViVQAAnnotationTool-backend/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.27900553&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vncorenlp/src/main/resources" />
@@ -455,40 +454,6 @@
       <option name="project" value="LOCAL" />
       <updated>1654845914314</updated>
     </task>
-    <task id="LOCAL-00052" summary="added properties file for vncorenlp module">
-      <created>1654848314167</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1654848314167</updated>
-    </task>
-    <task id="LOCAL-00053" summary="separate pos tagging apis from statistics apis">
-      <created>1654852375793</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1654852375793</updated>
-    </task>
-    <task id="LOCAL-00054" summary="removed NER and Dependency Parser">
-      <created>1654852818181</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1654852818181</updated>
-    </task>
-    <task id="LOCAL-00055" summary="fixed errors after removing NER and Dependency Parser">
-      <created>1654853205119</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1654853205119</updated>
-    </task>
-    <task id="LOCAL-00056" summary="added @Component for WordSegmenter">
-      <created>1654853601973</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1654853601973</updated>
     <task id="LOCAL-00052" summary="Added IAA Calculation">
       <created>1654853189406</created>
       <option name="number" value="00052" />
@@ -558,7 +523,6 @@
     <MESSAGE value="removed NER and Dependency Parser" />
     <MESSAGE value="fixed errors after removing NER and Dependency Parser" />
     <MESSAGE value="added @Component for WordSegmenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added @Component for WordSegmenter" />
     <MESSAGE value="Added IAA Calculation" />
     <option name="LAST_COMMIT_MESSAGE" value="Added IAA Calculation" />
   </component>

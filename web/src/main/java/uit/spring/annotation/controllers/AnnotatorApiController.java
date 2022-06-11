@@ -10,6 +10,7 @@ import uit.spring.annotation.interfaces.ImageInterface;
 import uit.spring.annotation.interfaces.ResponseInterface;
 import uit.spring.annotation.interfaces.UserInterface;
 import uit.spring.annotation.repositories.*;
+import uit.spring.annotation.utils.Mappings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,30 @@ public class AnnotatorApiController {
                 OK,
                 annotatorInterfaces
         );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
+    }
+
+    @GetMapping(GET + Mappings.ANNOTATOR)
+    public ResponseEntity<Object> getAnnotator(@RequestParam(name = "id") UUID annotatorId) {
+        Optional<User> optionalAnnotator = userRepository.findById(annotatorId);
+        if (optionalAnnotator.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    String.format("Cannot find annotator with id %s! Make sure this annotator is available", annotatorId)
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                new UserInterface(annotator)
+        );
+
         return ResponseEntity
                 .status(OK)
                 .body(response);

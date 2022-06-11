@@ -8,6 +8,7 @@ public final class Mappings {
     public static final String UPDATE = "/update";
     public static final String DELETE = "/delete";
     public static final String SUBSET = "/subset";
+    public static final String ANNOTATOR = "/annotator";
     public static final String SUBSETS = "/subsets";
     public static final String ASSIGNMENT = "/assignment";
     public static final String POS = "/pos";
