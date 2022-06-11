@@ -192,10 +192,12 @@ public class AssignmentApiController {
             Optional<Annotation> optionalAnnotation = annotationRepository.findByUserForImage(annotator.getId(), image.getId());
             if (optionalAnnotation.isPresent()) {
                 Annotation annotation = optionalAnnotation.get();
+                log.info(String.format("Processing for annotation %s", annotation.toString()));
                 try {
                     question = new Sentence(annotation.getQuestion(), wordSegmenter, posTagger);
                     answer = new Sentence(annotation.getAnswer(), wordSegmenter, posTagger);
                     // collecting objects or verbs in question
+                    log.info("Collecting objects or verbs from question");
                     for (Word word : question.getWords()) {
                         if (word.getPosTag().equals("N")) {
                             if (objects.containsKey(word.getForm())) {
@@ -216,7 +218,8 @@ public class AssignmentApiController {
                             }
                         }
                     }
-                    // collecting words or objects in answer
+                    // collecting objects or verbs in answer
+                    log.info("Collecting objects or verbs from question");
                     for (Word word : answer.getWords()) {
                         if (word.getPosTag().equals("N")) {
                             if (objects.containsKey(word.getForm())) {

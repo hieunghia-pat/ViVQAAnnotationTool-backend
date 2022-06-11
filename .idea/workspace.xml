@@ -7,9 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added another way to get annotator information">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,13 +143,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added IAA Calculation">
-      <created>1654657416425</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1654657416425</updated>
     </task>
     <task id="LOCAL-00010" summary="Added IAA Calculation">
       <created>1654658180133</created>
@@ -487,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654917996009</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="added another way to get annotator information">
+      <created>1654918323092</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1654918323093</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +508,6 @@
     <MESSAGE value="return ResponseInterface" />
     <MESSAGE value="fixed the link for deleting annotation" />
     <MESSAGE value="fixed the link for updating annotation" />
-    <MESSAGE value="debugging" />
     <MESSAGE value="make update query work" />
     <MESSAGE value="updated annotation api for updating annotator" />
     <MESSAGE value="added vncorenlp module" />
@@ -523,6 +522,7 @@
     <MESSAGE value="added @Component for WordSegmenter" />
     <MESSAGE value="Added IAA Calculation" />
     <MESSAGE value="added another way to get annotator information" />
-    <option name="LAST_COMMIT_MESSAGE" value="added another way to get annotator information" />
+    <MESSAGE value="debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
   </component>
 </project>
