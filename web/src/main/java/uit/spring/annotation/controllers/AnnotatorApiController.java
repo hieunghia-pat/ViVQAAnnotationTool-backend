@@ -100,6 +100,31 @@ public class AnnotatorApiController {
                 .body(response);
     }
 
+    @GetMapping(GET + WITH_PASSWORD + "/{annotatorName}")
+    public ResponseEntity<Object> getAnnotatorWithPassword(@PathVariable("annotatorName") String annotatorName) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+        if (optionalAnnotator.isEmpty()) {
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    String.format("Cannot find annotator %s! Make sure this annotator is available", annotatorName)
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
+        }
+        User annotator = optionalAnnotator.get();
+
+        UserInterface userInterface = new UserInterface(annotator);
+        userInterface.setPassword(annotator.getPassword());
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                userInterface
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
+    }
+
     @GetMapping(GET + IMAGES + "/{annotationName}")
     public ResponseEntity<Object> getImages(@PathVariable("annotationName") String annotationName) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(annotationName);
