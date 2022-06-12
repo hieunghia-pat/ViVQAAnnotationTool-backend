@@ -9,6 +9,7 @@ public final class Mappings {
     public static final String DELETE = "/delete";
     public static final String SUBSET = "/subset";
     public static final String ANNOTATOR = "/annotator";
+    public static final String GUIDELINE = "/guideline";
     public static final String SUBSETS = "/subsets";
     public static final String ASSIGNMENT = "/assignment";
     public static final String POS = "/pos";
@@ -33,6 +34,7 @@ public final class Mappings {
     public static final String ANNOTATOR_UPDATE_API = ANNOTATOR_API + UPDATE;
     public static final String ANNOTATOR_DELETE_API = ANNOTATOR_API + DELETE;
     public static final String ANNOTATOR_GET_IMAGES_API = ANNOTATOR_API + IMAGES + GET;
+    public static final String GUIDELINE_API = "/api/v1/guideline";
 
     public static final String LOGIN = "/login";
     public static final String API_LOGIN = API + LOGIN;
