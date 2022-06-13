@@ -26,9 +26,9 @@ public class UserSubset {
     @JoinColumn(name = "subset_id", unique = false)
     private Subset subset;
     @Column(name = "assign_date", nullable = false)
-    private Date assignDate;
+    private String assignDate;
     @Column(name = "finish_date", nullable = false)
-    private Date finishDate;
+    private String finishDate;
     @Column(name = "is_validation", nullable = false)
     boolean isValidation;
 
@@ -38,34 +38,8 @@ public class UserSubset {
     public UserSubset(User user, Subset subset, String assignDate, String finishDate, boolean isValidation) {
         this.user = user;
         this.subset = subset;
-        setAssignDate(assignDate);
-        setFinishDate(finishDate);
+        this.assignDate = assignDate;
+        this.finishDate = finishDate;
         this.isValidation = isValidation;
-    }
-
-    public String getAssignDate() {
-        return new SimpleDateFormat("dd/MM/yyyy").format(this.assignDate);
-    }
-
-    public String getFinshDate() {
-        return new SimpleDateFormat("dd/MM/yyyy").format(this.finishDate);
-    }
-
-    public void setAssignDate(String assignDate) {
-        try {
-            this.assignDate = new SimpleDateFormat("dd/MM/yyyy").parse(assignDate);
-        }
-        catch(ParseException exception) {
-            log.info(exception.getMessage());
-        }
-    }
-
-    public void setFinishDate(String finishDate) {
-        try {
-            this.finishDate = new SimpleDateFormat("dd/MM/yyyy").parse(finishDate);
-        }
-        catch(ParseException exception) {
-            log.info(exception.getMessage());
-        }
     }
 }
