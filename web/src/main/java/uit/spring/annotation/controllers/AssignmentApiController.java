@@ -36,7 +36,7 @@ public class AssignmentApiController {
     private AnnotationRepository annotationRepository;
 //    @Autowired
     private PosTagger posTagger;
-    @Autowired
+//    @Autowired
     private WordSegmenter wordSegmenter;
 
     @GetMapping(GET + "/{annotatorName}")
