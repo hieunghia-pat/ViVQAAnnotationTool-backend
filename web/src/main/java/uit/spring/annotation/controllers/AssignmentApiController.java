@@ -121,7 +121,7 @@ public class AssignmentApiController {
     }
 
     @GetMapping(GET + STATISTICS + SUBSET)
-    public ResponseEntity<Object> getStatisticsPerSubset(@RequestParam(name = "username") String username,
+    public ResponseEntity<Object> getStatisticsPerAssignment(@RequestParam(name = "username") String username,
                                                 @RequestParam(name = "subset-id") Long subsetId) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(username);
         if (optionalAnnotator.isEmpty()) {
@@ -194,7 +194,7 @@ public class AssignmentApiController {
     }
     
     @GetMapping(GET + POS + SUBSET)
-    public ResponseEntity<Object> getPosTaggingPerSubset(@RequestParam(name = "username") String username,
+    public ResponseEntity<Object> getPosTaggingPerAssignment(@RequestParam(name = "username") String username,
                                                  @RequestParam(name = "subset-id") Long subsetId) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(username);
         if (optionalAnnotator.isEmpty()) {
@@ -303,7 +303,7 @@ public class AssignmentApiController {
     }
 
     @GetMapping(GET + STATISTICS + SUBSETS)
-    public ResponseEntity<Object> getStatistics(@RequestParam("username") String username) {
+    public ResponseEntity<Object> getStatisticsForAnnotator(@RequestParam("username") String username) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(username);
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot find annotator %s", username);
@@ -369,7 +369,7 @@ public class AssignmentApiController {
     }
 
     @GetMapping(GET + POS + SUBSETS)
-    public ResponseEntity<Object> getPosTagging(@RequestParam("username") String username) {
+    public ResponseEntity<Object> getPosTaggingForAnnotator(@RequestParam("username") String username) {
         Optional<User> optionalAnnotator = userRepository.findByUsername(username);
         if (optionalAnnotator.isEmpty()) {
             String message = String.format("Cannot find annotator %s", username);

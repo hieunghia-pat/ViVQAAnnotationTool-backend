@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="debugging">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/GuidelineApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/GuidelineApiController.java" afterDir="false" />
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="refined the updating guideline api.">
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,13 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Added IAA Calculation">
-      <created>1654669720545</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1654669720545</updated>
     </task>
     <task id="LOCAL-00025" summary="Added IAA Calculation">
       <created>1654669902458</created>
@@ -490,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655115675398</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="refined the updating guideline api.">
+      <created>1655117139061</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1655117139061</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed the link for deleting annotation" />
     <MESSAGE value="fixed the link for updating annotation" />
     <MESSAGE value="make update query work" />
     <MESSAGE value="updated annotation api for updating annotator" />
@@ -530,6 +527,7 @@
     <MESSAGE value="added api for get only assigned subset for annotator" />
     <MESSAGE value="updated workspace.xml" />
     <MESSAGE value="debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
+    <MESSAGE value="refined the updating guideline api." />
+    <option name="LAST_COMMIT_MESSAGE" value="refined the updating guideline api." />
   </component>
 </project>
