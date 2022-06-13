@@ -7,7 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="fixed some errors">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="temporarily removed POS tagging and word segmenter">
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/controllers/AssignmentApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Added IAA Calculation">
-      <created>1654667775409</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1654667775409</updated>
     </task>
     <task id="LOCAL-00017" summary="Added IAA Calculation">
       <created>1654668145355</created>
@@ -488,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655089397862</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="temporarily removed POS tagging and word segmenter">
+      <created>1655089645909</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1655089645909</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added insert query for annotation table" />
     <MESSAGE value="turned back to using save method of repository for adding new annotation" />
     <MESSAGE value="return ResponseInterface" />
     <MESSAGE value="fixed the link for deleting annotation" />
@@ -528,6 +528,7 @@
     <MESSAGE value="added assignment reading authorization for annotator" />
     <MESSAGE value="changed date from Date to String" />
     <MESSAGE value="fixed some errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some errors" />
+    <MESSAGE value="temporarily removed POS tagging and word segmenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="temporarily removed POS tagging and word segmenter" />
   </component>
 </project>

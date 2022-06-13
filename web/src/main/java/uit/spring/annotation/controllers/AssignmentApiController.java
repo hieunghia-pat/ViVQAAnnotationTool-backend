@@ -34,7 +34,7 @@ public class AssignmentApiController {
     private UserSubsetRepository userSubsetRepository;
     @Autowired
     private AnnotationRepository annotationRepository;
-    @Autowired
+//    @Autowired
     private PosTagger posTagger;
     @Autowired
     private WordSegmenter wordSegmenter;
