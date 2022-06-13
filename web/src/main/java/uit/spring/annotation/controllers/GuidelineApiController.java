@@ -58,9 +58,9 @@ public class GuidelineApiController {
     @PutMapping(UPDATE)
     public ResponseEntity<Object> updateGuideline(@RequestBody String guideline) {
         URL resourceUrl = getClass().getResource("/guideline/content.md");
+        log.info(resourceUrl.getPath());
         try {
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(resourceUrl.getPath()), StandardCharsets.UTF_8);
-            log.info(resourceUrl.getPath());
             writer.write(guideline);
             writer.close();
         }
