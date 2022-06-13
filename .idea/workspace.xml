@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="added guideline apis">
+    <list default="true" id="ec354d59-c9c3-4f20-9fa4-1b10c611b341" name="Changes" comment="returned password for annotator api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/uit/spring/annotation/utils/Mappings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654649182404</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added IAA Calculation">
-      <created>1654658510382</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1654658510382</updated>
     </task>
     <task id="LOCAL-00013" summary="Added IAA Calculation">
       <created>1654658980807</created>
@@ -490,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655017660632</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="returned password for annotator api">
+      <created>1655030272346</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1655030272348</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -527,6 +526,7 @@
     <MESSAGE value="added another way to get annotator information" />
     <MESSAGE value="debugging" />
     <MESSAGE value="added guideline apis" />
-    <option name="LAST_COMMIT_MESSAGE" value="added guideline apis" />
+    <MESSAGE value="returned password for annotator api" />
+    <option name="LAST_COMMIT_MESSAGE" value="returned password for annotator api" />
   </component>
 </project>
