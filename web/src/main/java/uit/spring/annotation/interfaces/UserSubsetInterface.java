@@ -40,7 +40,7 @@ public class UserSubsetInterface {
         this.assigned = true;
         this.isValidation = userSubset.isValidation();
         this.assignedDate = userSubset.getAssignDate();
-        this.finishDate = userSubset.getFinshDate();
+        this.finishDate = userSubset.getFinishDate();
     }
 
     public UserSubsetInterface(Subset subset) {

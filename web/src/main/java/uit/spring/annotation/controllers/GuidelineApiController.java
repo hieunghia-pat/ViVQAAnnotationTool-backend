@@ -57,6 +57,7 @@ public class GuidelineApiController {
 
     @PutMapping(UPDATE)
     public ResponseEntity<Object> updateGuideline(@RequestBody String guideline) {
+        log.info(guideline);
         URL resourceUrl = getClass().getResource("/guideline/content.md");
         OutputStream outputStream;
         try {
