@@ -60,6 +60,7 @@ public class GuidelineApiController {
         URL resourceUrl = getClass().getResource("/guideline/content.md");
         try {
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(resourceUrl.getPath()), StandardCharsets.UTF_8);
+            log.info(resourceUrl.getPath());
             writer.write(guideline);
             writer.close();
         }
