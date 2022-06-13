@@ -116,6 +116,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // authorizing for guideline apis
                 .antMatchers(HttpMethod.GET, GUIDELINE_API + GET)
                     .hasAuthority(GUIDELINE_READ.getPermission())
+                .antMatchers(HttpMethod.PUT, GUIDELINE_API + UPDATE)
+                    .hasAuthority(GUIDELINE_WRITE.getPermission())
                 .anyRequest()
                     .authenticated()
                 .and()

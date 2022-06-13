@@ -57,15 +57,11 @@ public class GuidelineApiController {
 
     @PutMapping(UPDATE)
     public ResponseEntity<Object> updateGuideline(@RequestBody String guideline) {
-        log.info(guideline);
         URL resourceUrl = getClass().getResource("/guideline/content.md");
-        OutputStream outputStream;
         try {
-            outputStream = new FileOutputStream(new File(resourceUrl.toURI()));
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream));
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(resourceUrl.getPath()), StandardCharsets.UTF_8);
             writer.write(guideline);
             writer.close();
-            outputStream.close();
         }
         catch (FileNotFoundException fileNotFoundException) {
             log.error("Cannot find resource for content guideline");
@@ -85,15 +81,6 @@ public class GuidelineApiController {
 
             return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
         }
-        catch (URISyntaxException uriSyntaxException) {
-            log.error("There are some problem with the path to the resource content guideline file");
-            ErrorInterface response = new ErrorInterface(
-                    INTERNAL_SERVER_ERROR,
-                    "There are some problem with the path to the resource content guideline file"
-            );
-
-            return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
-        }
         catch (NullPointerException nullPointerException) {
             log.info("Cannot open resource file for content guideline");
             ErrorInterface response = new ErrorInterface(
@@ -104,6 +91,7 @@ public class GuidelineApiController {
             return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
         }
 
+        log.info("Updated guideline successfully");
         ResponseInterface response = new ResponseInterface(
                 OK,
                 "Updated guideline successfully"
