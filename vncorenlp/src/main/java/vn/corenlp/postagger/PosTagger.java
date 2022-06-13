@@ -15,7 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Slf4j
-@Component
+//@Component
 public class PosTagger {
     private static PosTagger posTagger = null;
     private MorphTagger tagger;

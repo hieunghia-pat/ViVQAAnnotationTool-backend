@@ -17,7 +17,7 @@ import java.util.List;
  * @author DatQuocNguyen
  */
 @Slf4j
-@Component
+//@Component
 public class WordSegmenter {
     private  Node root;
     private static WordSegmenter wordSegmenter = null;
