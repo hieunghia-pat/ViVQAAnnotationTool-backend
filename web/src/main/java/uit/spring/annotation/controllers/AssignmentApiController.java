@@ -83,6 +83,43 @@ public class AssignmentApiController {
                 .body(response);
     }
 
+    @GetMapping(GET + ASSIGNED + "/{annotatorName}")
+    public ResponseEntity<Object> getAssignedAssignment(@PathVariable("annotatorName") String annotatorName) {
+        Optional<User> optionalAnnotator = userRepository.findByUsername(annotatorName);
+
+        if (optionalAnnotator.isEmpty()) {
+            String message = String.format("Cannot find annotator %s", annotatorName);
+            ErrorInterface response = new ErrorInterface(
+                    NOT_FOUND,
+                    message
+            );
+            return ResponseEntity
+                    .status(NOT_FOUND)
+                    .body(response);
+        }
+
+        User annotator = optionalAnnotator.get();
+        List<Subset> subsets = subsetRepository.findAll();
+        List<UserSubsetInterface> userSubsetInterfaces = new ArrayList<>();
+        for (Subset subset: subsets) {
+            Optional<UserSubset> optionalUserSubset = userSubsetRepository.findByUserIdAndSubsetId(annotator.getId(), subset.getId());
+            if (optionalUserSubset.isPresent()) { // this subset was assigned to this user
+                UserSubset userSubset = optionalUserSubset.get();
+                UserSubsetInterface newUserSubsetInterface = new UserSubsetInterface(userSubset);
+                newUserSubsetInterface.setAssigned(true);
+                userSubsetInterfaces.add(newUserSubsetInterface);
+            }
+        }
+
+        ResponseInterface response = new ResponseInterface(
+                OK,
+                userSubsetInterfaces
+        );
+        return ResponseEntity
+                .status(OK)
+                .body(response);
+    }
+
     @GetMapping(GET + STATISTICS + SUBSET)
     public ResponseEntity<Object> getStatisticsPerSubset(@RequestParam(name = "username") String username,
                                                 @RequestParam(name = "subset-id") Long subsetId) {

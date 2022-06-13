@@ -6,6 +6,7 @@ public final class Mappings {
     public static final String GET = "/get";
     public static final String ADD = "/add";
     public static final String UPDATE = "/update";
+    public static final String ASSIGNED = "/assigned";
     public static final String DELETE = "/delete";
     public static final String SUBSET = "/subset";
     public static final String ANNOTATOR = "/annotator";
