@@ -26,7 +26,7 @@ public class GuidelineApiController {
     public ResponseEntity<Object> getGuideline() {
         String data;
         try {
-            InputStream inputStream = this.getClass().getResourceAsStream("/guideline/content.md");
+            InputStream inputStream = new FileInputStream("web/src/main/resources/guideline/content.md");
             byte[] rawData = Objects.requireNonNull(inputStream).readAllBytes();
             data = IOUtils.toString(rawData, String.valueOf(StandardCharsets.UTF_8));
         }
@@ -57,10 +57,8 @@ public class GuidelineApiController {
 
     @PutMapping(UPDATE)
     public ResponseEntity<Object> updateGuideline(@RequestBody String guideline) {
-        URL resourceUrl = getClass().getResource("/guideline/content.md");
-        log.info(resourceUrl.getPath());
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(resourceUrl.getPath()), StandardCharsets.UTF_8);
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("web/src/main/resources/guideline/content.md"), StandardCharsets.UTF_8);
             writer.write(guideline);
             writer.close();
         }
