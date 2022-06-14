@@ -140,7 +140,6 @@ public class AnnotationApiController {
         return ResponseEntity.status(OK).body(response);
     }
 
-    //Test
     @GetMapping(GET + USER_AGREEMENT + "/{subsetId}")
     public ResponseEntity<Object> getAnnotation(@PathVariable("subsetId") Long subsetId) {
         Optional<Subset> optionalSubset = subsetRepository.findById(subsetId);

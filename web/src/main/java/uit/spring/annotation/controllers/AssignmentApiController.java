@@ -10,6 +10,7 @@ import uit.spring.annotation.repositories.AnnotationRepository;
 import uit.spring.annotation.repositories.SubsetRepository;
 import uit.spring.annotation.repositories.UserRepository;
 import uit.spring.annotation.repositories.UserSubsetRepository;
+import uit.spring.annotation.services.AssignmentDateChecking;
 import vn.corenlp.postagger.PosTagger;
 import vn.corenlp.wordsegmenter.WordSegmenter;
 import vn.pipeline.Sentence;
@@ -38,6 +39,8 @@ public class AssignmentApiController {
     private PosTagger posTagger;
 //    @Autowired
     private WordSegmenter wordSegmenter;
+    @Autowired
+    private AssignmentDateChecking assignmentDateChecking;
 
     @GetMapping(GET + "/{annotatorName}")
     public ResponseEntity<Object> getAssignmentByUsername(@PathVariable("annotatorName") String annotatorName) {
@@ -497,6 +500,18 @@ public class AssignmentApiController {
         }
         Subset subset = optionalSubset.get();
 
+        ReturnInterface validationResult = assignmentDateChecking.checkTime(
+                userSubsetInterface.getAssignedDate(),
+                userSubsetInterface.getFinishDate()
+        );
+        if (validationResult.getStatusCode() != 0) {
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    validationResult.getMessage()
+            );
+            return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
+        }
+
         UserSubset userSubset = new UserSubset(
                 annotator,
                 subset,
@@ -574,6 +589,18 @@ public class AssignmentApiController {
             return ResponseEntity
                     .status(NOT_FOUND)
                     .body(response);
+        }
+
+        ReturnInterface validationResult = assignmentDateChecking.checkTime(
+                userSubsetInterface.getAssignedDate(),
+                userSubsetInterface.getFinishDate()
+        );
+        if (validationResult.getStatusCode() != 0) {
+            ErrorInterface response = new ErrorInterface(
+                    INTERNAL_SERVER_ERROR,
+                    validationResult.getMessage()
+            );
+            return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(response);
         }
 
         try {
